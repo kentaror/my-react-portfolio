@@ -43,7 +43,7 @@ const Certifications = () => {
               isDark ? 'text-zinc-100 hover:bg-zinc-700' : 'text-zinc-700 hover:bg-zinc-200'
             }`}
           >
-            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <i className="fa-regular fa-sun" aria-hidden="true"></i>}
+            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <span className="sun-icon-tabler" aria-hidden="true"></span>}
           </button>
         </div>
         <p className="text-sm leading-6">A curated list of awards, recognitions, and certifications that mark my growth in design and development.</p>
@@ -68,5 +68,16 @@ const Certifications = () => {
 }
 
 export default Certifications
+
+
+
+
+
+
+
+
+
+
+
 
 

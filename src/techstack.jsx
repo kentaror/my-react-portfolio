@@ -52,7 +52,7 @@ const TechStack = () => {
             className={`justify-self-end w-[28px] h-[28px] border-0 bg-transparent text-[12px] inline-flex items-center justify-center p-0 rounded-full transition-colors duration-200 ${isDark ? 'text-zinc-100 hover:bg-zinc-700' : 'text-zinc-700 hover:bg-zinc-200'
               }`}
           >
-            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <i className="fa-regular fa-sun" aria-hidden="true"></i>}
+            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <span className="sun-icon-tabler" aria-hidden="true"></span>}
           </button>
         </div>
       </section>
@@ -155,5 +155,16 @@ const TechStack = () => {
 }
 
 export default TechStack
+
+
+
+
+
+
+
+
+
+
+
 
 
