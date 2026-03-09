@@ -127,7 +127,7 @@ const TechStack = () => {
         </div>
 
         <div>
-          <h2 className="text-[14px] font-semibold mb-2">Software Designing Tools</h2>
+          <h2 className="text-[14px] font-semibold mb-2">Software and Cloud-based Designing Tools</h2>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="px-2 py-1 border border-zinc-200">Adobe Photoshop</span>
             <span className="px-2 py-1 border border-zinc-200">Adobe Illustrator</span>
@@ -137,10 +137,12 @@ const TechStack = () => {
             <span className="px-2 py-1 border border-zinc-200">Graphite</span>
             <span className="px-2 py-1 border border-zinc-200">Figma</span>
             <span className="px-2 py-1 border border-zinc-200">Canva</span>
-              <span className="px-2 py-1 border border-zinc-200">Photomate Automation</span>
+              <span className="px-2 py-1 border border-zinc-200">photomateMULTIv11</span>
             <span className="px-2 py-1 border border-zinc-200">Vector Magic</span>
             <span className="px-2 py-1 border border-zinc-200">Vectorgen</span>
-            <span className="px-2 py-1 border border-zinc-200">Freepik AI</span>
+                        <span className="px-2 py-1 border border-zinc-200">Kttl</span>
+            <span className="px-2 py-1 border border-zinc-200">Freepik</span>
+                        <span className="px-2 py-1 border border-zinc-200">VectorStock</span>
           </div>
         </div>
       </section>
