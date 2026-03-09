@@ -48,17 +48,17 @@ const Markup = () => (
   
   
   
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Portfolio%20Inquiry"
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn order-1 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
+                className="hero-action-btn order-1 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-envelope"></i> Send Email</a>
               <button id="openResumeModalBtn"
-                className="hero-action-btn order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
+                className="hero-action-btn order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-file-lines"></i> View Resume</button>
               <a
                 href="/blog-post" target='_blank'
-                className="hero-action-btn order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5">
+                className="hero-action-btn order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
                 <span className="inline-flex items-center gap-0.5 sm:gap-2">
                   <i className="fa-regular fa-newspaper"></i> Read my blog
                 </span>
@@ -151,45 +151,45 @@ const Markup = () => (
           <aside className="bg-white p-3 transition-all duration-300 ease-out 
                  hover:-translate-y-0.5 border-b border-zinc-200">
             <h2 className="text-lg font-bold mb-2">Experience</h2>
-            <div className="relative ml-2 pl-3 space-y-2.5">
-              <span className="absolute left-[-1px] top-[10px] bottom-[10px] w-px bg-zinc-200" aria-hidden="true"></span>
-              <div className="relative group"><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-black border border-black"></span>
+            <div id="experienceTimeline" className="relative ml-2 pl-3 space-y-2.5">
+              <span className="experience-line absolute left-[-1px] top-[10px] bottom-[10px] w-px bg-zinc-200" aria-hidden="true"></span>
+              <div className="relative group cursor-pointer" tabIndex={0}><span
+                className="experience-marker is-current absolute -left-[17px] top-1.5 w-2 h-2 bg-black border border-black"></span>
                 <p className="text-sm font-bold">Senior Graphic Full Subli Artist</p>
                 <p className="text-[13px]">Ryzn Clothing <span className="float-right text-[10px]">2026</span></p>
               </div>
-              <div className="relative group"><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+              <div className="relative group cursor-pointer" tabIndex={0}><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
                 <p className="text-sm font-bold">On-the-Job Training</p>
                 <p className="text-[13px]">Graphic Designer <span className="float-right text-[10px]">2026</span></p>
               </div>
-              <div className="relative group"><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+              <div className="relative group cursor-pointer" tabIndex={0}><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
                 <p className="text-sm font-bold">Leading Programmer</p>
                 <p className="text-[13px]">Capstone 101-102 <span className="float-right text-[10px]">2025</span></p>
               </div>
-              <div className="relative group"><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+              <div className="relative group cursor-pointer" tabIndex={0}><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
                 <p className="text-sm font-bold">Mid-Level Graphic Artist </p>
                 <p className="text-[13px] ">Ryzn Clothing <span className="float-right text-[10px]">2025</span></p>
               </div>
-              <div className="relative group"><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+              <div className="relative group cursor-pointer" tabIndex={0}><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
                 <p className="text-sm font-bold">Junior Graphic Artist</p>
                 <p className="text-[13px]">Ryzn Clothing<span className="float-right text-[10px]">2024</span></p>
               </div>
-              <div className="relative group"><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+              <div className="relative group cursor-pointer" tabIndex={0}><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
                 <p className="text-sm font-bold">Ps & Ai</p>
                 <p className="text-[13px]">Made my first pen tool <span className="float-right text-[10px]">2023</span></p>
               </div>
-              <div className="relative group"><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+              <div className="relative group cursor-pointer" tabIndex={0}><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
                 <p className="text-sm font-bold">BS Information Technology</p>
                 <p className="text-[13px]">Pangasinan State University  <span className="float-right text-[10px]">2022</span></p>
               </div>
-              <div className="relative group"><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+              <div className="relative group cursor-pointer" tabIndex={0}><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
                 <p className="text-sm font-bold">Hello World! <span className="text-xs">👋🏻</span></p>
                 <p className="text-[13px]">Wrote my first line of code <span className="float-right text-[10px]">2021</span></p>
               </div>
@@ -338,30 +338,58 @@ const Markup = () => (
                hover:-translate-y-0.5">
           <h3 className="text-sm font-bold mb-2">Social Links</h3>
           <a className="text-xs block transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border-b border-zinc-200 pb-3" href="#"><i
+               hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-linkedin"></i> LinkedIn</a>
           <a className="text-xs block mt-2 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border-b border-zinc-200 pb-3" href="#"><i
+               hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-github"></i> GitHub</a>
           <a className="text-xs block mt-2 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border-b border-zinc-200 pb-3" href="#"><i
+               hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-instagram"></i> Instagram</a>
         </div>
-        <div className="bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5">
+        <div className="bg-zinc-50 p-2.5">
           <h3 className="text-sm font-bold mb-2">Speaking</h3>
           <p className="text-xs leading-5">Available for speaking at events about software development and emerging
             technologies.</p>
-          <p className="text-xs mt-3">Get in touch <i className="fa-solid fa-angle-right"></i></p>
+          <p className="text-xs mt-3 hover:underline">Get in touch <i className="fa-solid fa-angle-right"></i></p>
         </div>
-        <div className="bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+        <div className="contact-actions bg-zinc-50 p-2 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
-          <h3 className="text-xs font-bold mb-1 "><i className="fa-regular fa-envelope"></i> Email</h3>
-          <p className="text-xs">agbayanikristianken@gmail.com</p>
-          <p className="text-xs mt-2.5 font-semibold"><i className="fa-regular fa-calendar"></i> Let's Talk</p>
-          <p className="text-xs">Schedule a Call <i className="fa-solid fa-angle-right"></i></p>
-          <p className="text-xs mt-2.5 font-semibold"><i className="fa-regular fa-file-lines"></i> Blog</p>
-          <p className="text-xs">Read my blog <i className="fa-solid fa-angle-right"></i></p>
+          <div className="contact-action-group group">
+            <h3 className="text-[11px] font-bold mb-0.5 inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-envelope"></i> Email</h3>
+            <p className="text-[11px] leading-tight">
+              <a className="text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
+                 shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                agbayanikristianken@gmail.com
+              </a>
+            </p>
+          </div>
+          <div className="contact-action-group group">
+            <p className="text-[11px] mt-1.5 font-semibold inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-calendar"></i> Let's Talk</p>
+            <p className="text-[11px] leading-tight">
+              <a className="text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
+                 shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
+                href="https://calendly.com/agbayanikristianken/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Schedule a Call <i className="fa-solid fa-angle-right"></i>
+              </a>
+            </p>
+          </div>
+          <div className="contact-action-group group">
+            <p className="text-[11px] mt-1.5 font-semibold inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-file-lines"></i> Blog</p>
+            <p className="text-[11px] leading-tight">
+              <a className="text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
+                 shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5" href="/blog-post" target="_blank" rel="noopener noreferrer">
+                Read my blog <i className="fa-solid fa-angle-right"></i>
+              </a>
+            </p>
+          </div>
         </div>
       </section>
 
