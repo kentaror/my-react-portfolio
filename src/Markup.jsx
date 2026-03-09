@@ -1,0 +1,467 @@
+﻿import Chatbot from './chatbot'
+
+const Markup = () => (
+  <>
+    <div className="max-w-[1800px] mx-auto mt-4 sm:mt-0 pt-4 sm:pt-5 px-5 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
+
+      <section id="heroCard" className="grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-2 sm:gap-3 mb-8 items-start">
+        <div id="profileMedia" className="relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[136px] md:h-[136px] overflow-hidden">
+          <img id="profileLight"
+            className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-200" src="pfp2.png"
+            alt="Profile light" />
+          <img id="profileDark"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200" src="pfp.png"
+            alt="Profile dark" />
+          <img id="profileHover"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200 pointer-events-none" src="lec.jpeg"
+            alt="Profile hover" />
+        </div>
+        <div className="min-h-[160px] sm:min-h-[180px] md:min-h-0 min-w-0 pr-1 sm:pr-0 flex flex-col justify-between">
+          <div className="min-w-0">
+            <div className="flex items-start justify-between gap-2 mb-1 sm:mb-2">
+              <h1 className="text-[16px] sm:text-[18px] md:text-2xl font-bold leading-tight flex items-center gap-1 sm:gap-2 min-w-0"><span className="sm:hidden">Ken Agbayani</span><span className="hidden sm:inline">Agbayani, Kristian Ken Lucero. CK</span>
+                <span className="relative inline-flex items-center justify-center w-[12px] h-[12px] sm:w-[14px] sm:h-[14px]" aria-label="Verified"><i className="fa-solid fa-certificate text-sky-500 text-[12px] sm:text-[14px]"></i><i className="fa-solid fa-check absolute text-white text-[7px] sm:text-[8px]"></i></span>
+              </h1>
+              <div className="switch shrink-0 z-10" aria-label="Toggle dark mode">
+                <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode" />
+                <label htmlFor="themeToggle"></label>
+              </div>
+            </div>
+              <p className="text-[10px] sm:text-sm md:text-[15px] mt-0 mb-1 sm:mb-2 whitespace-nowrap"><i className="fa-solid fa-location-dot mr-1"></i> Pangasinan, Philippines</p>
+              <p className="text-[8px] sm:text-sm md:text-base leading-tight max-w-full whitespace-nowrap">
+                <span>GA <span className='text-gray-400'>\</span> Frontend Dev <span className='text-gray-400'>\</span> Aspiring Fullstack Dev</span>
+              </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1.5 mt-1 sm:mt-2">
+            <div className="hero-actions grid grid-cols-2 gap-1 mb-2 sm:flex sm:flex-row sm:gap-1.5">
+              <a id="scheduleCallBtn"
+                href="https://calendly.com/agbayanikristianken/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-action-btn order-3 sm:order-1 h-[23px] sm:h-[34px] px-1 sm:px-3 border border-black bg-black text-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
+                  className="fa-regular fa-calendar"></i> Schedule a Call <i className="fa-solid fa-angle-right"></i></a>
+              <a
+  
+  
+  
+  
+  
+  
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Portfolio%20Inquiry"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-action-btn order-1 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
+                  className="fa-regular fa-envelope"></i> Send Email</a>
+              <button id="openResumeModalBtn"
+                className="hero-action-btn order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
+                  className="fa-regular fa-file-lines"></i> View Resume</button>
+              <a
+                href="/blog-post" target='_blank'
+                className="hero-action-btn order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5">
+                <span className="inline-flex items-center gap-0.5 sm:gap-2">
+                  <i className="fa-regular fa-newspaper"></i> Read my blog
+                </span>
+                <i className="fa-solid fa-angle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-3 mb-3 md:items-stretch">
+        <div className="flex flex-col gap-2 h-full">
+          <article className="bg-white p-3 h-full flex flex-col justify-between border-b border-zinc-200">
+            <div>
+              <h2 className="text-lg font-bold mb-2">About</h2>
+              <p className="text-sm leading-6 mb-3">I am a Bachelor of Science in Information Technology student from
+                Pangasinan State University and a dedicated working student with over three years of experience as a
+                Senior Full Graphic Sublimation Artist. My background in graphic design has strengthened my creativity,
+                attention to detail, and visual problem-solving skills.</p>
+              <p className="text-sm leading-6 mb-3.5">I am now focused on web development, where I combine technical skills and design thinking to build clean, user-centered interfaces. I enjoy turning ideas into responsive, accessible, and performance-driven websites that feel modern across desktop and mobile devices.</p>
+              <p className="text-sm leading-6">My goal is to grow as a full-stack developer while continuing to build products that solve real problems and create meaningful value for users. I value clear structure, reliable performance, and thoughtful user experience, and I approach each project with ownership, consistency, and long-term maintainability in mind, while continuously learning, improving my technical and problem-solving skills, and delivering impactful solutions.</p>
+            </div>
+          </article>
+          <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
+            <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-lg font-bold">UI Designs</h2>
+                <a href="/ui-design" className="text-xs">View All <i
+                  className="fa-solid fa-angle-right"></i></a>
+              </div>
+              <div className="relative ml-2 pl-3 space-y-2.5">
+                <div className="relative group">
+                <div className="grid grid-cols-5 gap-1.5">
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="UI design 1" loading="lazy" decoding="async" />
+                    </div>
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal2.JPG" alt="UI design 2" loading="lazy" decoding="async" />
+                    </div>
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal3.png" alt="UI design 3" loading="lazy" decoding="async" />
+                    </div>
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal4.png" alt="UI design 4" loading="lazy" decoding="async" />
+                    </div>
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal5.jpg" alt="UI design 5" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
+              <div className="flex items-center justify-between mb-2">
+                <h2 className="text-lg font-bold">Graphic Designs</h2>
+                <a href="/graphic-design" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
+              </div>
+              <div className="relative ml-2 pl-3 space-y-2.5">
+                <div className="relative group">
+                  <div className="grid grid-cols-5 gap-1.5">
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="Graphic design Gold" loading="lazy" decoding="async" />
+
+                    </div>
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal2.JPG" alt="Graphic design Black" loading="lazy" decoding="async" />
+
+                    </div>
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal3.png" alt="Graphic design Red" loading="lazy" decoding="async" />
+
+                    </div>
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal4.png" alt="Graphic design Maroon" loading="lazy" decoding="async" />
+
+                    </div>
+                    <div className="overflow-hidden">
+                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal5.jpg" alt="Graphic design White Black" loading="lazy" decoding="async" />
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+
+        <div className="flex flex-col gap-2 h-full">
+          <aside className="bg-white p-3 transition-all duration-300 ease-out 
+                 hover:-translate-y-0.5 border-b border-zinc-200">
+            <h2 className="text-lg font-bold mb-2">Experience</h2>
+            <div className="relative ml-2 pl-3 space-y-2.5">
+              <span className="absolute left-[-1px] top-[10px] bottom-[10px] w-px bg-zinc-200" aria-hidden="true"></span>
+              <div className="relative group"><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-black border border-black"></span>
+                <p className="text-sm font-bold">Senior Graphic Full Subli Artist</p>
+                <p className="text-[13px]">Ryzn Clothing <span className="float-right text-[10px]">2026</span></p>
+              </div>
+              <div className="relative group"><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+                <p className="text-sm font-bold">On-the-Job Training</p>
+                <p className="text-[13px]">Graphic Designer <span className="float-right text-[10px]">2026</span></p>
+              </div>
+              <div className="relative group"><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+                <p className="text-sm font-bold">Leading Programmer</p>
+                <p className="text-[13px]">Capstone 101-102 <span className="float-right text-[10px]">2025</span></p>
+              </div>
+              <div className="relative group"><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+                <p className="text-sm font-bold">Mid-Level Graphic Artist </p>
+                <p className="text-[13px] ">Ryzn Clothing <span className="float-right text-[10px]">2025</span></p>
+              </div>
+              <div className="relative group"><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+                <p className="text-sm font-bold">Junior Graphic Artist</p>
+                <p className="text-[13px]">Ryzn Clothing<span className="float-right text-[10px]">2024</span></p>
+              </div>
+              <div className="relative group"><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+                <p className="text-sm font-bold">Ps & Ai</p>
+                <p className="text-[13px]">Made my first pen tool <span className="float-right text-[10px]">2023</span></p>
+              </div>
+              <div className="relative group"><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+                <p className="text-sm font-bold">BS Information Technology</p>
+                <p className="text-[13px]">Pangasinan State University  <span className="float-right text-[10px]">2022</span></p>
+              </div>
+              <div className="relative group"><span
+                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black"></span>
+                <p className="text-sm font-bold">Hello World! <span className="text-xs">👋🏻</span></p>
+                <p className="text-[13px]">Wrote my first line of code <span className="float-right text-[10px]">2021</span></p>
+              </div>
+            </div>
+          </aside>
+          <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
+            <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
+                 hover:-translate-y-0.5 border-b border-zinc-200">
+              <h2 className="text-lg font-bold mb-2">Education</h2>
+              <div className="relative ml-2 pl-3 space-y-2.5">
+                <div className="relative group">
+                  <p className="text-sm font-bold">Pangasinan State University</p>
+                  <p className="text-[13px]">Alaminos City Campus</p>
+                </div>
+              </div>
+            </article>
+
+            <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
+                 hover:-translate-y-0.5 border-b border-zinc-200">
+              <h2 className="text-lg font-bold mb-2">On-the-Job Training</h2>
+              <div className="relative ml-2 pl-3 space-y-2.5">
+                <div className="relative group">
+                  <p className="text-sm font-bold">Virtual Wonders Web Solutions</p>
+                  <p className="text-[13px]">Palamis, Alaminos City</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+        <article className="bg-white p-3 border-b border-zinc-200">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-lg font-bold">Tech Stack</h2><a href="/techstack" className="text-xs">View All <i
+              className="fa-solid fa-angle-right"></i></a>
+          </div>
+          <div className="mb-3">
+            <h3 className="text-[13px] font-semibold mb-1.5">Frontend</h3>
+            <div className="flex flex-wrap gap-1.5 text-xs">
+              <span className="px-2 py-0.5">Html</span>
+              <span className="px-2 py-0.5">Css</span>
+              <span className="px-2 py-0.5">JavaScript</span><span
+                className="px-2 py-0.5">Bootstrap</span><span
+                  className="px-2 py-0.5">Tailwind CSS</span><span
+                    className="px-2 py-0.5">Next.js</span><span
+                      className="px-2 py-0.5">React.js</span>
+            </div>
+          </div>
+          <div className="mb-3">
+            <h3 className="text-[13px] font-semibold mb-1.5">Backend</h3>
+            <div className="flex flex-wrap gap-1.5 text-xs"><span
+              className="px-2 py-0.5">Node.js</span><span
+                className="px-2 py-0.5">PHP</span><span
+                  className="px-2 py-0.5">Laravel</span><span
+                    className="px-2 py-0.5">MySQL</span></div>
+          </div>
+          <div>
+            <h3 className="text-[13px] font-semibold mb-1.5">Object-Oriented Programming</h3>
+            <div className="flex flex-wrap gap-1.5 text-xs"><span
+              className="px-2 py-0.5">Java</span><span
+                className="px-2 py-0.5">C++</span><span
+                  className="px-2 py-0.5">C#</span><span
+                    className="px-2 py-0.5">Kotlin</span>
+              <span
+                className="px-2 py-0.5">PHP</span>
+              <span
+                className="px-2 py-0.5">Dart</span>
+            </div>
+          </div>
+        </article>
+
+        <article className="bg-white p-3 border-b border-zinc-200">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-lg font-bold">Recent Projects</h2><a href="/recent-projects" className="text-xs">View All <i
+              className="fa-solid fa-angle-right"></i></a>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div className="border-b border-zinc-200 bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5">
+              <h4 className="text-sm font-semibold mb-1">Cabanas</h4>
+              <p className="text-xs mb-1.5">Hotel and boat booking for cabanas</p><code
+                className="text-xs bg-zinc-200 px-1.5 py-0.5">cabanas.fun</code>
+            </div>
+            <div className="border-b border-zinc-200 bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5">
+              <h4 className="text-sm font-semibold mb-1">sm404</h4>
+              <p className="text-xs mb-1.5">Online coding bootcamp</p><code
+                className="text-xs bg-zinc-200 px-1.5 py-0.5">sm-404.com</code>
+            </div>
+            <div className="border-b border-zinc-200 bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5">
+              <h4 className="text-sm font-bold mb-1">DIIN.PH</h4>
+              <p className="text-xs mb-1.5">AI-powered wardrobe assistant</p><code
+                className="text-xs bg-zinc-200 px-1.5 py-0.5">diin.ph</code>
+            </div>
+            <div className="border-b border-zinc-200 bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5">
+              <h4 className="text-sm font-bold mb-1">DYNAMIS Workout Tracker</h4>
+              <p className="text-xs mb-1.5">AI-powered workout tracker</p><code
+                className="text-xs bg-zinc-200 px-1.5 py-0.5">dynamis-app.online</code>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 md:items-stretch">
+        <article className="border-b border-zinc-200 bg-white p-3 ">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-lg font-bold">Attainments</h2><a href="/certifications" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
+          </div>
+          <div className="bg-zinc-100 p-2 mb-1.5 hover:bg-gray-200"><b className="text-sm">Lecturer</b>
+            <p className="text-xs">Techtalk</p>
+          </div>
+          <div className="bg-zinc-100 p-2 mb-1.5 hover:bg-gray-200"><b className="text-sm">CBT Web Design 1st Place</b>
+            <p className="text-xs">CBT Fest</p>
+          </div>
+          <div className="bg-zinc-100 p-2 mb-1.5 hover:bg-gray-200"><b className="text-sm">Legacy Responsive Web Design</b>
+            <p className="text-xs">FreeCodeCamp</p>
+          </div>
+          <div className="bg-zinc-100 p-2 mb-1.5 hover:bg-gray-200"><b className="text-sm">CodeCred</b>
+            <p className="text-xs">HTML Fundamentals</p>
+          </div>
+
+        </article>
+
+        <article className="border-b border-zinc-200 bg-white p-3 ">
+          <h2 className="text-lg font-bold mb-2">Recommendations</h2>
+          <p id="recommendationQuote" className="text-[13px] leading-6 mb-1 min-h-[96px] sm:min-h-[110px]"></p>
+          <div className="border-t border-zinc-200 min-h-[48px] sm:min-h-[56px]">
+            <b id="recommendationName" className="text-[13px] font-semibold"></b>
+            <div id="recommendationRole" className="text-[12px]"></div>
+          </div>
+          <div id="recommendationDots" className="flex gap-1.5 mt-auto pt-3" aria-label="Recommendation indicators"></div>
+        </article>
+      </section>
+
+      <section className="border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-3">
+        <div className="bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5">
+          <h3 className="text-sm font-bold mb-2">A member of</h3>
+          <p className="text-xs leading-5">Analytics & Artificial Intelligence Association of the Philippines (AAP)</p>
+          <p className="text-xs leading-5 mt-2.5">Philippine Software Industry Association</p>
+        </div>
+        <div className="bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5">
+          <h3 className="text-sm font-bold mb-2">Social Links</h3>
+          <a className="text-xs block transition-all duration-300 ease-out 
+               hover:-translate-y-0.5 border-b border-zinc-200 pb-3" href="#"><i
+              className="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a className="text-xs block mt-2 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5 border-b border-zinc-200 pb-3" href="#"><i
+              className="fa-brands fa-github"></i> GitHub</a>
+          <a className="text-xs block mt-2 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5 border-b border-zinc-200 pb-3" href="#"><i
+              className="fa-brands fa-instagram"></i> Instagram</a>
+        </div>
+        <div className="bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5">
+          <h3 className="text-sm font-bold mb-2">Speaking</h3>
+          <p className="text-xs leading-5">Available for speaking at events about software development and emerging
+            technologies.</p>
+          <p className="text-xs mt-3">Get in touch <i className="fa-solid fa-angle-right"></i></p>
+        </div>
+        <div className="bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5">
+          <h3 className="text-xs font-bold mb-1 "><i className="fa-regular fa-envelope"></i> Email</h3>
+          <p className="text-xs">agbayanikristianken@gmail.com</p>
+          <p className="text-xs mt-2.5 font-semibold"><i className="fa-regular fa-calendar"></i> Let's Talk</p>
+          <p className="text-xs">Schedule a Call <i className="fa-solid fa-angle-right"></i></p>
+          <p className="text-xs mt-2.5 font-semibold"><i className="fa-regular fa-file-lines"></i> Blog</p>
+          <p className="text-xs">Read my blog <i className="fa-solid fa-angle-right"></i></p>
+        </div>
+      </section>
+
+      <section id="portfolioGallery" className="bg-white p-3 overflow-hidden">
+        <h2 className="text-lg font-bold mb-2">Gallery</h2>
+        <div className="relative">
+          <button id="galleryPrevBtn" type="button"
+            className="grid absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-9 border border-zinc-200 bg-zinc-50 place-items-center text-sm text-zinc-500 z-[1]"><i
+              className="fa-solid fa-angle-left"></i></button>
+          <div id="galleryViewport" className="overflow-hidden">
+            <div id="galleryTrack" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1.5">
+              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+                <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
+                  src="/gal1.jpeg"
+                  alt="Gallery 1"
+                  loading="lazy"
+                  decoding="async" />
+              </div>
+              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+                <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
+                  src="/gal2.JPG"
+                  alt="Gallery 2"
+                  loading="lazy"
+                  decoding="async" />
+              </div>
+              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+                <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
+                  src="/gal3.png"
+                  alt="Gallery 3"
+                  loading="lazy"
+                  decoding="async" />
+              </div>
+              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+                <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
+                  src="/gal4.png"
+                  alt="Gallery 4"
+                  loading="lazy"
+                  decoding="async" />
+              </div>
+              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+                <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
+                  src="/gal5.jpg"
+                  alt="Gallery 5"
+                  loading="lazy"
+                  decoding="async" />
+              </div>
+            </div>
+          </div>
+          <button id="galleryNextBtn" type="button"
+            className="grid absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-9 border border-zinc-200 bg-zinc-50 place-items-center text-sm text-zinc-500 z-[1]"><i
+              className="fa-solid fa-angle-right"></i></button>
+        </div>
+      </section>
+
+      <div id="portfolioLightbox" className="fixed inset-0 z-50 hidden items-center justify-center px-4 sm:px-10 bg-[rgba(15,15,18,0.9)] backdrop-blur-[4px]"
+        aria-hidden="true">
+        <button id="lightboxClose" className="absolute right-4 top-4 w-[45px] h-[42px] bg-[rgba(72,72,80,0.78)] text-white grid place-items-center transition-colors duration-200 hover:bg-[rgba(96,96,106,0.9)] text-lg" type="button"
+          aria-label="Close preview">
+          <i className="fa-solid fa-xmark text-white opacity-100"></i>
+        </button>
+        <button id="lightboxPrev" className="absolute left-4 top-1/2 -translate-y-1/2 w-[45px] h-[42px] bg-[rgba(72,72,80,0.78)] text-white grid place-items-center transition-colors duration-200 hover:bg-[rgba(96,96,106,0.9)] text-lg" type="button"
+          aria-label="Previous image">
+          <i className="fa-solid fa-angle-left text-white opacity-100"></i>
+        </button>
+        <button id="lightboxNext" className="absolute right-4 top-1/2 -translate-y-1/2 w-[45px] h-[42px] bg-[rgba(72,72,80,0.78)] text-white grid place-items-center transition-colors duration-200 hover:bg-[rgba(96,96,106,0.9)] text-lg
+      " type="button"
+          aria-label="Next image">
+          <i className="fa-solid fa-angle-right text-white opacity-100"></i>
+        </button>
+        <div className="relative max-w-[92vw] max-h-[88vh] w-full flex items-center justify-center">
+          <img id="lightboxImage" className="max-h-[82vh] w-auto max-w-full object-contain" src="" alt="Gallery preview" />
+        </div>
+        <div id="lightboxCounter" className="absolute left-4 top-4 px-3 py-2 text-sm bg-[rgba(44,44,50,0.72)] text-[#f4f4f5]">1 / 1</div>
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 text-xs font-semibold bg-[rgba(44,44,50,0.72)] text-[#f4f4f5]">Use arrow
+          keys to navigate • ESC to close</div>
+      </div>
+
+      <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">© 2026 Agbayani, Kristian Ken Lucero.
+        All rights reserved.</footer>
+    </div>
+    <Chatbot />
+
+    <div id="resumeModal" className="fixed inset-0 z-[70] hidden items-center justify-center bg-black/55 px-2 sm:px-4 py-3" aria-hidden="true">
+      <div className="bg-white border border-zinc-200 w-full max-w-[420px] sm:max-w-[520px] md:max-w-[620px] h-[94vh] overflow-hidden flex flex-col">
+        <div className="flex items-center justify-between border-b border-zinc-200 px-3 sm:px-4 py-3">
+          <h2 className="text-base sm:text-lg font-bold">My Resume</h2>
+          <div className="flex items-center gap-2">
+            <a href="/2025-template_bullet.pdf" target="_blank" rel="noopener noreferrer" className="text-sm border border-zinc-200 px-3 py-1">Open Full</a>
+            <button id="closeResumeModalBtn" type="button" className="text-sm border border-zinc-200 px-3 py-1">Close</button>
+          </div>
+        </div>
+        <div className="p-2 sm:p-3 bg-zinc-50 flex-1 min-h-0 flex justify-center overflow-auto">
+          <div className="w-full max-w-[560px] aspect-[8.5/11] bg-white border border-zinc-200">
+            <iframe title="Resume Preview" src="/2025-template_bullet.pdf#view=FitH" className="w-full h-full bg-white"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </>
+)
+
+export default Markup
