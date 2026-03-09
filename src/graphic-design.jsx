@@ -61,7 +61,7 @@ const GraphicDesign = () => {
               isDark ? 'text-zinc-100 hover:bg-zinc-700' : 'text-zinc-700 hover:bg-zinc-200'
             }`}
           >
-            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <span aria-hidden="true">☀</span>}
+            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <i className="fa-solid fa-sun" aria-hidden="true"></i>}
           </button>
         </div>
         <p className="text-sm leading-6">A collection of my visual and branding works focused on composition, typography, and impactful storytelling.</p>
@@ -91,3 +91,4 @@ const GraphicDesign = () => {
 }
 
 export default GraphicDesign
+

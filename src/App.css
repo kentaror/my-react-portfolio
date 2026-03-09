@@ -63,7 +63,9 @@ body {
 
     .switch label::after {
       position: absolute;
-      content: "☀";
+      content: "\f185";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
       width: 18px;
       height: 18px;
       left: 2px;

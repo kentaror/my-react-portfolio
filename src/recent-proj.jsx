@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import './App.css'
 
 const projects = [
@@ -76,7 +76,7 @@ const RecentProj = () => {
               isDark ? 'text-zinc-100 hover:bg-zinc-700' : 'text-zinc-700 hover:bg-zinc-200'
             }`}
           >
-            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <span aria-hidden="true">☀</span>}
+            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <i className="fa-solid fa-sun" aria-hidden="true"></i>}
           </button>
         </div>
         <p className="text-sm leading-6">
@@ -97,10 +97,11 @@ const RecentProj = () => {
       </section>
 
       <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
-        © 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
+        Â© 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
       </footer>
     </div>
   )
 }
 
 export default RecentProj
+
