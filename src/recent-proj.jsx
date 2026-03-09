@@ -76,7 +76,7 @@ const RecentProj = () => {
               isDark ? 'text-zinc-100 hover:bg-zinc-700' : 'text-zinc-700 hover:bg-zinc-200'
             }`}
           >
-            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <i className="fa-solid fa-sun" aria-hidden="true"></i>}
+            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <i className="fa-regular fa-sun" aria-hidden="true"></i>}
           </button>
         </div>
         <p className="text-sm leading-6">
@@ -104,4 +104,5 @@ const RecentProj = () => {
 }
 
 export default RecentProj
+
 
