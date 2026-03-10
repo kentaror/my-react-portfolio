@@ -19,7 +19,7 @@ const Markup = () => (
         <div className="min-h-[160px] sm:min-h-[180px] md:min-h-0 min-w-0 pr-1 sm:pr-0 flex flex-col justify-between">
           <div className="min-w-0">
             <div className="flex items-start justify-between gap-2 mb-1 sm:mb-2">
-              <h1 className="text-[16px] sm:text-[18px] md:text-2xl font-bold leading-tight flex items-center gap-1 sm:gap-2 min-w-0"><span className="sm:hidden">Ken Agbayani</span><span className="hidden sm:inline">. CK</span>
+              <h1 className="text-[16px] sm:text-[18px] md:text-2xl font-bold leading-tight flex items-center gap-1 sm:gap-2 min-w-0"><span className="sm:hidden">Ken Agbayani</span><span className="hidden sm:inline">Agbayani, Kristian Ken Lucero. CK</span>
                 <span className="relative inline-flex items-center justify-center w-[12px] h-[12px] sm:w-[14px] sm:h-[14px]" aria-label="Verified"><i className="fa-solid fa-certificate text-sky-500 text-[12px] sm:text-[14px]"></i><i className="fa-solid fa-check absolute text-white text-[7px] sm:text-[8px]"></i></span>
               </h1>
               <div className="switch shrink-0 z-10" aria-label="Toggle dark mode">
