@@ -44,7 +44,7 @@ const TechStack = () => {
             </svg>
             <span>Back to Home</span>
           </a>
-          <h1 className="text-lg font-bold text-center">Tech Stack</h1>
+       
           <button
             type="button"
             onClick={onThemeButtonClick}
@@ -55,6 +55,7 @@ const TechStack = () => {
             {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <span className="sun-icon-tabler" aria-hidden="true"></span>}
           </button>
         </div>
+           <h1 className="text-lg font-bold text-center">Tech Stack</h1>
       </section>
 
       <section className="p-3">
