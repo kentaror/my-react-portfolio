@@ -60,6 +60,9 @@ const TechStack = () => {
           </button>
         </div>
         <h1 className="sm:hidden text-lg font-bold text-center mt-2">Tech Stack</h1>
+        <p className="text-sm leading-6">
+          A focused overview of the tools and technologies I use across frontend, backend, mobile, and design workflows.
+        </p>
       </section>
 
       <section className="p-3">

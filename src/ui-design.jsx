@@ -71,6 +71,9 @@ const UiDesign = () => {
           </button>
         </div>
         <h1 className="sm:hidden text-lg font-bold text-center mt-2">UI Designs</h1>
+        <p className="text-sm leading-6">
+          A curated set of interface studies highlighting layout, spacing, and clean visual hierarchy across different UI concepts.
+        </p>
       </section>
 
       <section className="p-3">
@@ -97,7 +100,6 @@ const UiDesign = () => {
 }
 
 export default UiDesign
-
 
 
 
