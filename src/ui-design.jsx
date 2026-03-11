@@ -69,8 +69,8 @@ const UiDesign = () => {
             {isDark ? <i className="fa-solid fa-moon relative z-[1]" aria-hidden="true"></i> : <span className="sun-icon-tabler relative z-[1]" aria-hidden="true"></span>}
           </button>
         </div>
-          <h1 className="text-lg font-bold text-center">UI Designs</h1>
-        <p className="text-sm leading-6 text-center">A collection of my interface design studies, focusing on structure, spacing, and clean visual hierarchy.</p>
+          <h1 className="text-lg font-bold text-left">UI Designs</h1>
+        <p className="text-sm leading-6 text-left">A collection of my interface design studies, focusing on structure, spacing, and clean visual hierarchy.</p>
       </section>
 
       <section className="p-3">
