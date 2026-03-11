@@ -122,7 +122,7 @@ const BlogPost = () => {
       </section>
 
       <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
-        Â© 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
+        © 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
       </footer>
     </div>
   )
