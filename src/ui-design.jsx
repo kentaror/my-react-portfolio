@@ -30,7 +30,7 @@ const UiDesign = () => {
   return (
     <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-5 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
       <section className="p-3 border-b border-zinc-200 mb-3">
-        <div className="relative flex items-center justify-between mb-2 min-h-[32px]">
+        <div className="relative flex items-center justify-between mb-5 min-h-[32px]">
           <a
             href="/"
             className="justify-self-start inline-flex items-center gap-1 text-[13px] sm:text-[14px] text-zinc-900"
@@ -69,8 +69,8 @@ const UiDesign = () => {
             {isDark ? <i className="fa-solid fa-moon relative z-[1]" aria-hidden="true"></i> : <span className="sun-icon-tabler relative z-[1]" aria-hidden="true"></span>}
           </button>
         </div>
-          <h1 className="text-lg font-bold text-left">UI Designs</h1>
-        <p className="text-sm leading-6 text-left">A collection of my interface design studies, focusing on structure, spacing, and clean visual hierarchy.</p>
+          <h1 className="text-lg font-bold text-center">UI Designs</h1>
+        <p className="text-sm leading-6 text-justify">A collection of my interface design studies, focusing on structure, spacing, and clean visual hierarchy.</p>
       </section>
 
       <section className="p-3">
