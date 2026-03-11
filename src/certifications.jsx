@@ -28,13 +28,13 @@ const Certifications = () => {
     <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-5 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
       <section className="p-3 border-b border-zinc-200 mb-3">
         <div className="grid grid-cols-[1fr_auto_1fr] items-center mb-2 min-h-[32px]">
-          <a href="/" className="justify-self-start inline-flex items-center gap-1 text-[13px] sm:text-[14px] text-zinc-900">
+          <a href="/" className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
               <path d="M14 10H4M4 10L8 6M4 10L8 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
             </svg>
             <span>Back to Home</span>
           </a>
-          <h1 className="text-lg font-bold text-center">Attainments</h1>
+          <h1 className="hidden sm:block text-lg font-bold text-center">Attainments</h1>
           <button
             type="button"
             onClick={onThemeButtonClick}
@@ -50,6 +50,7 @@ const Certifications = () => {
             {isDark ? <i className="fa-solid fa-moon relative z-[1]" aria-hidden="true"></i> : <span className="sun-icon-tabler relative z-[1]" aria-hidden="true"></span>}
           </button>
         </div>
+        <h1 className="sm:hidden text-lg font-bold text-center mt-2">Attainments</h1>
         <p className="text-sm leading-6">A curated list of awards, recognitions, and certifications that mark my growth in design and development.</p>
       </section>
 
@@ -72,6 +73,7 @@ const Certifications = () => {
 }
 
 export default Certifications
+
 
 
 

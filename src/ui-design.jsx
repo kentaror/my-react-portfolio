@@ -30,10 +30,10 @@ const UiDesign = () => {
   return (
     <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-5 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
       <section className="p-3 border-b border-zinc-200 mb-3">
-        <div className="relative flex items-center justify-between mb-5 min-h-[32px]">
+        <div className="grid grid-cols-[auto_1fr_auto] mb-4 items-center min-h-[32px]">
           <a
             href="/"
-            className="justify-self-start inline-flex items-center gap-1 text-[13px] sm:text-[14px] text-zinc-900"
+            className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900"
           >
             <svg
               aria-hidden="true"
@@ -54,6 +54,7 @@ const UiDesign = () => {
             </svg>
             <span>Back to Home</span>
           </a>
+          <h1 className="hidden sm:block text-lg font-bold text-center">UI Designs</h1>
           <button
             type="button"
             onClick={onThemeButtonClick}
@@ -69,8 +70,7 @@ const UiDesign = () => {
             {isDark ? <i className="fa-solid fa-moon relative z-[1]" aria-hidden="true"></i> : <span className="sun-icon-tabler relative z-[1]" aria-hidden="true"></span>}
           </button>
         </div>
-          <h1 className="text-lg font-bold text-center">UI Designs</h1>
-        <p className="text-sm leading-6 text-justify">A collection of my interface design studies, focusing on structure, spacing, and clean visual hierarchy.</p>
+        <h1 className="sm:hidden text-lg font-bold text-center mt-2">UI Designs</h1>
       </section>
 
       <section className="p-3">

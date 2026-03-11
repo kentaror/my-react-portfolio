@@ -46,7 +46,7 @@ const RecentProj = () => {
         <div className="grid grid-cols-[1fr_auto_1fr] items-center mb-2 min-h-[32px]">
           <a
             href="/"
-            className="justify-self-start inline-flex items-center gap-1 text-[13px] sm:text-[14px] text-zinc-900"
+            className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900"
           >
             <svg
               aria-hidden="true"
@@ -67,7 +67,7 @@ const RecentProj = () => {
             </svg>
             <span>Back to Home</span>
           </a>
-          <h1 className="text-lg font-bold text-center">Recent Projects</h1>
+          <h1 className="hidden sm:block text-lg font-bold text-center">Recent Projects</h1>
           <button
             type="button"
             onClick={onThemeButtonClick}
@@ -83,6 +83,7 @@ const RecentProj = () => {
             {isDark ? <i className="fa-solid fa-moon relative z-[1]" aria-hidden="true"></i> : <span className="sun-icon-tabler relative z-[1]" aria-hidden="true"></span>}
           </button>
         </div>
+        <h1 className="sm:hidden text-lg font-bold text-center mt-2">Recent Projects</h1>
         <p className="text-sm leading-6">
           A summary of selected projects I built across booking platforms, bootcamps, and AI-powered products.
         </p>
@@ -108,6 +109,7 @@ const RecentProj = () => {
 }
 
 export default RecentProj
+
 
 
 
