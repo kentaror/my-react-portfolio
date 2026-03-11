@@ -39,11 +39,15 @@ const Certifications = () => {
             type="button"
             onClick={onThemeButtonClick}
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-            className={`justify-self-end w-[28px] h-[28px] border-0 bg-transparent text-[12px] inline-flex items-center justify-center p-0 rounded-full transition-colors duration-200 ${
-              isDark ? 'text-zinc-100 hover:bg-zinc-700' : 'text-zinc-700 hover:bg-zinc-200'
+            className={`group relative justify-self-end w-[28px] h-[28px] border-0 bg-transparent text-[12px] inline-flex items-center justify-center p-0 rounded-full !rounded-full overflow-hidden transition-all duration-200 ${
+              isDark ? 'text-zinc-100' : 'text-zinc-700'
             }`}
           >
-            {isDark ? <i className="fa-solid fa-moon" aria-hidden="true"></i> : <span className="sun-icon-tabler" aria-hidden="true"></span>}
+            <span
+              aria-hidden="true"
+              className={`absolute inset-0 rounded-full !rounded-full opacity-0 transition-opacity duration-200 ${isDark ? 'bg-zinc-700/80 group-hover:opacity-100' : 'bg-zinc-200 group-hover:opacity-100'}`}
+            ></span>
+            {isDark ? <i className="fa-solid fa-moon relative z-[1]" aria-hidden="true"></i> : <span className="sun-icon-tabler relative z-[1]" aria-hidden="true"></span>}
           </button>
         </div>
         <p className="text-sm leading-6">A curated list of awards, recognitions, and certifications that mark my growth in design and development.</p>

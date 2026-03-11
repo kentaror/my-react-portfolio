@@ -27,10 +27,15 @@ const Markup = () => (
                 <label htmlFor="themeToggle"></label>
               </div>
             </div>
-              <p className="text-[10px] sm:text-sm md:text-[15px] mt-0 mb-1 sm:mb-2 whitespace-nowrap"><i className="fa-solid fa-location-dot mr-1"></i> Pangasinan, Philippines</p>
-              <p className="text-[8px] sm:text-sm md:text-base leading-tight max-w-full whitespace-nowrap">
-                <span>GA <span className='text-gray-400'>\</span> Frontend Dev <span className='text-gray-400'>\</span> Aspiring Fullstack Dev</span>
-              </p>
+            <p className="text-[10px] sm:text-sm md:text-[15px] mt-0 mb-1 sm:mb-2 whitespace-nowrap"><i className="fa-solid fa-location-dot mr-1"></i> Pangasinan, Philippines</p>
+            <p className="text-[8px] sm:text-sm md:text-base leading-tight max-w-full whitespace-nowrap">
+              <div className="md:mb-4">
+                <span>
+                  GA <span className='text-gray-400'>\</span> Frontend Dev
+                  <span className='text-gray-400'>\</span> Aspiring Fullstack Dev
+                </span>
+              </div>
+            </p>
           </div>
 
           <div className="grid grid-cols-1 gap-1.5 mt-1 sm:mt-2">
@@ -42,13 +47,13 @@ const Markup = () => (
                 className="hero-action-btn order-3 sm:order-1 h-[23px] sm:h-[34px] px-1 sm:px-3 border border-black bg-black text-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
                   className="fa-regular fa-calendar"></i> Schedule a Call <i className="fa-solid fa-angle-right"></i></a>
               <a
-  
-  
-  
-  
-  
-  
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
+
+
+
+
+
+
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-action-btn order-1 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
@@ -91,7 +96,7 @@ const Markup = () => (
               </div>
               <div className="relative ml-2 pl-3 space-y-2.5">
                 <div className="relative group">
-                <div className="grid grid-cols-5 gap-1.5">
+                  <div className="grid grid-cols-5 gap-1.5">
                     <div className="overflow-hidden">
                       <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="UI design 1" loading="lazy" decoding="async" />
                     </div>
