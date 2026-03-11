@@ -25,9 +25,9 @@ const Certifications = () => {
   }
 
   return (
-    <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-5 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
+    <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-4 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
       <section className="p-3 border-b border-zinc-200 mb-3">
-        <div className="grid grid-cols-[1fr_auto_1fr] items-center mb-2 min-h-[32px]">
+        <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a href="/" className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
               <path d="M14 10H4M4 10L8 6M4 10L8 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -73,6 +73,7 @@ const Certifications = () => {
 }
 
 export default Certifications
+
 
 
 

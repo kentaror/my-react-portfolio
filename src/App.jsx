@@ -206,6 +206,32 @@ function App() {
     let activeGallerySlideIndex = 0
     const isMobileGalleryView = () => window.innerWidth < 768
 
+    function updateGalleryNav(isMobile) {
+      if (!galleryPrevBtn || !galleryNextBtn) {
+        return
+      }
+      if (!isMobile) {
+        galleryPrevBtn.disabled = false
+        galleryNextBtn.disabled = false
+        galleryPrevBtn.setAttribute('aria-disabled', 'false')
+        galleryNextBtn.setAttribute('aria-disabled', 'false')
+        galleryPrevBtn.classList.remove('opacity-40', 'pointer-events-none')
+        galleryNextBtn.classList.remove('opacity-40', 'pointer-events-none')
+        return
+      }
+      const maxIndex = Math.max(galleryDisplayFrames.length - 1, 0)
+      const atStart = activeGallerySlideIndex <= 0
+      const atEnd = activeGallerySlideIndex >= maxIndex
+      galleryPrevBtn.disabled = atStart
+      galleryNextBtn.disabled = atEnd
+      galleryPrevBtn.setAttribute('aria-disabled', atStart ? 'true' : 'false')
+      galleryNextBtn.setAttribute('aria-disabled', atEnd ? 'true' : 'false')
+      galleryPrevBtn.classList.toggle('opacity-40', atStart)
+      galleryPrevBtn.classList.toggle('pointer-events-none', atStart)
+      galleryNextBtn.classList.toggle('opacity-40', atEnd)
+      galleryNextBtn.classList.toggle('pointer-events-none', atEnd)
+    }
+
     function renderGallerySlides(shouldAnimate = false) {
       if (!galleryDisplayFrames.length) {
         return
@@ -224,14 +250,16 @@ function App() {
         galleryTrack.style.transform = ''
         galleryTrack.style.transition = ''
       }
+      updateGalleryNav(isMobile)
     }
 
     function moveGallerySlides(direction) {
       if (!galleryDisplayFrames.length) {
         return
       }
-      activeGallerySlideIndex =
-        (activeGallerySlideIndex + direction + galleryDisplayFrames.length) % galleryDisplayFrames.length
+      const maxIndex = Math.max(galleryDisplayFrames.length - 1, 0)
+      const nextIndex = activeGallerySlideIndex + direction
+      activeGallerySlideIndex = Math.min(Math.max(nextIndex, 0), maxIndex)
       renderGallerySlides(true)
     }
 

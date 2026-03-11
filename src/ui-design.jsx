@@ -28,9 +28,9 @@ const UiDesign = () => {
   }
 
   return (
-    <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-5 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
+    <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-4 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
       <section className="p-3 border-b border-zinc-200 mb-3">
-        <div className="grid grid-cols-[auto_1fr_auto] mb-4 items-center min-h-[32px]">
+        <div className="grid grid-cols-[auto_1fr_auto] mb-2 items-center min-h-[32px]">
           <a
             href="/"
             className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900"
@@ -100,6 +100,7 @@ const UiDesign = () => {
 }
 
 export default UiDesign
+
 
 
 

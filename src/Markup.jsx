@@ -2,9 +2,9 @@
 
 const Markup = () => (
   <>
-    <div className="max-w-[1800px] mx-auto mt-4 sm:mt-0 pt-4 sm:pt-5 px-5 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
+    <div className="max-w-[1800px] mx-auto mt-4 sm:mt-0 pt-4 sm:pt-5 px-4 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
 
-      <section id="heroCard" className="grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-2 sm:gap-3 mb-8 items-start">
+      <section id="heroCard" className="grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-3 sm:gap-4 mb-8 items-start">
         <div id="profileMedia" className="relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[136px] md:h-[136px] overflow-hidden">
           <img id="profileLight"
             className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-200" src="pfp2.png"
@@ -16,11 +16,11 @@ const Markup = () => (
             className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200 pointer-events-none" src="lec.jpeg"
             alt="Profile hover" />
         </div>
-        <div className="min-h-[160px] sm:min-h-[180px] md:min-h-0 min-w-0 pr-1 sm:pr-0 flex flex-col justify-between">
+        <div className="min-h-[160px] sm:min-h-[180px] md:min-h-0 min-w-0 pr-1 sm:pr-0 pl-3 sm:pl-0 flex flex-col justify-between">
           <div className="min-w-0">
             <div className="flex items-start justify-between gap-2 mb-1 sm:mb-2">
-              <h1 className="text-[16px] sm:text-[18px] md:text-2xl font-bold leading-tight flex items-center gap-1 sm:gap-2 min-w-0"><span className="sm:hidden">Ken Agbayani</span><span className="hidden sm:inline">Agbayani, Kristian Ken Lucero. CK</span>
-                <span className="relative inline-flex items-center justify-center w-[12px] h-[12px] sm:w-[14px] sm:h-[14px]" aria-label="Verified"><i className="fa-solid fa-certificate text-sky-500 text-[12px] sm:text-[14px]"></i><i className="fa-solid fa-check absolute text-white text-[7px] sm:text-[8px]"></i></span>
+              <h1 className="text-[15px] sm:text-[17px] md:text-[22px] font-bold leading-tight flex items-center gap-1 sm:gap-2 min-w-0"><span className="sm:hidden">Ken Agbayani</span><span className="hidden sm:inline">Agbayani, Kristian Ken Lucero. CK</span>
+                <span className="relative inline-flex items-center justify-center w-[10px] h-[10px] sm:w-[14px] sm:h-[14px]" aria-label="Verified"><i className="fa-solid fa-certificate text-sky-500 text-[10px] sm:text-[14px]"></i><i className="fa-solid fa-check absolute text-white text-[5px] sm:text-[8px]"></i></span>
               </h1>
               <div className="switch shrink-0 z-10" aria-label="Toggle dark mode">
                 <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode" />
@@ -44,7 +44,7 @@ const Markup = () => (
                 href="https://calendly.com/agbayanikristianken/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn order-3 sm:order-1 h-[23px] sm:h-[34px] px-1 sm:px-3 border border-black bg-black text-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
+                className="hero-action-btn order-1 sm:order-1 h-[23px] sm:h-[34px] px-1 sm:px-3 border border-black bg-black text-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
                   className="fa-regular fa-calendar"></i> Schedule a Call <i className="fa-solid fa-angle-right"></i></a>
               <a
 
@@ -56,7 +56,7 @@ const Markup = () => (
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn order-1 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-envelope"></i> Send Email</a>
               <button id="openResumeModalBtn"
                 className="hero-action-btn order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
@@ -400,11 +400,11 @@ const Markup = () => (
 
       <section id="portfolioGallery" className="bg-white p-3 overflow-hidden">
         <h2 className="text-lg font-bold mb-2">Gallery</h2>
-        <div className="relative">
+        <div className="relative z-[40]">
           <button id="galleryPrevBtn" type="button"
-            className="grid absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-9 border border-zinc-200 bg-zinc-50 place-items-center text-sm text-zinc-500 z-[1]"><i
+            className="grid absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-9 sm:w-9 sm:h-10 border border-zinc-200 bg-zinc-50 place-items-center text-sm text-zinc-500 z-[50] pointer-events-auto cursor-pointer"><i
               className="fa-solid fa-angle-left"></i></button>
-          <div id="galleryViewport" className="overflow-hidden">
+          <div id="galleryViewport" className="overflow-hidden relative z-[1]">
             <div id="galleryTrack" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1.5">
               <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
                 <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
@@ -444,7 +444,7 @@ const Markup = () => (
             </div>
           </div>
           <button id="galleryNextBtn" type="button"
-            className="grid absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-9 border border-zinc-200 bg-zinc-50 place-items-center text-sm text-zinc-500 z-[1]"><i
+            className="grid absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-8 h-9 sm:w-9 sm:h-10 border border-zinc-200 bg-zinc-50 place-items-center text-sm text-zinc-500 z-[50] pointer-events-auto cursor-pointer"><i
               className="fa-solid fa-angle-right"></i></button>
         </div>
       </section>
@@ -498,3 +498,4 @@ const Markup = () => (
 )
 
 export default Markup
+

@@ -18,9 +18,9 @@ const TechStack = () => {
   }
 
   return (
-    <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-5 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
+    <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-4 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
       <section className="p-3 border-b border-zinc-200 mb-3">
-        <div className="grid grid-cols-[auto_1fr_auto] items-center mb-4 min-h-[32px]">
+        <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a
             href="/"
             className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900"
@@ -61,7 +61,7 @@ const TechStack = () => {
         </div>
         <h1 className="sm:hidden text-lg font-bold text-center mt-2">Tech Stack</h1>
         <p className="text-sm leading-6">
-          A focused overview of the tools and technologies I use across frontend, backend, mobile, and design workflows.
+          A overview of the tools and technologies I use across frontend, backend, mobile, and design workflows.
         </p>
       </section>
 
@@ -163,6 +163,7 @@ const TechStack = () => {
 }
 
 export default TechStack
+
 
 
 
