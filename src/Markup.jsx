@@ -2,7 +2,7 @@
 
 const Markup = () => (
   <>
-    <div className="max-w-[1800px] mx-auto mt-4 sm:mt-0 pt-4 sm:pt-5 px-4 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
+    <div className="max-w-4xl mx-auto px-4 py-8">
 
       <section id="heroCard" className="grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-3 sm:gap-4 mb-8 items-start">
         <div id="profileMedia" className="relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[136px] md:h-[136px] overflow-hidden">

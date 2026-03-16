@@ -18,7 +18,7 @@ const TechStack = () => {
   }
 
   return (
-    <div className="max-w-[1800px] mx-auto pt-4 sm:pt-5 px-4 sm:px-8 md:px-12 lg:px-44 xl:px-52 py-4 sm:py-6 md:py-10">
+    <div className="max-w-4xl mx-auto px-4 py-8">
       <section className="p-3 border-b border-zinc-200 mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a

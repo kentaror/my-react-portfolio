@@ -6,6 +6,11 @@ const certifications = [
   { title: 'CBT Web Design 1st Place', source: 'CBT Fest' },
   { title: 'Legacy Responsive Web Design', source: 'FreeCodeCamp' },
   { title: 'CodeCred', source: 'HTML Fundamentals' },
+  {
+    title: 'Python Essentials 1',
+    source: 'Cisco Certified Networking Academy',
+    link: 'https://www.credly.com/badges/97abe206-4958-471a-a26d-f29ce293297d/public_url',
+  },
 ]
 
 const Certifications = () => {
@@ -58,7 +63,13 @@ const Certifications = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {certifications.map((item) => (
             <article key={item.title} className="border-b border-zinc-200 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
-              <b className="text-sm">{item.title}</b>
+              {item.link ? (
+                <a className="text-sm font-semibold hover:underline" href={item.link} target="_blank" rel="noopener noreferrer">
+                  {item.title}
+                </a>
+              ) : (
+                <b className="text-sm">{item.title}</b>
+              )}
               <p className="text-xs mt-1">{item.source}</p>
             </article>
           ))}
