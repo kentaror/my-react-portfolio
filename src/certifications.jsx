@@ -2,14 +2,26 @@
 import './App.css'
 
 const certifications = [
-  { title: 'Lecturer', source: 'Techtalk' },
+  { title: 'Lecturer', 
+    source: 'Techtalk',
+    link: 'https://www.facebook.com/share/1BiaVr5RGA/' 
+  },
+
   { title: 'CBT Web Design 1st Place', source: 'CBT Fest' },
-  { title: 'Legacy Responsive Web Design', source: 'FreeCodeCamp' },
-  { title: 'CodeCred', source: 'HTML Fundamentals' },
+
+  { title: 'Legacy Responsive Web Design', 
+    source: 'FreeCodeCamp',
+    link: 'https://www.freecodecamp.org/certification/fcc2f5a3655-1aa6-412b-a926-40887cf8d2cd/responsive-web-design'},
+
+  { title: 'CodeCred', 
+    source: 'HTML Fundamentals',
+    link: 'https://www.codecred.dev/verify/77b5afcb-4900-4b67-aa98-9a9e0966b750' 
+  },
+
   {
     title: 'Python Essentials 1',
     source: 'Cisco Certified Networking Academy',
-    link: 'https://www.netacad.com/certificates/?issuanceId=4890499a-a76b-4c0c-b59e-0bbde9369d2f',
+    link: 'https://www.credly.com/badges/97abe206-4958-471a-a26d-f29ce293297d/public_url',
   },
 ]
 
@@ -61,18 +73,30 @@ const Certifications = () => {
 
       <section className="p-3 border-b border-zinc-200">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {certifications.map((item) => (
-            <article key={item.title} className="border-b border-zinc-200 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
-              {item.link ? (
-                <a className="text-sm font-semibold hover:underline" href={item.link} target="_blank" rel="noopener noreferrer">
-                  {item.title}
-                </a>
-              ) : (
+          {certifications.map((item) =>
+            item.link ? (
+              <a
+                key={item.title}
+                className="block no-underline hover:no-underline"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <article className="border-b border-zinc-200 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
+                  <b className="text-sm">{item.title}</b>
+                  <p className="text-xs mt-1">{item.source}</p>
+                </article>
+              </a>
+            ) : (
+              <article
+                key={item.title}
+                className="border-b border-zinc-200 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5"
+              >
                 <b className="text-sm">{item.title}</b>
-              )}
-              <p className="text-xs mt-1">{item.source}</p>
-            </article>
-          ))}
+                <p className="text-xs mt-1">{item.source}</p>
+              </article>
+            ),
+          )}
         </div>
       </section>
 
