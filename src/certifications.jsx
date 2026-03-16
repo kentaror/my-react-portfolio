@@ -9,7 +9,7 @@ const certifications = [
   {
     title: 'Python Essentials 1',
     source: 'Cisco Certified Networking Academy',
-    link: 'https://www.credly.com/badges/97abe206-4958-471a-a26d-f29ce293297d/public_url',
+    link: 'https://www.netacad.com/certificates/?issuanceId=4890499a-a76b-4c0c-b59e-0bbde9369d2f',
   },
 ]
 
