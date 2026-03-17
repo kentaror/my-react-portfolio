@@ -7,7 +7,7 @@ const certifications = [
     link: 'https://www.facebook.com/share/1BiaVr5RGA/' 
   },
 
-{ title: 'CBT Web Design 1st Place', 
+{ title: 'Web Design Champion', 
     source: 'CBT Fest',
     link: 'https://www.facebook.com/photo.php?fbid=669636665811880&set=a.136747215767497&type=3'
   },
@@ -23,8 +23,14 @@ const certifications = [
 
   {
     title: 'Python Essentials 1',
-    source: 'Cisco Certified Networking Academy',
+    source: 'Cisco Networking Academy',
     link: 'https://www.credly.com/badges/97abe206-4958-471a-a26d-f29ce293297d/public_url',
+  },
+
+  {
+    title: 'Best in Org Shirt Design',
+    source: 'DOIT Organizational Shirt',
+    link: 'https://www.facebook.com/ynotDOITnow/posts/we-are-thrilled-to-introduce-our-new-org-shirt-a-standout-design-chosen-as-the-w/622014330349147/',
   },
 ]
 

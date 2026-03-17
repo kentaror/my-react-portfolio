@@ -94,7 +94,7 @@ const Markup = () => (
                 href="/blog-post" target='_blank'
                 className="hero-action-btn order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
                 <span className="inline-flex items-center gap-0.5 sm:gap-2">
-                  <i className="fa-regular fa-newspaper"></i> Read my blog
+                  <i className="fa-regular fa-pen-to-square"></i> Read my blog
                 </span>
                 <i className="fa-solid fa-angle-right"></i>
               </a>
