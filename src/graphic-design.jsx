@@ -28,7 +28,7 @@ const GraphicDesign = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <section className="p-3 border-b border-zinc-200 mb-3">
-        <div className="grid grid-cols-[1fr_auto_1fr] items-center mb-2 min-h-[32px]">
+        <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a
             href="/"
             className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900"
@@ -69,7 +69,9 @@ const GraphicDesign = () => {
           </button>
         </div>
         <h1 className="sm:hidden text-lg font-bold text-center mt-2">Graphic Designs</h1>
-        <p className="text-sm leading-6">A collection of my visual and branding works focused on composition, typography, and impactful storytelling.</p>
+        <p className="text-sm leading-6">
+          A collection of my visual and branding works focused on composition, typography, and impactful storytelling.
+        </p>
       </section>
 
       <section className="p-3">

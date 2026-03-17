@@ -366,7 +366,7 @@ body {
 
     }
 
-    @media (max-width: 420px) {
+@media (max-width: 420px) {
       #heroCard {
         grid-template-columns: 160px minmax(0, 1fr);
         gap: 5px;
@@ -524,6 +524,34 @@ body {
 
 .dark-theme .text-zinc-900 {
   color: #f4f4f5 !important;
+}
+
+@media (min-width: 1024px) {
+  #heroCard .switch {
+    width: 46px;
+    height: 24px;
+  }
+
+  #heroCard .switch label::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  #heroCard .switch label::after {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    -webkit-mask-size: 12px 12px;
+    mask-size: 12px 12px;
+  }
+
+  #heroCard .switch input:checked + label::before {
+    transform: translateX(22px);
+  }
+
+  #heroCard .switch input:checked + label::after {
+    transform: translateX(22px);
+  }
 }
 
 .dark-theme .bg-black {

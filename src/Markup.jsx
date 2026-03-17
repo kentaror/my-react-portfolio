@@ -2,7 +2,7 @@
 
 const Markup = () => (
   <>
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-4xl mx-auto px-4 py-8 mt-2 sm:mt-3">
 
       <section id="heroCard" className="grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-3 sm:gap-4 mb-8 items-start">
         <div id="profileMedia" className="relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[136px] md:h-[136px] overflow-hidden">
@@ -19,15 +19,44 @@ const Markup = () => (
         <div className="min-h-[160px] sm:min-h-[180px] md:min-h-0 min-w-0 pr-1 sm:pr-0 pl-3 sm:pl-0 flex flex-col justify-between">
           <div className="min-w-0">
             <div className="flex items-start justify-between gap-2 mb-1 sm:mb-2">
-              <h1 className="text-[15px] sm:text-[17px] md:text-[22px] font-bold leading-tight flex items-center gap-1 sm:gap-2 min-w-0"><span className="sm:hidden">Ken Agbayani</span><span className="hidden sm:inline">Agbayani, Kristian Ken Lucero. CK</span>
+              <h1 className="text-[15px] sm:text-[17px] md:text-[23px] lg:text-[26px] font-bold leading-tight flex items-center gap-1 sm:gap-2 min-w-0"><span className="sm:hidden">Ken Agbayani</span><span className="hidden sm:inline">Agbayani, Kristian Ken Lucero</span>
                 <span className="relative inline-flex items-center justify-center w-[10px] h-[10px] sm:w-[14px] sm:h-[14px]" aria-label="Verified"><i className="fa-solid fa-certificate text-sky-500 text-[10px] sm:text-[14px]"></i><i className="fa-solid fa-check absolute text-white text-[5px] sm:text-[8px]"></i></span>
               </h1>
-              <div className="switch shrink-0 z-10" aria-label="Toggle dark mode">
+              <div className="switch shrink-0 z-10 hidden lg:block" aria-label="Toggle dark mode">
                 <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode" />
                 <label htmlFor="themeToggle"></label>
               </div>
             </div>
-            <p className="text-[10px] sm:text-sm md:text-[15px] mt-0 mb-1 sm:mb-2 whitespace-nowrap"><i className="fa-solid fa-location-dot mr-1"></i> Pangasinan, Philippines</p>
+            <p className="text-[10px] sm:text-sm md:text-[15px] mt-0 mb-1 sm:mb-2 whitespace-nowrap">
+              <svg
+                className="mr-1 inline-block align-[-2px]"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              Pangasinan, Philippines
+            </p>
+
+
             <p className="text-[8px] sm:text-sm md:text-base leading-tight max-w-full whitespace-nowrap">
               <div className="md:mb-4">
                 <span>
