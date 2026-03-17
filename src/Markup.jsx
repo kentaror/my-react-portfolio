@@ -29,7 +29,7 @@ const Markup = () => (
             </div>
             <p className="text-[10px] sm:text-sm md:text-[15px] mt-0 mb-1 sm:mb-2 whitespace-nowrap">
               <svg
-                className="mr-1 inline-block align-[-2px]"
+                className="mr-1 inline-block align-[-2px] w-3 h-3 sm:w-4 sm:h-4"
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ const Markup = () => (
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-3 mb-3 md:items-stretch">
+      <section className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
         <div className="flex flex-col gap-2 h-full">
           <article className="bg-white p-3 h-full flex flex-col justify-between border-b border-zinc-200">
             <div>
@@ -255,7 +255,7 @@ const Markup = () => (
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
         <article className="bg-white p-3 border-b border-zinc-200">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Tech Stack</h2><a href="/techstack" className="text-xs">View All <i
@@ -330,7 +330,7 @@ const Markup = () => (
         </article>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 md:items-stretch">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
         <article className="border-b border-zinc-200 bg-white p-3 ">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Attainments</h2><a href="/certifications" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
@@ -361,15 +361,13 @@ const Markup = () => (
         </article>
       </section>
 
-      <section className="border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-3">
-        <div className="bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5">
+      <section className="border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
+        <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">A member of</h3>
           <p className="text-xs leading-5">Analytics & Artificial Intelligence Association of the Philippines (AAP)</p>
           <p className="text-xs leading-5 mt-2.5">Philippine Software Industry Association</p>
         </div>
-        <div className="bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5">
+        <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">Social Links</h3>
           <a className="text-xs block transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
@@ -387,8 +385,7 @@ const Markup = () => (
             technologies.</p>
           <p className="text-xs mt-3 hover:underline">Get in touch <i className="fa-solid fa-angle-right"></i></p>
         </div>
-        <div className="contact-actions bg-zinc-50 p-2 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5">
+        <div className="contact-actions p-2">
           <div className="contact-action-group group">
             <h3 className="text-[11px] font-bold mb-0.5 inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-envelope"></i> Email</h3>
             <p className="text-[11px] leading-tight">

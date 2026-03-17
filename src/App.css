@@ -262,14 +262,14 @@ body {
 #portfolioGallery .js-gallery-frame {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 1 / 1;
 }
 
 #portfolioGallery .js-gallery-frame::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: opacity 200ms ease;
   pointer-events: none;
@@ -479,6 +479,11 @@ body {
 
       #galleryNextBtn {
         right: 2px;
+      }
+
+      #chatPanel #chatInput {
+        font-size: 16px;
+        line-height: 1.4;
       }
     }
 
