@@ -4,7 +4,7 @@ const Markup = () => (
   <>
     <div className="max-w-4xl mx-auto px-4 py-8 mt-2 sm:mt-3">
 
-      <section id="heroCard" className="grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-3 sm:gap-4 mb-8 items-start">
+      <section id="heroCard" className="fadeup-item fadeup-1 grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-3 sm:gap-4 mb-8 items-start">
         <div id="profileMedia" className="relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[136px] md:h-[136px] overflow-hidden">
           <img id="profileLight"
             className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-200" src="pfp2.png"
@@ -103,7 +103,7 @@ const Markup = () => (
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
+      <section className="fadeup-item fadeup-2 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
         <div className="flex flex-col gap-2 h-full">
           <article className="bg-white p-3 h-full flex flex-col justify-between border-b border-zinc-200">
             <div>
@@ -170,7 +170,7 @@ const Markup = () => (
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+      <section className="fadeup-item fadeup-3 grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
         <article className="bg-white p-3 border-b border-zinc-200">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Tech Stack</h2><a href="/techstack" className="text-xs">View All <i
@@ -245,7 +245,7 @@ const Markup = () => (
         </article>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
+      <section className="fadeup-item fadeup-4 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
         <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
           <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
             <div className="flex items-center justify-between mb-2">
@@ -333,7 +333,7 @@ const Markup = () => (
         </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
+      <section className="fadeup-item fadeup-5 grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
         <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Attainments</h2>
@@ -384,7 +384,7 @@ const Markup = () => (
         </article>
       </section>
 
-      <section className="border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
+      <section className="fadeup-item fadeup-6 border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">A member of</h3>
           <p className="text-xs leading-5">Analytics & Artificial Intelligence Association of the Philippines (AAP)</p>
@@ -457,7 +457,7 @@ const Markup = () => (
         </div>
       </section>
 
-      <section id="portfolioGallery" className="bg-white p-3 overflow-hidden">
+      <section id="portfolioGallery" className="fadeup-item fadeup-7 bg-white p-3 overflow-hidden">
         <h2 className="text-lg font-bold mb-2">Gallery</h2>
         <div className="relative z-[40]">
           <button id="galleryPrevBtn" type="button"

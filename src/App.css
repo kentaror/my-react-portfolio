@@ -830,6 +830,39 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
   }
 }
 
+.fadeup-item {
+  opacity: 0;
+  transform: translateY(48px);
+  animation: fade-up 700ms ease-out forwards;
+}
+
+.fadeup-1 { animation-delay: 0ms; }
+.fadeup-2 { animation-delay: 120ms; }
+.fadeup-3 { animation-delay: 240ms; }
+.fadeup-4 { animation-delay: 360ms; }
+.fadeup-5 { animation-delay: 480ms; }
+.fadeup-6 { animation-delay: 600ms; }
+.fadeup-7 { animation-delay: 720ms; }
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fadeup-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
 /* Keep Tailwind utility transitions for hover lift animations. */
 .transition-all {
