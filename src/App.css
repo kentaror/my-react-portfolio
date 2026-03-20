@@ -656,6 +656,27 @@ body {
   box-shadow: none !important;
 }
 
+.contact-outline {
+  border-color: #000000;
+  border-width: 0.1px;
+}
+
+.dark-theme .contact-outline {
+  border-color: #0f0f0f;
+}
+
+.contact-action-group:hover .contact-outline,
+.contact-action-group:active .contact-outline,
+.contact-action-group:focus-within .contact-outline {
+  border-color: transparent !important;
+}
+
+.social-link.contact-outline:hover,
+.social-link.contact-outline:active,
+.social-link.contact-outline:focus-visible {
+  border-color: transparent !important;
+}
+
 .experience-item {
   margin-left: -8px;
   padding: 6px 8px;

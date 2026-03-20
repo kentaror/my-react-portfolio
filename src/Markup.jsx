@@ -334,55 +334,55 @@ const Markup = () => (
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
-  <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
-    <div className="flex items-center justify-between mb-2">
-      <h2 className="text-lg font-bold">Attainments</h2>
-      <a href="/certifications" className="text-xs">
-        View All <i className="fa-solid fa-angle-right"></i>
-      </a>
-    </div>
+        <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-lg font-bold">Attainments</h2>
+            <a href="/certifications" className="text-xs">
+              View All <i className="fa-solid fa-angle-right"></i>
+            </a>
+          </div>
 
-    <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
-      <b className="text-[13px] ml-1">Lecturer</b>
-      <p className="text-[12px] ml-1">Techtalk</p>
-    </div>
+          <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
+            <b className="text-[13px] ml-1">Lecturer</b>
+            <p className="text-[12px] ml-1">Techtalk</p>
+          </div>
 
-    <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
-      <b className="text-[13px] ml-1">CBT Web Design 1st Place</b>
-      <p className="text-[12px] ml-1">CBT Fest</p>
-    </div>
+          <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
+            <b className="text-[13px] ml-1">CBT Web Design 1st Place</b>
+            <p className="text-[12px] ml-1">CBT Fest</p>
+          </div>
 
-    <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
-      <b className="text-[13px] ml-1">Legacy Responsive Web Design</b>
-      <p className="text-[12px] ml-1">FreeCodeCamp</p>
-    </div>
+          <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
+            <b className="text-[13px] ml-1">Legacy Responsive Web Design</b>
+            <p className="text-[12px] ml-1">FreeCodeCamp</p>
+          </div>
 
-    <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
-      <b className="text-[13px] ml-1">CodeCred</b>
-      <p className="text-[12px] ml-1">HTML Fundamentals</p>
-    </div>
-  </article>
+          <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
+            <b className="text-[13px] ml-1">CodeCred</b>
+            <p className="text-[12px] ml-1">HTML Fundamentals</p>
+          </div>
+        </article>
 
-  <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
-    <h2 className="text-lg font-bold mb-2">Recommendations</h2>
+        <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
+          <h2 className="text-lg font-bold mb-2">Recommendations</h2>
 
-    <p
-      id="recommendationQuote"
-      className="text-[13px] leading-6 mb-1 min-h-[96px] sm:min-h-[110px]"
-    ></p>
+          <p
+            id="recommendationQuote"
+            className="text-[13px] leading-6 mb-1 min-h-[96px] sm:min-h-[110px]"
+          ></p>
 
-    <div className="border-t border-zinc-200 pt-1 min-h-[48px] sm:min-h-[56px]">
-      <b id="recommendationName" className="text-[13px] font-semibold"></b>
-      <div id="recommendationRole" className="text-[12px]"></div>
-    </div>
+          <div className="border-t border-zinc-200 pt-1 min-h-[48px] sm:min-h-[56px]">
+            <b id="recommendationName" className="text-[13px] font-semibold"></b>
+            <div id="recommendationRole" className="text-[12px]"></div>
+          </div>
 
-    <div
-      id="recommendationDots"
-      className="flex gap-1.5 mt-auto pt-2"
-      aria-label="Recommendation indicators"
-    ></div>
-  </article>
-</section>
+          <div
+            id="recommendationDots"
+            className="flex gap-1.5 mt-auto pt-2"
+            aria-label="Recommendation indicators"
+          ></div>
+        </article>
+      </section>
 
       <section className="border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
         <div className="p-2.5">
@@ -391,58 +391,68 @@ const Markup = () => (
           <p className="text-xs leading-5 mt-2.5">Philippine Software Industry Association</p>
         </div>
         <div className="p-2.5">
-          <h3 className="text-sm font-bold mb-2">Social Links</h3>
-          <a className="social-link text-xs block transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
-              className="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a className="social-link text-xs block mt-2 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
-              className="fa-brands fa-github"></i> GitHub</a>
-          <a className="social-link text-xs block mt-2 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
-              className="fa-brands fa-instagram"></i> Instagram</a>
+          <h3 className="text-sm font-bold mb-1">Social Links</h3>
+          <a className="social-link contact-outline text-xs inline-flex items-center w-full transition-all duration-300 ease-out 
+               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
+              className="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
+          <a className="social-link contact-outline text-xs inline-flex items-center w-full transition-all duration-300 ease-out 
+               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
+              className="fa-brands fa-github mr-1"></i> GitHub</a>
+          <a className="social-link contact-outline text-xs inline-flex items-center w-full transition-all duration-300 ease-out 
+               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
+              className="fa-brands fa-instagram mr-1"></i> Instagram</a>
         </div>
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">Speaking</h3>
           <p className="text-xs leading-5">Available for freelance web development, custom UI/UX design, and digital branding solutions.</p>
-          <a className="text-xs mt-3 hover:underline inline-flex items-center gap-1"  href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch">Get in touch <i className="fa-solid fa-angle-right"></i></a>
-        
+          <a className="text-xs mt-3 hover:underline inline-flex items-center gap-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch">Get in touch <i className="fa-solid fa-angle-right"></i></a>
+
         </div>
         <div className="contact-actions p-2">
           <div className="contact-action-group group">
-            <h3 className="text-[11px] font-bold mb-0.5 inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-envelope mr-1"></i> Email</h3>
-            <p className="text-[11px] leading-tight">
-              <a className="contact-link text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
-                 shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <a
+              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h3 className="text-[11px] font-bold mb-0.5 inline-flex items-center leading-tight">
+                <i className="fa-regular fa-envelope mr-1"></i> Email
+              </h3>
+              <span className="text-[11px] leading-tight">
                 agbayanikristianken@gmail.com
-              </a>
-            </p>
+              </span>
+            </a>
           </div>
           <div className="contact-action-group group">
-            <p className="text-[11px] mt-1.5 font-semibold inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-calendar mr-1"></i> Let's Talk</p>
-            <p className="text-[11px] leading-tight">
-              <a className="contact-link text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
-                 shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
-                href="https://calendly.com/agbayanikristianken/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <a
+              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
+              href="https://calendly.com/agbayanikristianken/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-[11px] mt-0.5 font-semibold inline-flex items-center leading-tight">
+                <i className="fa-regular fa-calendar mr-1"></i> Let's Talk
+              </span>
+              <span className="text-[11px] leading-tight">
                 Schedule a Call <i className="fa-solid fa-angle-right"></i>
-              </a>
-            </p>
+              </span>
+            </a>
           </div>
           <div className="contact-action-group group">
-            <p className="text-[11px] mt-1.5 font-semibold inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-pen-to-square mr-1"></i> Blog</p>
-            <p className="text-[11px] leading-tight">
-              <a className="contact-link text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
-                 shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5" href="/blog-post" target="_blank" rel="noopener noreferrer">
+            <a
+              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
+              href="/blog-post"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-[11px] mt-0.5 font-semibold inline-flex items-center leading-tight">
+                <i className="fa-regular fa-pen-to-square mr-1"></i> Blog
+              </span>
+              <span className="text-[11px] leading-tight">
                 Read my blog <i className="fa-solid fa-angle-right"></i>
-              </a>
-            </p>
+              </span>
+            </a>
           </div>
         </div>
       </section>
