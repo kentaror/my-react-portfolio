@@ -2,7 +2,7 @@
 
 const Markup = () => (
   <>
-    <div className="max-w-4xl mx-auto px-4 py-8 mt-2 sm:mt-3">
+    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8 mt-2 sm:mt-3">
 
       <section id="heroCard" className="fadeup-item fadeup-1 grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-3 sm:gap-4 mb-8 items-start">
         <div id="profileMedia" className="relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[136px] md:h-[136px] overflow-hidden">

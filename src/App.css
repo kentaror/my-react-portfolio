@@ -844,6 +844,11 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
 .fadeup-6 { animation-delay: 600ms; }
 .fadeup-7 { animation-delay: 720ms; }
 
+.page-fadeup {
+  opacity: 1;
+  transform: none;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -855,8 +860,28 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
   }
 }
 
+@media (max-width: 640px) {
+  .fadeup-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .page-fadeup {
+    opacity: 0;
+    transform: translateY(48px);
+    animation: fade-up 700ms ease-out forwards;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fadeup-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .page-fadeup {
     animation: none;
     opacity: 1;
     transform: none;
