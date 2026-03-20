@@ -259,13 +259,18 @@ body {
       display: none;
     }
 
-#portfolioGallery .js-gallery-frame {
+#portfolioGallery .js-gallery-frame,
+.mini-gallery-frame {
   position: relative;
   overflow: hidden;
+}
+
+#portfolioGallery .js-gallery-frame {
   aspect-ratio: 1 / 1;
 }
 
-#portfolioGallery .js-gallery-frame::after {
+#portfolioGallery .js-gallery-frame::after,
+.mini-gallery-frame::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -278,7 +283,10 @@ body {
 
 #portfolioGallery .js-gallery-frame:hover::after,
 #portfolioGallery .js-gallery-frame:active::after,
-#portfolioGallery .js-gallery-frame:focus-within::after {
+#portfolioGallery .js-gallery-frame:focus-within::after,
+.mini-gallery-frame:hover::after,
+.mini-gallery-frame:active::after,
+.mini-gallery-frame:focus-within::after {
   opacity: 1;
 }
 
@@ -596,6 +604,57 @@ body {
 
 .dark-theme .hover\:bg-gray-200:hover {
   background: #262626 !important;
+}
+
+.dark-theme .hero-actions .hero-action-btn:hover,
+.dark-theme .hero-actions .hero-action-btn:active,
+.dark-theme .hero-actions .hero-action-btn:focus-visible {
+  box-shadow: none !important;
+}
+
+.hero-action-ghost {
+  background: transparent;
+}
+
+.hero-action-ghost:hover,
+.hero-action-ghost:active,
+.hero-action-ghost:focus-visible {
+  background: #ffffff;
+}
+
+.dark-theme .hero-actions .hero-action-hover-bg {
+  background: transparent !important;
+}
+
+.dark-theme .hero-actions .hero-action-hover-bg:hover,
+.dark-theme .hero-actions .hero-action-hover-bg:active,
+.dark-theme .hero-actions .hero-action-hover-bg:focus-visible {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+}
+
+.dark-theme .hero-action-ghost:hover,
+.dark-theme .hero-action-ghost:active,
+.dark-theme .hero-action-ghost:focus-visible {
+  background: #1f1f23;
+}
+
+.dark-theme .social-link:hover,
+.dark-theme .social-link:active,
+.dark-theme .social-link:focus-visible {
+  box-shadow: none !important;
+}
+
+.dark-theme .contact-link:hover,
+.dark-theme .contact-link:active,
+.dark-theme .contact-link:focus-visible {
+  box-shadow: none !important;
+}
+
+.dark-theme .contact-action-group:hover .contact-link,
+.dark-theme .contact-action-group:active .contact-link,
+.dark-theme .contact-action-group:focus-within .contact-link {
+  box-shadow: none !important;
 }
 
 .experience-item {

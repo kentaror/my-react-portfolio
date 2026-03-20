@@ -85,14 +85,14 @@ const Markup = () => (
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn hero-action-hover-bg order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-envelope"></i> Send Email</a>
               <button id="openResumeModalBtn"
-                className="hero-action-btn order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn hero-action-hover-bg order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-file-lines"></i> View Resume</button>
               <a
                 href="/blog-post" target='_blank'
-                className="hero-action-btn order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
+                className="hero-action-btn hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
                 <span className="inline-flex items-center gap-0.5 sm:gap-2">
                   <i className="fa-regular fa-pen-to-square"></i> Read my blog
                 </span>
@@ -116,68 +116,6 @@ const Markup = () => (
               <p className="text-sm leading-6">My goal is to grow as a full-stack developer while continuing to build products that solve real problems and create meaningful value for users. I value clear structure, reliable performance, and thoughtful user experience, and I approach each project with ownership, consistency, and long-term maintainability in mind, while continuously learning, improving my technical and problem-solving skills, and delivering impactful solutions.</p>
             </div>
           </article>
-          <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
-            <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
-              <div className="flex items-center justify-between mb-2">
-                <h2 className="text-lg font-bold">UI Designs</h2>
-                <a href="/ui-design" className="text-xs">View All <i
-                  className="fa-solid fa-angle-right"></i></a>
-              </div>
-              <div className="relative ml-2 pl-3 space-y-2.5">
-                <div className="relative group">
-                  <div className="grid grid-cols-5 gap-1.5">
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="UI design 1" loading="lazy" decoding="async" />
-                    </div>
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal2.JPG" alt="UI design 2" loading="lazy" decoding="async" />
-                    </div>
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal3.png" alt="UI design 3" loading="lazy" decoding="async" />
-                    </div>
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal4.png" alt="UI design 4" loading="lazy" decoding="async" />
-                    </div>
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal5.jpg" alt="UI design 5" loading="lazy" decoding="async" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
-              <div className="flex items-center justify-between mb-2">
-                <h2 className="text-lg font-bold">Graphic Designs</h2>
-                <a href="/graphic-design" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
-              </div>
-              <div className="relative ml-2 pl-3 space-y-2.5">
-                <div className="relative group">
-                  <div className="grid grid-cols-5 gap-1.5">
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="Graphic design Gold" loading="lazy" decoding="async" />
-
-                    </div>
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal2.JPG" alt="Graphic design Black" loading="lazy" decoding="async" />
-
-                    </div>
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal3.png" alt="Graphic design Red" loading="lazy" decoding="async" />
-
-                    </div>
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal4.png" alt="Graphic design Maroon" loading="lazy" decoding="async" />
-
-                    </div>
-                    <div className="overflow-hidden">
-                      <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal5.jpg" alt="Graphic design White Black" loading="lazy" decoding="async" />
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
         </div>
 
 
@@ -229,29 +167,6 @@ const Markup = () => (
               </div>
             </div>
           </aside>
-          <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
-            <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
-                 hover:-translate-y-0.5 border-b border-zinc-200">
-              <h2 className="text-lg font-bold mb-2">Education</h2>
-              <div className="relative ml-2 pl-3 space-y-2.5">
-                <div className="relative group">
-                  <p className="text-sm font-bold">Pangasinan State University</p>
-                  <p className="text-[13px]">Alaminos City Campus</p>
-                </div>
-              </div>
-            </article>
-
-            <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
-                 hover:-translate-y-0.5 border-b border-zinc-200">
-              <h2 className="text-lg font-bold mb-2">On-the-Job Training</h2>
-              <div className="relative ml-2 pl-3 space-y-2.5">
-                <div className="relative group">
-                  <p className="text-sm font-bold">Virtual Wonders Web Solutions</p>
-                  <p className="text-[13px]">Palamis, Alaminos City</p>
-                </div>
-              </div>
-            </article>
-          </div>
         </div>
       </section>
 
@@ -330,36 +245,144 @@ const Markup = () => (
         </article>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
-        <article className="border-b border-zinc-200 bg-white p-3 ">
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="text-lg font-bold">Attainments</h2><a href="/certifications" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
-          </div>
-          <div className="bg-zinc-100 p-2 mb-1.5 hover:bg-gray-200"><b className="text-sm">Lecturer</b>
-            <p className="text-xs">Techtalk</p>
-          </div>
-          <div className="bg-zinc-100 p-2 mb-1.5 hover:bg-gray-200"><b className="text-sm">CBT Web Design 1st Place</b>
-            <p className="text-xs">CBT Fest</p>
-          </div>
-          <div className="bg-zinc-100 p-2 mb-1.5 hover:bg-gray-200"><b className="text-sm">Legacy Responsive Web Design</b>
-            <p className="text-xs">FreeCodeCamp</p>
-          </div>
-          <div className="bg-zinc-100 p-2 mb-1.5 hover:bg-gray-200"><b className="text-sm">CodeCred</b>
-            <p className="text-xs">HTML Fundamentals</p>
-          </div>
+      <section className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
+        <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
+          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-lg font-bold">UI Designs</h2>
+              <a href="/ui-design" className="text-xs">View All <i
+                className="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div className="relative space-y-2.5">
+              <div className="relative group">
+                <div className="grid grid-cols-5 gap-1.5">
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="UI design 1" loading="lazy" decoding="async" />
+                  </div>
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal2.JPG" alt="UI design 2" loading="lazy" decoding="async" />
+                  </div>
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal3.png" alt="UI design 3" loading="lazy" decoding="async" />
+                  </div>
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal4.png" alt="UI design 4" loading="lazy" decoding="async" />
+                  </div>
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal5.jpg" alt="UI design 5" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-lg font-bold">Graphic Designs</h2>
+              <a href="/graphic-design" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div className="relative space-y-2.5">
+              <div className="relative group">
+                <div className="grid grid-cols-5 gap-1.5">
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="Graphic design Gold" loading="lazy" decoding="async" />
 
-        </article>
+                  </div>
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal2.JPG" alt="Graphic design Black" loading="lazy" decoding="async" />
 
-        <article className="border-b border-zinc-200 bg-white p-3 ">
-          <h2 className="text-lg font-bold mb-2">Recommendations</h2>
-          <p id="recommendationQuote" className="text-[13px] leading-6 mb-1 min-h-[96px] sm:min-h-[110px]"></p>
-          <div className="border-t border-zinc-200 min-h-[48px] sm:min-h-[56px]">
-            <b id="recommendationName" className="text-[13px] font-semibold"></b>
-            <div id="recommendationRole" className="text-[12px]"></div>
-          </div>
-          <div id="recommendationDots" className="flex gap-1.5 mt-auto pt-3" aria-label="Recommendation indicators"></div>
-        </article>
+                  </div>
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal3.png" alt="Graphic design Red" loading="lazy" decoding="async" />
+
+                  </div>
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal4.png" alt="Graphic design Maroon" loading="lazy" decoding="async" />
+
+                  </div>
+                  <div className="overflow-hidden">
+                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal5.jpg" alt="Graphic design White Black" loading="lazy" decoding="async" />
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
+          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5 border-b border-zinc-200">
+            <h2 className="text-lg font-bold mb-2">Education</h2>
+            <div className="relative ml-2 pl-3 space-y-2.5">
+              <div className="relative group">
+                <p className="text-sm font-bold">Pangasinan State University</p>
+                <p className="text-[13px]">Alaminos City Campus</p>
+              </div>
+            </div>
+          </article>
+
+          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
+               hover:-translate-y-0.5 border-b border-zinc-200">
+            <h2 className="text-lg font-bold mb-2">On-the-Job Training</h2>
+            <div className="relative ml-2 pl-3 space-y-2.5">
+              <div className="relative group">
+                <p className="text-sm font-bold">Virtual Wonders Web Solutions</p>
+                <p className="text-[13px]">Palamis, Alaminos City</p>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
+  <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
+    <div className="flex items-center justify-between mb-2">
+      <h2 className="text-lg font-bold">Attainments</h2>
+      <a href="/certifications" className="text-xs">
+        View All <i className="fa-solid fa-angle-right"></i>
+      </a>
+    </div>
+
+    <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
+      <b className="text-[13px] ml-1">Lecturer</b>
+      <p className="text-[12px] ml-1">Techtalk</p>
+    </div>
+
+    <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
+      <b className="text-[13px] ml-1">CBT Web Design 1st Place</b>
+      <p className="text-[12px] ml-1">CBT Fest</p>
+    </div>
+
+    <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
+      <b className="text-[13px] ml-1">Legacy Responsive Web Design</b>
+      <p className="text-[12px] ml-1">FreeCodeCamp</p>
+    </div>
+
+    <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
+      <b className="text-[13px] ml-1">CodeCred</b>
+      <p className="text-[12px] ml-1">HTML Fundamentals</p>
+    </div>
+  </article>
+
+  <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
+    <h2 className="text-lg font-bold mb-2">Recommendations</h2>
+
+    <p
+      id="recommendationQuote"
+      className="text-[13px] leading-6 mb-1 min-h-[96px] sm:min-h-[110px]"
+    ></p>
+
+    <div className="border-t border-zinc-200 pt-1 min-h-[48px] sm:min-h-[56px]">
+      <b id="recommendationName" className="text-[13px] font-semibold"></b>
+      <div id="recommendationRole" className="text-[12px]"></div>
+    </div>
+
+    <div
+      id="recommendationDots"
+      className="flex gap-1.5 mt-auto pt-2"
+      aria-label="Recommendation indicators"
+    ></div>
+  </article>
+</section>
 
       <section className="border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
         <div className="p-2.5">
@@ -369,27 +392,27 @@ const Markup = () => (
         </div>
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">Social Links</h3>
-          <a className="text-xs block transition-all duration-300 ease-out 
+          <a className="social-link text-xs block transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-linkedin"></i> LinkedIn</a>
-          <a className="text-xs block mt-2 transition-all duration-300 ease-out 
+          <a className="social-link text-xs block mt-2 transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-github"></i> GitHub</a>
-          <a className="text-xs block mt-2 transition-all duration-300 ease-out 
+          <a className="social-link text-xs block mt-2 transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border-b border-zinc-200 pb-3 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-instagram"></i> Instagram</a>
         </div>
-        <div className="bg-zinc-50 p-2.5">
+        <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">Speaking</h3>
-          <p className="text-xs leading-5">Available for speaking at events about software development and emerging
-            technologies.</p>
-          <p className="text-xs mt-3 hover:underline">Get in touch <i className="fa-solid fa-angle-right"></i></p>
+          <p className="text-xs leading-5">Available for freelance web development, custom UI/UX design, and digital branding solutions.</p>
+          <a className="text-xs mt-3 hover:underline inline-flex items-center gap-1"  href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch">Get in touch <i className="fa-solid fa-angle-right"></i></a>
+        
         </div>
         <div className="contact-actions p-2">
           <div className="contact-action-group group">
-            <h3 className="text-[11px] font-bold mb-0.5 inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-envelope"></i> Email</h3>
+            <h3 className="text-[11px] font-bold mb-0.5 inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-envelope mr-1"></i> Email</h3>
             <p className="text-[11px] leading-tight">
-              <a className="text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
+              <a className="contact-link text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
                  shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
@@ -400,9 +423,9 @@ const Markup = () => (
             </p>
           </div>
           <div className="contact-action-group group">
-            <p className="text-[11px] mt-1.5 font-semibold inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-calendar"></i> Let's Talk</p>
+            <p className="text-[11px] mt-1.5 font-semibold inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-calendar mr-1"></i> Let's Talk</p>
             <p className="text-[11px] leading-tight">
-              <a className="text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
+              <a className="contact-link text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
                  shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
                 href="https://calendly.com/agbayanikristianken/30min"
                 target="_blank"
@@ -413,9 +436,9 @@ const Markup = () => (
             </p>
           </div>
           <div className="contact-action-group group">
-            <p className="text-[11px] mt-1.5 font-semibold inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-file-lines"></i> Blog</p>
+            <p className="text-[11px] mt-1.5 font-semibold inline-block transition-all duration-300 ease-out group-hover:-translate-y-0.5 leading-tight"><i className="fa-regular fa-pen-to-square mr-1"></i> Blog</p>
             <p className="text-[11px] leading-tight">
-              <a className="text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
+              <a className="contact-link text-[11px] block transition-all duration-300 ease-out border-b border-zinc-200 pb-2
                  shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5" href="/blog-post" target="_blank" rel="noopener noreferrer">
                 Read my blog <i className="fa-solid fa-angle-right"></i>
               </a>

@@ -79,52 +79,61 @@ function App() {
       },
     ]
 
-    const recommendationQuoteEl = document.getElementById('recommendationQuote')
-    const recommendationNameEl = document.getElementById('recommendationName')
-    const recommendationRoleEl = document.getElementById('recommendationRole')
-    const recommendationDotsEl = document.getElementById('recommendationDots')
+    let recommendationsIntervalId
+    let recommendationRetryId
     let recommendationIndex = 0
 
-    function setRecommendationContent(index) {
-      const current = recommendations[index]
-      recommendationQuoteEl.textContent = `"${current.quote}"`
-      recommendationNameEl.textContent = current.name
-      recommendationRoleEl.textContent = current.role
-    }
+    function initRecommendations() {
+      const recommendationQuoteEl = document.getElementById('recommendationQuote')
+      const recommendationNameEl = document.getElementById('recommendationName')
+      const recommendationRoleEl = document.getElementById('recommendationRole')
+      const recommendationDotsEl = document.getElementById('recommendationDots')
 
-    function renderRecommendationDots(activeIndex) {
-      recommendationDotsEl.innerHTML = recommendations
-        .map((_, idx) => {
-          const stateClass = idx === activeIndex ? 'is-active' : ''
-          return `<span class="recommendation-dot ${stateClass}" aria-hidden="true"></span>`
-        })
-        .join('')
-    }
+      if (!recommendationQuoteEl || !recommendationNameEl || !recommendationRoleEl || !recommendationDotsEl) {
+        recommendationRetryId = window.setTimeout(initRecommendations, 200)
+        return
+      }
 
-    function animateRecommendationChange(nextIndex) {
-      const contentEls = [recommendationQuoteEl, recommendationNameEl, recommendationRoleEl]
-      contentEls.forEach((el) => el.classList.add('recommendation-content', 'is-transitioning'))
+      function setRecommendationContent(index) {
+        const current = recommendations[index]
+        recommendationQuoteEl.textContent = `"${current.quote}"`
+        recommendationNameEl.textContent = current.name
+        recommendationRoleEl.textContent = current.role
+      }
 
-      setTimeout(() => {
-        setRecommendationContent(nextIndex)
-        contentEls.forEach((el) => el.classList.remove('is-transitioning'))
-        renderRecommendationDots(nextIndex)
-      }, 430)
-    }
+      function renderRecommendationDots(activeIndex) {
+        recommendationDotsEl.innerHTML = recommendations
+          .map((_, idx) => {
+            const stateClass = idx === activeIndex ? 'is-active' : ''
+            return `<span class="recommendation-dot ${stateClass}" aria-hidden="true"></span>`
+          })
+          .join('')
+      }
 
-    let recommendationsIntervalId
-    if (recommendationQuoteEl && recommendationNameEl && recommendationRoleEl && recommendationDotsEl) {
+      function animateRecommendationChange(nextIndex) {
+        const contentEls = [recommendationQuoteEl, recommendationNameEl, recommendationRoleEl]
+        contentEls.forEach((el) => el.classList.add('recommendation-content', 'is-transitioning'))
+
+        setTimeout(() => {
+          setRecommendationContent(nextIndex)
+          contentEls.forEach((el) => el.classList.remove('is-transitioning'))
+          renderRecommendationDots(nextIndex)
+        }, 430)
+      }
+
       ;[recommendationQuoteEl, recommendationNameEl, recommendationRoleEl].forEach((el) =>
         el.classList.add('recommendation-content'),
       )
       setRecommendationContent(recommendationIndex)
       renderRecommendationDots(recommendationIndex)
 
-      recommendationsIntervalId = setInterval(() => {
+      recommendationsIntervalId = window.setInterval(() => {
         recommendationIndex = (recommendationIndex + 1) % recommendations.length
         animateRecommendationChange(recommendationIndex)
       }, 4500)
     }
+
+    initRecommendations()
 
     const galleryImages = Array.from(document.querySelectorAll('.js-gallery-image'))
     const gallerySection = document.getElementById('portfolioGallery')
@@ -547,6 +556,9 @@ function App() {
       document.removeEventListener('click', onDocumentClick)
       if (recommendationsIntervalId) {
         clearInterval(recommendationsIntervalId)
+      }
+      if (recommendationRetryId) {
+        clearTimeout(recommendationRetryId)
       }
       if (lightbox) {
         lightbox.removeEventListener('click', onLightboxBackdropClick)
