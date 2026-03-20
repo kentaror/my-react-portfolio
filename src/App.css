@@ -629,8 +629,7 @@ body {
 .dark-theme .hero-actions .hero-action-hover-bg:hover,
 .dark-theme .hero-actions .hero-action-hover-bg:active,
 .dark-theme .hero-actions .hero-action-hover-bg:focus-visible {
-  background: #ffffff !important;
-  color: #0a0a0a !important;
+  background: #1f1f23 !important;
 }
 
 .dark-theme .hero-action-ghost:hover,
