@@ -34,8 +34,16 @@ const Chatbot = () => (
       </div>
     </div>
 
-    <button id="chatLauncher" className="fixed right-3 bottom-3 h-11 w-[170px] px-4 border border-[#0a0a0a] bg-[#0a0a0a] text-white inline-flex items-center justify-center gap-2 text-sm font-semibold z-[60] !rounded-none" type="button"><img src="message-svgrepo-com.png" alt="Chat icon"
-        className="chat-launcher-icon" /> Chat with Ken</button>
+    <button id="chatLauncher" className="fixed right-3 bottom-3 h-11 w-[170px] px-4 border border-[#0a0a0a] bg-[#0a0a0a] text-white inline-flex items-center justify-center gap-2 text-sm font-semibold z-[60] !rounded-none" type="button">
+      <svg className="chat-launcher-icon" width="24" height="24" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M12 14C12 10.6863 14.6863 8 18 8H46C49.3137 8 52 10.6863 52 14V34C52 37.3137 49.3137 40 46 40H30L20 48V40H18C14.6863 40 12 37.3137 12 34V14Z"
+          stroke="currentColor" strokeWidth="5" strokeLinejoin="round" />
+        <circle cx="24" cy="24" r="2.5" fill="currentColor" />
+        <circle cx="32" cy="24" r="2.5" fill="currentColor" />
+        <circle cx="40" cy="24" r="2.5" fill="currentColor" />
+      </svg>
+      Chat with Ken
+    </button>
   </>
 )
 

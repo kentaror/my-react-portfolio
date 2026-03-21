@@ -33,7 +33,7 @@ const Markup = () => (
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
-                fill="none"
+                fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
                 focusable="false"
@@ -57,7 +57,7 @@ const Markup = () => (
             </p>
 
 
-            <p className="text-[8px] sm:text-sm md:text-base leading-tight max-w-full whitespace-nowrap">
+            <p className="hero-role text-[8px] sm:text-sm md:text-base leading-tight max-w-full whitespace-nowrap">
               <div className="md:mb-4">
                 <span>
                   GA <span className='text-gray-400'>\</span> Frontend Dev
@@ -65,6 +65,8 @@ const Markup = () => (
                 </span>
               </div>
             </p>
+
+            
           </div>
 
           <div className="grid grid-cols-1 gap-1.5 mt-1 sm:mt-2">
@@ -127,7 +129,6 @@ const Markup = () => (
               <span className="experience-line absolute left-[-1px] top-[10px] bottom-[10px] w-px bg-zinc-200" aria-hidden="true"></span>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker is-current absolute -left-[17px] top-1.5 w-2 h-2 bg-black border border-black"></span>
-                <p className="text-sm font-bold">Full Subli Graphic Artist</p>
                 <p className="text-sm font-bold">Full Subli Graphic Artist</p>
                 <p className="text-[13px]">Ryzn Clothing <span className="float-right text-[10px]">2026</span></p>
               </div>
