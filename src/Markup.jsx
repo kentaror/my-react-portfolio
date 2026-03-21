@@ -92,7 +92,7 @@ const Markup = () => (
                   className="fa-regular fa-file-lines"></i> View Resume</button>
               <a
                 href="/blog-post" target='_blank'
-                className="hero-action-btn hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
+                className="hero-action-btn hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
                 <span className="inline-flex items-center gap-0.5 sm:gap-2">
                   <i className="fa-regular fa-pen-to-square"></i> Read my blog
                 </span>
@@ -127,7 +127,8 @@ const Markup = () => (
               <span className="experience-line absolute left-[-1px] top-[10px] bottom-[10px] w-px bg-zinc-200" aria-hidden="true"></span>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker is-current absolute -left-[17px] top-1.5 w-2 h-2 bg-black border border-black"></span>
-                <p className="text-sm font-bold">Senior Graphic Full Subli Artist</p>
+                <p className="text-sm font-bold">Full Subli Graphic Artist</p>
+                <p className="text-sm font-bold">Full Subli Graphic Artist</p>
                 <p className="text-[13px]">Ryzn Clothing <span className="float-right text-[10px]">2026</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
@@ -411,7 +412,7 @@ const Markup = () => (
 
         </div>
         <div className="contact-actions p-2">
-           <h3 className="text-sm font-bold mb-1">Insights & Inquiries </h3>
+          <h3 className="text-sm font-bold mb-1">Insights & Inquiries </h3>
           <div className="contact-action-group group">
             <a
               className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
@@ -467,7 +468,7 @@ const Markup = () => (
             className="grid absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-9 sm:w-9 sm:h-10 border border-zinc-200 bg-zinc-50 place-items-center text-sm text-zinc-500 z-[50] pointer-events-auto cursor-pointer"><i
               className="fa-solid fa-angle-left"></i></button>
           <div id="galleryViewport" className="overflow-hidden relative z-[1]">
-            <div id="galleryTrack" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1.5">
+            <div id="galleryTrack" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
               <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
                 <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
                   src="/gal1.jpeg"

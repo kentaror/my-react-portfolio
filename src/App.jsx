@@ -213,13 +213,17 @@ function App() {
     }
 
     let activeGallerySlideIndex = 0
-    const isMobileGalleryView = () => window.innerWidth < 768
+    const getGalleryColumns = () => {
+      if (window.innerWidth < 768) return 1
+      if (window.innerWidth < 1024) return 4
+      return 0
+    }
 
-    function updateGalleryNav(isMobile) {
+    function updateGalleryNav(columns) {
       if (!galleryPrevBtn || !galleryNextBtn) {
         return
       }
-      if (!isMobile) {
+      if (!columns) {
         galleryPrevBtn.disabled = false
         galleryNextBtn.disabled = false
         galleryPrevBtn.setAttribute('aria-disabled', 'false')
@@ -228,7 +232,7 @@ function App() {
         galleryNextBtn.classList.remove('opacity-40', 'pointer-events-none')
         return
       }
-      const maxIndex = Math.max(galleryDisplayFrames.length - 1, 0)
+      const maxIndex = Math.max(galleryDisplayFrames.length - columns, 0)
       const atStart = activeGallerySlideIndex <= 0
       const atEnd = activeGallerySlideIndex >= maxIndex
       galleryPrevBtn.disabled = atStart
@@ -245,13 +249,16 @@ function App() {
       if (!galleryDisplayFrames.length) {
         return
       }
-      const isMobile = isMobileGalleryView()
+      const columns = getGalleryColumns()
       galleryDisplayFrames.forEach((frame) => frame.classList.remove('hidden'))
       if (!galleryTrack) {
         return
       }
-      if (isMobile) {
-        galleryTrack.style.transform = `translate3d(-${activeGallerySlideIndex * 100}%, 0, 0)`
+      if (columns) {
+        const step = 100 / columns
+        const maxIndex = Math.max(galleryDisplayFrames.length - columns, 0)
+        activeGallerySlideIndex = Math.min(Math.max(activeGallerySlideIndex, 0), maxIndex)
+        galleryTrack.style.transform = `translate3d(-${activeGallerySlideIndex * step}%, 0, 0)`
         galleryTrack.style.transition = shouldAnimate
           ? 'transform 520ms cubic-bezier(0.22, 1, 0.36, 1)'
           : 'none'
@@ -259,14 +266,15 @@ function App() {
         galleryTrack.style.transform = ''
         galleryTrack.style.transition = ''
       }
-      updateGalleryNav(isMobile)
+      updateGalleryNav(columns)
     }
 
     function moveGallerySlides(direction) {
       if (!galleryDisplayFrames.length) {
         return
       }
-      const maxIndex = Math.max(galleryDisplayFrames.length - 1, 0)
+      const columns = getGalleryColumns()
+      const maxIndex = Math.max(galleryDisplayFrames.length - (columns || 1), 0)
       const nextIndex = activeGallerySlideIndex + direction
       activeGallerySlideIndex = Math.min(Math.max(nextIndex, 0), maxIndex)
       renderGallerySlides(true)
