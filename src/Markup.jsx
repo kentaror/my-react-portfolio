@@ -414,7 +414,7 @@ const Markup = () => (
            <h3 className="text-sm font-bold mb-1">Insights & Inquiries </h3>
           <div className="contact-action-group group">
             <a
-              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
+              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
               href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
               target="_blank"
               rel="noopener noreferrer"
@@ -429,7 +429,7 @@ const Markup = () => (
           </div>
           <div className="contact-action-group group">
             <a
-              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
+              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
               href="https://calendly.com/agbayanikristianken/30min"
               target="_blank"
               rel="noopener noreferrer"
@@ -444,7 +444,7 @@ const Markup = () => (
           </div>
           <div className="contact-action-group group">
             <a
-              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"
+              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
               href="/blog-post"
               target="_blank"
               rel="noopener noreferrer"
