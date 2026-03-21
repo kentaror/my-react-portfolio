@@ -61,7 +61,7 @@ const Markup = () => (
               <div className="md:mb-4">
                 <span>
                   GA <span className='text-gray-400'>\</span> Frontend Dev
-                  <span className='text-gray-400'>\</span> Aspiring Fullstack Dev
+                  <span className='text-gray-400'> \</span> Aspiring Fullstack Dev
                 </span>
               </div>
             </p>
@@ -387,28 +387,31 @@ const Markup = () => (
       <section className="fadeup-item fadeup-6 border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">A member of</h3>
-          <p className="text-xs leading-5">Analytics & Artificial Intelligence Association of the Philippines (AAP)</p>
-          <p className="text-xs leading-5 mt-2.5">Philippine Software Industry Association</p>
+          <p className="text-[11.5px] leading-5">Analytics & Artificial Intelligence Association of the Philippines (AAP)</p>
+          <p className="text-[11.5px] leading-5 mt-2.5">Philippine Software Industry Association</p>
         </div>
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-1">Social Links</h3>
-          <a className="social-link contact-outline text-xs inline-flex items-center w-full transition-all duration-300 ease-out 
+          <a className="social-link contact-outline text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
-          <a className="social-link contact-outline text-xs inline-flex items-center w-full transition-all duration-300 ease-out 
+          <a className="social-link contact-outline text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-github mr-1"></i> GitHub</a>
-          <a className="social-link contact-outline text-xs inline-flex items-center w-full transition-all duration-300 ease-out 
+          <a className="social-link contact-outline text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-instagram mr-1"></i> Instagram</a>
         </div>
         <div className="p-2.5">
-          <h3 className="text-sm font-bold mb-2">Speaking</h3>
-          <p className="text-xs leading-5">Available for freelance web development, custom UI/UX design, and digital branding solutions.</p>
-          <a className="text-xs mt-3 hover:underline inline-flex items-center gap-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch">Get in touch <i className="fa-solid fa-angle-right"></i></a>
+          <h3 className="text-sm font-bold mb-2">Work With Me</h3>
+          <div className="contact-outline border px-2 py-2.5 w-full transition-all duration-300 ease-out hover:border-transparent">
+            <p className="text-[11.5px] leading-5">Available for freelance web development, custom UI/UX design, and digital branding solutions.</p>
+            <a className="text-[11.5px] mt-3 hover:underline inline-flex items-center gap-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch">Get in touch <i className="fa-solid fa-angle-right"></i></a>
+          </div>
 
         </div>
         <div className="contact-actions p-2">
+           <h3 className="text-sm font-bold mb-1">Insights & Inquiries </h3>
           <div className="contact-action-group group">
             <a
               className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] group-hover:border-transparent group-hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] group-hover:-translate-y-0.5"

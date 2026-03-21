@@ -18,8 +18,8 @@ const TechStack = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <section className="p-3 border-b border-zinc-200 mb-3">
+    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
+      <section className="fadeup-item fadeup-1 p-3 border-b border-zinc-200 mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a
             href="/"
@@ -65,7 +65,7 @@ const TechStack = () => {
         </p>
       </section>
 
-      <section className="p-3">
+      <section className="fadeup-item fadeup-2 p-3">
         <div className="mb-4">
           <h2 className="text-[14px] font-semibold mb-2">Frontend</h2>
           <div className="flex flex-wrap gap-3 text-sm">
@@ -155,7 +155,7 @@ const TechStack = () => {
         </div>
       </section>
 
-      <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
+      <footer className="fadeup-item fadeup-3 mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
         © 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
       </footer>
     </div>

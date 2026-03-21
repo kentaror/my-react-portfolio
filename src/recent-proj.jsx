@@ -41,8 +41,8 @@ const RecentProj = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <section className="p-3 border-b border-zinc-200 mb-3">
+    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
+      <section className="fadeup-item fadeup-1 p-3 border-b border-zinc-200 mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a
             href="/"
@@ -89,10 +89,10 @@ const RecentProj = () => {
         </p>
       </section>
 
-      <section className="p-3">
+      <section className="fadeup-item fadeup-2 p-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {projects.map((project) => (
-            <article key={project.title} className="border-b border-zinc-200 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
+            <article key={project.title} className="border-b border-zinc-200 bg-zinc-100 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
               <h4 className="text-sm font-semibold mb-1">{project.title}</h4>
               <p className="text-xs mb-1.5">{project.description}</p>
               <code className="text-xs bg-zinc-200 px-1.5 py-0.5">{project.site}</code>
@@ -101,8 +101,8 @@ const RecentProj = () => {
         </div>
       </section>
 
-      <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
-        Â© 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
+      <footer className="fadeup-item fadeup-3 mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
+        © 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
       </footer>
     </div>
   )

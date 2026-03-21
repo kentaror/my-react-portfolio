@@ -671,6 +671,12 @@ body {
   border-color: transparent !important;
 }
 
+.contact-outline:hover,
+.contact-outline:active,
+.contact-outline:focus-visible {
+  border-color: transparent !important;
+}
+
 .social-link.contact-outline:hover,
 .social-link.contact-outline:active,
 .social-link.contact-outline:focus-visible {
