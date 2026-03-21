@@ -354,12 +354,15 @@ function App() {
       }
     }
 
+    const shouldAutofocusChat = () =>
+      !window.matchMedia('(max-width: 640px), (hover: none) and (pointer: coarse)').matches
+
     function setChatOpen(isOpen) {
       chatPanel.classList.toggle('hidden', !isOpen)
       chatPanel.classList.toggle('flex', isOpen)
       chatPanel.setAttribute('aria-hidden', isOpen ? 'false' : 'true')
       chatLauncher.classList.toggle('hidden', isOpen)
-      if (isOpen) {
+      if (isOpen && shouldAutofocusChat()) {
         chatInput.focus()
       }
     }

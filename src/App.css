@@ -683,6 +683,18 @@ body {
   border-color: transparent !important;
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .contact-outline {
+    border-width: 0.2px;
+  }
+
+  .contact-outline:active {
+    border-color: transparent !important;
+    transform: translateY(-0.125rem);
+    box-shadow: 0 8px 14px -10px rgba(113, 113, 122, 0.62);
+  }
+}
+
 .experience-item {
   margin-left: -8px;
   padding: 6px 8px;
