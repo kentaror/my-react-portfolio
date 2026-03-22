@@ -146,12 +146,18 @@ body.chat-open #chatPanel {
   #chatPanel {
     left: 16px;
     right: 16px;
-    bottom: 16px;
+    bottom: 80px;
     top: auto;
-    width: calc(100vw - 32px);
+    width: auto;
     height: 70vh;
     max-height: 70vh;
     margin-inline: auto;
+  }
+
+  #chatLauncher {
+    right: 16px;
+    bottom: 20px;
+    width: min(170px, calc(100vw - 32px));
   }
 }
 
@@ -387,21 +393,24 @@ body.chat-open #chatPanel {
         transform: translateX(16px);
       }
 
-      #chatPanel {
-        left: auto;
-        right: 8px;
-        width: min(320px, calc(100vw - 16px));
-        height: min(500px, calc(100vh - 80px));
-        max-height: calc(100vh - 80px);
-      }
+    #chatPanel {
+      left: 16px;
+      right: 16px;
+      width: auto;
+      height: min(500px, calc(100vh - 80px));
+      max-height: calc(100vh - 80px);
+      margin-inline: auto;
+      transform-origin: bottom center;
+    }
 
-      #chatLauncher {
-        left: auto;
-        right: 8px;
-        width: auto;
-        max-width: calc(100vw - 16px);
-        justify-content: center;
-      }
+    #chatLauncher {
+      left: auto;
+      right: 16px;
+      bottom: 20px;
+      width: auto;
+      max-width: calc(100vw - 32px);
+      justify-content: center;
+    }
 
       #galleryViewport {
         width: min(100%, 420px);
@@ -512,19 +521,22 @@ body.chat-open #chatPanel {
   }
 
   #chatPanel {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    max-height: 100vh;
+    left: 16px;
+    right: 16px;
+    top: auto;
+    bottom: 82px;
+    width: auto;
+    height: min(540px, calc(100vh - 108px));
+    max-height: calc(100vh - 108px);
+    margin-inline: auto;
     border-radius: 0;
+    transform-origin: bottom center;
   }
 
   #chatLauncher {
-    right: 8px;
-    width: min(170px, calc(100vw - 16px));
+    right: 16px;
+    bottom: 20px;
+    width: min(170px, calc(100vw - 32px));
   }
 }
 
@@ -600,7 +612,9 @@ body.chat-open #chatPanel {
       }
 
       #chatPanel {
-        width: min(300px, calc(100vw - 16px));
+        left: 16px;
+        right: 16px;
+        width: auto;
       }
 
       #chatLauncher {
@@ -925,7 +939,7 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
 
 
 .dark-theme #chatPanel {
-  background: #121212 !important;
+  background: #000000 !important;
   border-color: #2f2f2f !important;
 }
 
@@ -933,6 +947,14 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
 .dark-theme #chatPanel .border-t,
 .dark-theme #chatPanel [class*="border-[#"] {
   border-color: #2f2f2f !important;
+}
+
+.dark-theme #chatPanel .border-b {
+  border-bottom-width: 1px !important;
+}
+
+.dark-theme #chatPanel .border-t {
+  border-top-width: 1px !important;
 }
 
 .dark-theme #chatPanel,
