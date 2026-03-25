@@ -33,15 +33,15 @@ const certifications = [
   },
 
   {
-    title: 'CodeCred',
-    source: 'HTML Fundamentals',
+    title: 'HTML Fundamentals',
+    source: 'CodeCred',
     link: 'https://www.codecred.dev/verify/70b4de9d-7307-4b74-8506-c3a03d0ed394'
   },
 
   {
     title: 'Python Essentials 1',
     source: 'Cisco Networking Academy',
-    link: 'https://www.credly.com/badges/97abe206-4958-471a-a26d-f29ce293297d/public_url',
+    link: 'https://drive.google.com/file/d/1botoWB7nQhxgGv7h4ae0npZDlDvlrZL4/view?usp=drive_link',
   },
 
   {

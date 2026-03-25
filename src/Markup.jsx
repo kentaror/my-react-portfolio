@@ -87,14 +87,14 @@ const Markup = () => (
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn hero-action-hover-bg order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn hero-action-hover-bg order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-envelope"></i> Send Email</a>
               <button id="openResumeModalBtn"
-                className="hero-action-btn hero-action-hover-bg order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn hero-action-hover-bg order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-file-lines"></i> View Resume</button>
               <a
                 href="/blog-post" target='_blank'
-                className="hero-action-btn hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 border-b border-zinc-200 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
+                className="hero-action-btn hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
                 <span className="inline-flex items-center gap-0.5 sm:gap-2">
                   <i className="fa-regular fa-pen-to-square"></i> Read my blog
                 </span>
@@ -107,7 +107,7 @@ const Markup = () => (
 
       <section className="fadeup-item fadeup-2 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
         <div className="flex flex-col gap-2 h-full">
-          <article className="bg-white p-3 h-full flex flex-col justify-between border-b border-zinc-200">
+          <article className="bg-white p-3 h-full flex flex-col justify-between">
             <div>
               <h2 className="text-lg font-bold mb-2">About</h2>
               <p className="text-sm leading-6 mb-3">I am a Bachelor of Science in Information Technology student from
@@ -123,7 +123,7 @@ const Markup = () => (
 
         <div className="flex flex-col gap-2 h-full">
           <aside className="bg-white p-3 transition-all duration-300 ease-out 
-                 hover:-translate-y-0.5 border-b border-zinc-200">
+                 hover:-translate-y-0.5 ">
             <h2 className="text-lg font-bold mb-2">Experience</h2>
             <div id="experienceTimeline" className="relative ml-2 pl-3 space-y-2.5">
               <span className="experience-line absolute left-[-1px] top-[10px] bottom-[10px] w-px bg-zinc-200" aria-hidden="true"></span>
@@ -173,7 +173,7 @@ const Markup = () => (
       </section>
 
       <section className="fadeup-item fadeup-3 grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
-        <article className="bg-white p-3 border-b border-zinc-200">
+        <article className="bg-white p-3 ">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Tech Stack</h2><a href="/techstack" className="text-xs">View All <i
               className="fa-solid fa-angle-right"></i></a>
@@ -213,31 +213,31 @@ const Markup = () => (
           </div>
         </article>
 
-        <article className="bg-white p-3 border-b border-zinc-200">
+        <article className="bg-white p-3">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Recent Projects</h2><a href="/recent-projects" className="text-xs">View All <i
               className="fa-solid fa-angle-right"></i></a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <div className="border-b border-zinc-200 bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+            <div className=" bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
               <h4 className="text-sm font-semibold mb-1">Cabanas</h4>
               <p className="text-xs mb-1.5">Hotel and boat booking for cabanas</p><code
                 className="text-xs bg-zinc-200 px-1.5 py-0.5">cabanas.fun</code>
             </div>
-            <div className="border-b border-zinc-200 bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+            <div className=" bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
               <h4 className="text-sm font-semibold mb-1">sm404</h4>
               <p className="text-xs mb-1.5">Online coding bootcamp</p><code
                 className="text-xs bg-zinc-200 px-1.5 py-0.5">sm-404.com</code>
             </div>
-            <div className="border-b border-zinc-200 bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+            <div className=" bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
               <h4 className="text-sm font-bold mb-1">DIIN.PH</h4>
               <p className="text-xs mb-1.5">AI-powered wardrobe assistant</p><code
                 className="text-xs bg-zinc-200 px-1.5 py-0.5">diin.ph</code>
             </div>
-            <div className="border-b border-zinc-200 bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+            <div className=" bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
               <h4 className="text-sm font-bold mb-1">DYNAMIS Workout Tracker</h4>
               <p className="text-xs mb-1.5">AI-powered workout tracker</p><code
@@ -249,7 +249,7 @@ const Markup = () => (
 
       <section className="fadeup-item fadeup-4 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
         <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
-          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
+          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 ">
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-lg font-bold">UI Designs</h2>
               <a href="/ui-design" className="text-xs">View All <i
@@ -277,7 +277,7 @@ const Markup = () => (
               </div>
             </div>
           </article>
-          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 border-b border-zinc-200">
+          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 ">
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-lg font-bold">Graphic Designs</h2>
               <a href="/graphic-design" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
@@ -312,7 +312,7 @@ const Markup = () => (
         </div>
         <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
           <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border-b border-zinc-200">
+               hover:-translate-y-0.5 ">
             <h2 className="text-lg font-bold mb-2">Education</h2>
             <div className="relative ml-2 pl-3 space-y-2.5">
               <div className="relative group">
@@ -323,7 +323,7 @@ const Markup = () => (
           </article>
 
           <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border-b border-zinc-200">
+               hover:-translate-y-0.5">
             <h2 className="text-lg font-bold mb-2">On-the-Job Training</h2>
             <div className="relative ml-2 pl-3 space-y-2.5">
               <div className="relative group">
@@ -336,9 +336,9 @@ const Markup = () => (
       </section>
 
       <section className="fadeup-item fadeup-5 grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
-        <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
+        <article className=" bg-white p-2 md:p-2.5">
           <div className="flex items-center justify-between mb-2">
-            <h2 className="text-lg font-bold">Certifications and Achievements</h2>
+            <h2 className="text-lg font-bold">Certifications</h2>
             <a href="/certifications" className="text-xs">
               View All <i className="fa-solid fa-angle-right"></i>
             </a>
@@ -365,7 +365,7 @@ const Markup = () => (
           </div>
         </article>
 
-        <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
+        <article className=" bg-white p-2 md:p-2.5">
           <h2 className="text-lg font-bold mb-2">Recommendations</h2>
 
           <p
@@ -386,7 +386,7 @@ const Markup = () => (
         </article>
       </section>
 
-      <section className="fadeup-item fadeup-6 border-b border-zinc-200 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
+      <section className="fadeup-item fadeup-6 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">A member of</h3>
           <p className="text-[11.5px] leading-5">Analytics & Artificial Intelligence Association of the Philippines (AAP)</p>
