@@ -2,23 +2,40 @@
 import './App.css'
 
 const certifications = [
-  { title: 'Lecturer', 
-    source: 'Techtalk',
-    link: 'https://www.facebook.com/share/1BiaVr5RGA/' 
+  {
+    title: 'Best in Org Shirt Design 2024',
+    source: 'DOIT Organizational Shirt',
+    link: 'https://www.facebook.com/ynotDOITnow/posts/we-are-thrilled-to-introduce-our-new-org-shirt-a-standout-design-chosen-as-the-w/622014330349147/',
   },
 
-{ title: 'Web Design Champion', 
+  {
+    title: 'Deans Lister',
+    source: '3rd Year, 1st Semester',
+    link: 'https://www.facebook.com/share/1BiaVr5RGA/'
+  },
+
+  {
+    title: 'Lecturer',
+    source: 'DOIT: Techtalk',
+    link: 'https://www.facebook.com/share/1BiaVr5RGA/'
+  },
+
+  {
+    title: 'Web Design Champion 2025',
     source: 'CBT Fest',
     link: 'https://www.facebook.com/photo.php?fbid=669636665811880&set=a.136747215767497&type=3'
   },
 
-  { title: 'Legacy Responsive Web Design', 
+  {
+    title: 'Legacy Responsive Web Design',
     source: 'FreeCodeCamp',
-    link: 'https://www.freecodecamp.org/certification/fcc2f5a3655-1aa6-412b-a926-40887cf8d2cd/responsive-web-design'},
+    link: 'https://peerlist.io/agbayani_dev/project/responsive-web-design'
+  },
 
-  { title: 'CodeCred', 
+  {
+    title: 'CodeCred',
     source: 'HTML Fundamentals',
-    link: 'https://www.codecred.dev/verify/77b5afcb-4900-4b67-aa98-9a9e0966b750' 
+    link: 'https://www.codecred.dev/verify/70b4de9d-7307-4b74-8506-c3a03d0ed394'
   },
 
   {
@@ -28,11 +45,31 @@ const certifications = [
   },
 
   {
-    title: 'Best in Org Shirt Design',
-    source: 'DOIT Organizational Shirt',
-    link: 'https://www.facebook.com/ynotDOITnow/posts/we-are-thrilled-to-introduce-our-new-org-shirt-a-standout-design-chosen-as-the-w/622014330349147/',
+    title: 'HTML/CSS',
+    source: 'Testdome',
+    link: 'https://www.testdome.com/certificates/eeef7d8f044f42cea5a3b7c856e69ac1',
   },
+
+  {
+    title: 'Responsive Web Design',
+    source: 'EPCPS',
+    link: 'https://drive.google.com/file/d/1nvhoMLcumCwvrUqKJ67ouQziko9lSAwf/view?usp=drive_link',
+  },
+
+  {
+    title: 'CSS Styling',
+    source: 'EPCPS',
+    link: 'https://drive.google.com/file/d/1TYeka23yVyM2HA-ncYO2juJs-8B376zT/view?usp=drive_link',
+  },
+
+  {
+    title: 'JavaScript',
+    source: 'EPCPS',
+    link: 'https://drive.google.com/file/d/1ZGDmchE-Q8uax45fMuafOTh-9ngrsV_q/view?usp=drive_link',
+  },
+
 ]
+
 
 const Certifications = () => {
   const [isDark, setIsDark] = useState(false)
@@ -82,9 +119,8 @@ const Certifications = () => {
             type="button"
             onClick={onThemeButtonClick}
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-            className={`group relative justify-self-end w-[28px] h-[28px] border-0 bg-transparent text-[12px] inline-flex items-center justify-center p-0 rounded-full !rounded-full overflow-hidden transition-all duration-200 ${
-              isDark ? 'text-zinc-100' : 'text-zinc-700'
-            }`}
+            className={`group relative justify-self-end w-[28px] h-[28px] border-0 bg-transparent text-[12px] inline-flex items-center justify-center p-0 rounded-full !rounded-full overflow-hidden transition-all duration-200 ${isDark ? 'text-zinc-100' : 'text-zinc-700'
+              }`}
           >
             <span
               aria-hidden="true"
@@ -110,7 +146,7 @@ const Certifications = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <article className="border-b border-zinc-200 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
+                <article className="border-b border-zinc-200 p-2.5 ">
                   <b className="text-sm">{item.title}</b>
                   <p className="text-xs mt-1">{item.source}</p>
                 </article>

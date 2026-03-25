@@ -7,6 +7,7 @@ import GraphicDesign from './graphic-design.jsx'
 import RecentProj from './recent-proj.jsx'
 import Certifications from './certifications.jsx'
 import BlogPost from './blog-post.jsx'
+import BlogCleanFastPortfolioUi from './blog-clean-fast-portfolio-ui.jsx'
 
 const path = window.location.pathname
 const page =
@@ -16,6 +17,7 @@ const page =
   path === '/recent-projects' ? <RecentProj /> :
   path === '/certifications' ? <Certifications /> :
   path === '/blog-post' ? <BlogPost /> :
+  path === '/blog/building-clean-fast-portfolio-ui' ? <BlogCleanFastPortfolioUi /> :
   <App />
 
 createRoot(document.getElementById('root')).render(page)

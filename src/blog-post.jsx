@@ -3,36 +3,37 @@ import './App.css'
 
 const blogPosts = [
   {
-    title: 'How I Build Portfolio UI That Looks Clean and Fast',
+    title: 'Building Clean, Fast Portfolio UI',
     date: 'February 10, 2026',
-    readTime: '6 min read',
+    readTime: '6 min',
     category: 'Frontend',
+    href: '/blog/building-clean-fast-portfolio-ui',
     excerpt:
-      'A practical breakdown of my layout process, spacing system, and component decisions to make portfolio pages feel polished on both desktop and mobile.',
+      'A quick look at how I design portfolio layouts that feel clean and fast.',
   },
   {
-    title: 'From Graphic Design to Frontend Development',
+    title: 'Graphic Design to Frontend',
     date: 'January 25, 2026',
-    readTime: '5 min read',
+    readTime: '5 min',
     category: 'Career',
     excerpt:
-      'I shared how my experience in visual design improved my frontend work, especially in typography, contrast, and consistent UI hierarchy.',
+      'How graphic design shaped the way I build clearer and more polished interfaces.',
   },
   {
-    title: 'My React Workflow for Reusable Sections',
+    title: 'Reusable React Sections Workflow',
     date: 'January 8, 2026',
-    readTime: '7 min read',
+    readTime: '7 min',
     category: 'React',
     excerpt:
-      'This post covers how I structure reusable sections, keep component markup readable, and avoid duplication while scaling personal projects.',
+      'How I build reusable React sections without making the markup messy or repetitive.',
   },
   {
-    title: 'Building Better Mobile Carousels and Galleries',
+    title: 'Better Mobile Carousels',
     date: 'December 18, 2025',
-    readTime: '4 min read',
+    readTime: '4 min ',
     category: 'UI/UX',
     excerpt:
-      'A short guide on fixed aspect ratios, clipping, and carousel behavior so mixed image sizes still look consistent and professional.',
+      'A simple guide to making mobile carousels look cleaner and feel more consistent.',
   },
 ]
 
@@ -53,33 +54,11 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
-      <section className="fadeup-item fadeup-1 p-3 border-b border-zinc-200 mb-3">
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <section className="blog-header-separator p-3 border-b border-zinc-200 mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
-          <a
-            href="/"
-            className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900"
-          >
-            <svg
-              aria-hidden="true"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-              className="shrink-0"
-            >
-              <path
-                d="M14 10H4M4 10L8 6M4 10L8 14"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-              />
-            </svg>
-            <span>Back to Home</span>
-          </a>
-          <h1 className="hidden sm:block text-lg font-bold text-center">Ken Blogs</h1>
+          <h1 className="justify-self-start text-2xl font-bold">Ken's Blogs</h1>
+          <div></div>
           <button
             type="button"
             onClick={onThemeButtonClick}
@@ -95,32 +74,32 @@ const BlogPost = () => {
             {isDark ? <i className="fa-solid fa-moon relative z-[1]" aria-hidden="true"></i> : <span className="sun-icon-tabler relative z-[1]" aria-hidden="true"></span>}
           </button>
         </div>
-        <h1 className="sm:hidden text-lg font-bold text-center mt-2">Ken Blogs</h1>
-        <p className="text-sm leading-6">
+        <p className="text-sm text-zinc-500 leading-6">
           Notes, lessons, and practical write-ups about frontend development, UI design, and my progress as Ken.
         </p>
       </section>
 
-      <section className="fadeup-item fadeup-2 p-3">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <section className="p-3">
+        <div className="grid grid-cols-1 gap-2">
           {blogPosts.map((post) => (
-            <article key={post.title} className="border-b border-zinc-200 p-3 bg-zinc-50 transition-all duration-300 ease-out hover:-translate-y-0.5">
-              <div className="flex items-center gap-2 mb-2 text-xs">
-                <span className="px-2 py-0.5 bg-zinc-200">{post.category}</span>
-                <span>{post.date}</span>
-                <span>{post.readTime}</span>
+            <article key={post.title} className="blog-card-separator group border-b border-zinc-300 px-3 pt-3 pb-5">
+              <div className="mb-2 flex items-center justify-between gap-3">
+                <h2 className="text-base font-semibold">{post.title}</h2>
+                <span className="shrink-0 text-xs text-zinc-500">{post.date}</span>
               </div>
-              <h2 className="text-base font-semibold mb-2">{post.title}</h2>
-              <p className="text-sm leading-6 mb-3">{post.excerpt}</p>
-              <a href="#" className="text-xs inline-flex items-center gap-1 border-b border-zinc-200 pb-1">
-                Read article <i className="fa-solid fa-angle-right" aria-hidden="true"></i>
-              </a>
+              <p className="text-sm text-zinc-500 leading-6 mb-3">{post.excerpt}</p>
+              <div className="flex items-center gap-3 text-xs">
+                <a href={post.href ?? '#'} className="inline-flex items-center gap-1 transition-colors duration-300 ease-out group-hover:text-sky-600">
+                  Read article <i className="fa-solid fa-angle-right transition-transform duration-300 ease-out group-hover:translate-x-1" aria-hidden="true"></i>
+                </a>
+                <span className="text-zinc-500">{post.readTime}</span>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <footer className="fadeup-item fadeup-3 mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
+      <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
         © 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
       </footer>
     </div>
@@ -128,16 +107,3 @@ const BlogPost = () => {
 }
 
 export default BlogPost
-
-
-
-
-
-
-
-
-
-
-
-
-

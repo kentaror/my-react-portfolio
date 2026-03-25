@@ -338,7 +338,7 @@ const Markup = () => (
       <section className="fadeup-item fadeup-5 grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
         <article className="border-b border-zinc-200 bg-white p-2 md:p-2.5">
           <div className="flex items-center justify-between mb-2">
-            <h2 className="text-lg font-bold">Attainments</h2>
+            <h2 className="text-lg font-bold">Certifications and Achievements</h2>
             <a href="/certifications" className="text-xs">
               View All <i className="fa-solid fa-angle-right"></i>
             </a>
