@@ -23,7 +23,7 @@ const BlogCleanFastPortfolioUi = () => {
         <div className="mb-4 flex items-start justify-between gap-3 min-h-[28px]">
           <a
             href="/blog-post"
-            className="inline-flex items-center gap-1 text-xs text-zinc-500 transition-colors duration-200 hover:text-sky-600 focus-visible:text-sky-600 active:text-sky-600"
+            className="inline-flex items-center gap-1 text-xs text-zinc-500 transition-colors duration-200 hover:!text-sky-600 focus-visible:!text-sky-600 active:!text-sky-600"
           >
             <i className="fa-solid fa-angle-left" aria-hidden="true"></i>
             All posts

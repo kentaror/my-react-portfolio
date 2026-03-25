@@ -82,20 +82,29 @@ const BlogPost = () => {
       <section className="p-3">
         <div className="grid grid-cols-1 gap-2">
           {blogPosts.map((post) => (
-            <article key={post.title} className="blog-card-separator group border-b border-zinc-300 px-3 pt-3 pb-5">
+            <article
+              key={post.title}
+              className="blog-card-separator group border-b border-zinc-300 px-3 pt-3 pb-5"
+            >
               <div className="mb-2 flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
-                <h2 className="text-base font-semibold">{post.title}</h2>
+                <h2
+                  className={`text-base font-semibold transition-opacity duration-300 ease-out ${
+                    isDark ? 'group-hover:opacity-85 group-active:opacity-85' : 'group-hover:opacity-70 group-active:opacity-70'
+                  }`}
+                >
+                  {post.title}
+                </h2>
                 <span className="text-xs text-zinc-500 sm:shrink-0">{post.date}</span>
               </div>
               <p className="text-sm text-zinc-500 leading-6 mb-3">{post.excerpt}</p>
               <div className="flex items-center gap-3 text-xs">
                 <a
                   href={post.href ?? '#'}
-                  className="inline-flex items-center gap-1 transition-colors duration-300 ease-out hover:text-sky-600 focus-visible:text-sky-600 active:text-sky-600"
+                  className="inline-flex items-center gap-1 transition-colors duration-300 ease-out group-hover:text-sky-600 group-active:text-sky-600 focus-visible:text-sky-600 active:text-sky-600"
                 >
                   Read article{' '}
                   <i
-                    className="fa-solid fa-angle-right transition-transform duration-300 ease-out group-hover:translate-x-1 hover:translate-x-1 focus-visible:translate-x-1 active:translate-x-1"
+                    className="fa-solid fa-angle-right transition-transform duration-300 ease-out group-hover:translate-x-1 group-active:translate-x-1 hover:translate-x-1 focus-visible:translate-x-1 active:translate-x-1"
                     aria-hidden="true"
                   ></i>
                 </a>
