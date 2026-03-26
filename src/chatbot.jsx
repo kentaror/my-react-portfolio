@@ -34,9 +34,9 @@ const Chatbot = () => (
       </div>
     </div>
 
-    <button id="chatLauncher" className="fixed bottom-4 right-4 bg-black px-6 py-3 text-white font-medium tracking-[0.02em] shadow-[0_2px_6px_rgba(0,0,0,0.1)] transition-colors hover:bg-[#0a0a0a]/90 inline-flex items-center gap-2 rounded-full text-sm z-[60]" type="button" aria-label="Open chat">
+    <button id="chatLauncher" className="fixed bottom-4 right-4 bg-black px-6 py-3 text-white font-medium tracking-[0.02em] shadow-[0_2px_6px_rgba(0,0,0,0.1)] transition-colors hover:bg-[#0a0a0a]/90 inline-flex items-center gap-2 rounded-full text-sm whitespace-nowrap z-[60]" type="button" aria-label="Open chat">
       <svg className="w-5 h-5 animate-wiggle" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
-      Chat with Ken
+      <span className="whitespace-nowrap">Chat with Ken</span>
     </button>
   </>
 )
