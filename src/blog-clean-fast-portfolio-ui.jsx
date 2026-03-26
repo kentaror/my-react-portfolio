@@ -55,7 +55,7 @@ const BlogCleanFastPortfolioUi = () => {
           Why simple structure and tighter spacing make a portfolio feel more polished.
         </p>
         <p className="text-xs text-zinc-500">
-          Kristian Ken Lucero Agbayani &bull; February 10, 2026 &bull; 2 min read
+          Kristian Ken Agbayani &bull; February 10, 2026 &bull; 2 min read
         </p>
       </section>
 

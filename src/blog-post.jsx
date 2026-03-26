@@ -49,6 +49,15 @@ const BlogPost = () => {
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
+  useEffect(() => {
+    const previousTitle = document.title
+    document.title = "Ken's Blog"
+
+    return () => {
+      document.title = previousTitle
+    }
+  }, [])
+
   const onThemeButtonClick = () => {
     setIsDark((prev) => !prev)
   }

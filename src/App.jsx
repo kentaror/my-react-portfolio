@@ -5,8 +5,6 @@ import Markup from './Markup'
 
 function App() {
   useEffect(() => {
-    document.body.classList.remove('dark-theme')
-
     const toggle = document.getElementById('themeToggle')
     const switchWrap = toggle?.closest('.switch')
     const profileLight = document.getElementById('profileLight')
@@ -561,7 +559,6 @@ function App() {
     }
 
     return () => {
-      document.body.classList.remove('dark-theme')
       document.body.style.overflow = ''
       toggle?.removeEventListener('change', onThemeChange)
       document.removeEventListener('click', onDocumentClick)

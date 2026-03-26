@@ -68,6 +68,12 @@ const certifications = [
     link: 'https://drive.google.com/file/d/1ZGDmchE-Q8uax45fMuafOTh-9ngrsV_q/view?usp=drive_link',
   },
 
+    {
+    title: 'AI Fundamentals',
+    source: 'UpskillTechPH',
+    link: 'https://upskilltechph.com/verify?id=c0e3226e1e231188265e1d5111419ab9&token=44ea382a1a600fcd',
+  },
+
 ]
 
 

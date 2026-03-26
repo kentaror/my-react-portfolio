@@ -9,6 +9,9 @@ import Certifications from './certifications.jsx'
 import BlogPost from './blog-post.jsx'
 import BlogCleanFastPortfolioUi from './blog-clean-fast-portfolio-ui.jsx'
 
+const savedTheme = localStorage.getItem('portfolio-theme')
+document.body.classList.toggle('dark-theme', savedTheme === 'dark')
+
 const path = window.location.pathname
 const page =
   path === '/techstack' ? <TechStack /> :
