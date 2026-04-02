@@ -18,8 +18,8 @@ const BlogCleanFastPortfolioUi = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <section className="blog-header-separator p-3 border-b border-zinc-200 mb-3">
+    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
+      <section className="fadeup-item fadeup-1 blog-header-separator p-3 border-b border-zinc-200 mb-3">
         <div className="mb-4 flex items-start justify-between gap-3 min-h-[28px]">
           <a
             href="/blog-post"
@@ -59,7 +59,7 @@ const BlogCleanFastPortfolioUi = () => {
         </p>
       </section>
 
-      <article className="p-3 text-sm leading-8">
+      <article className="fadeup-item fadeup-2 p-3 text-sm leading-8">
         <section className="blog-card-separator border-b border-zinc-200 pb-8">
           <p className="text-[15px] sm:text-base font-medium mb-5">
             A clean portfolio feels stronger when the layout is short, clear, and easy to scan. The essentials are:

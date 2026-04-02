@@ -90,7 +90,7 @@ const GraphicDesign = () => {
         </div>
       </section>
 
-      <footer className="fadeup-item fadeup-3 mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
+      <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">
         © 2026 Agbayani, Kristian Ken Lucero. All rights reserved.
       </footer>
     </div>

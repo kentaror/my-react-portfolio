@@ -11,6 +11,7 @@ html {
 
 body {
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 *,
@@ -122,9 +123,12 @@ body.dark-theme #root {
   background: #000;
 }
 
-body,
 #root {
   overflow-x: hidden;
+}
+
+#root {
+  overflow-y: clip;
 }
 
 body.chat-open #chatPanel {
@@ -1125,47 +1129,32 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
 
 .fadeup-item {
   opacity: 0;
-  transform: translateY(48px);
-  animation: fade-up 700ms ease-out forwards;
+  transform: translateY(20px);
+  animation: page-stagger-in 600ms ease-out forwards;
+  will-change: opacity, transform;
 }
 
 .fadeup-1 { animation-delay: 0ms; }
-.fadeup-2 { animation-delay: 120ms; }
-.fadeup-3 { animation-delay: 240ms; }
-.fadeup-4 { animation-delay: 360ms; }
-.fadeup-5 { animation-delay: 480ms; }
-.fadeup-6 { animation-delay: 600ms; }
-.fadeup-7 { animation-delay: 720ms; }
+.fadeup-2 { animation-delay: 100ms; }
+.fadeup-3 { animation-delay: 200ms; }
+.fadeup-4 { animation-delay: 300ms; }
+.fadeup-5 { animation-delay: 400ms; }
+.fadeup-6 { animation-delay: 500ms; }
+.fadeup-7 { animation-delay: 600ms; }
 
 .page-fadeup {
-  opacity: 1;
-  transform: none;
   overflow-x: clip;
   overflow-y: clip;
 }
 
-@keyframes fade-up {
+@keyframes page-stagger-in {
   from {
     opacity: 0;
-    transform: translateY(48px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media (max-width: 640px) {
-  .fadeup-item {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-
-  .page-fadeup {
-    opacity: 0;
-    transform: translateY(48px);
-    animation: fade-up 700ms ease-out forwards;
   }
 }
 
@@ -1175,8 +1164,41 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
     opacity: 1;
     transform: none;
   }
+}
 
-  .page-fadeup {
+.certifications-page {
+  overflow-x: clip;
+  overflow-y: clip;
+}
+
+.certifications-intro,
+.certification-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: page-stagger-in 600ms ease-out forwards;
+  will-change: opacity, transform;
+}
+
+.certifications-intro {
+  animation-delay: 0ms;
+}
+
+.certification-card {
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
+.certification-panel {
+  background: transparent;
+}
+
+.dark-theme .certification-panel {
+  background: #121212;
+  border-color: transparent !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certifications-intro,
+  .certification-card {
     animation: none;
     opacity: 1;
     transform: none;

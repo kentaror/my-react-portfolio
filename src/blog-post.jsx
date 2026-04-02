@@ -63,8 +63,8 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <section className="blog-header-separator p-3 border-b border-zinc-200 mb-3">
+    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
+      <section className="fadeup-item fadeup-1 blog-header-separator p-3 border-b border-zinc-200 mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <h1 className="justify-self-start text-2xl font-bold">Ken's Blogs</h1>
           <div></div>
@@ -88,7 +88,7 @@ const BlogPost = () => {
         </p>
       </section>
 
-      <section className="p-3">
+      <section className="fadeup-item fadeup-2 p-3">
         <div className="grid grid-cols-1 gap-2">
           {blogPosts.map((post) => (
             <article

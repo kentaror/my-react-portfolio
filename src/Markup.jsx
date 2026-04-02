@@ -389,8 +389,7 @@ const Markup = () => (
       <section className="fadeup-item fadeup-6 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">A member of</h3>
-          <p className="text-[11.5px] leading-5">Analytics & Artificial Intelligence Association of the Philippines (AAP)</p>
-          <p className="text-[11.5px] leading-5 mt-2.5">Philippine Software Industry Association</p>
+          <p className="text-[11.5px] leading-5">Domain of Information Technologist (Multimedia Club)</p>
         </div>
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-1">Social Links</h3>
@@ -405,8 +404,8 @@ const Markup = () => (
               className="fa-brands fa-instagram mr-1"></i> Instagram</a>
         </div>
         <div className="p-2.5">
-          <h3 className="text-sm font-bold mb-2">Work With Me</h3>
-          <div className="contact-outline border px-2 py-2.5 w-full transition-all duration-300 ease-out hover:border-transparent">
+          <h3 className="text-sm font-bold mb-1">Work With Me</h3>
+          <div className="contact-outline border px-1 py-1 w-full transition-all duration-300 ease-out hover:border-transparent">
             <p className="text-[11.5px] leading-5">Available for freelance web development, custom UI/UX design, and digital branding solutions.</p>
             <a className="text-[11.5px] mt-3 hover:underline inline-flex items-center gap-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch">Get in touch <i className="fa-solid fa-angle-right"></i></a>
           </div>
