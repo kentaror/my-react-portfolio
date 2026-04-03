@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import './App.css'
+import { applyDocumentTheme } from './theme.js'
 
 const uiImages = [
   { src: '/ui1.jpg', alt: 'UI design layout 1' },
@@ -19,7 +20,7 @@ const UiDesign = () => {
   }, [])
 
   useEffect(() => {
-    document.body.classList.toggle('dark-theme', isDark)
+    applyDocumentTheme(isDark)
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
@@ -76,10 +77,14 @@ const UiDesign = () => {
         </p>
       </section>
 
-      <section className="fadeup-item fadeup-2 p-3">
+      <section className="p-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-          {uiImages.map((image) => (
-            <article key={image.src} className="transition-all duration-300 ease-out hover:-translate-y-0.5 border-b border-zinc-200 p-2">
+          {uiImages.map((image, index) => (
+            <article
+              key={image.src}
+              className="stagger-item transition-all duration-300 ease-out hover:-translate-y-0.5 border-b border-zinc-200 p-2"
+              style={{ '--stagger-delay': `${index * 100}ms` }}
+            >
               <img
                 className="w-full h-44 sm:h-52 md:h-56 object-cover border border-zinc-200"
                 src={image.src}

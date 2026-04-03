@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import './App.css'
+import { applyDocumentTheme } from './theme.js'
 
 const TechStack = () => {
   const [isDark, setIsDark] = useState(false)
@@ -9,7 +10,7 @@ const TechStack = () => {
   }, [])
 
   useEffect(() => {
-    document.body.classList.toggle('dark-theme', isDark)
+    applyDocumentTheme(isDark)
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
@@ -65,8 +66,8 @@ const TechStack = () => {
         </p>
       </section>
 
-      <section className="fadeup-item fadeup-2 p-3">
-        <div className="mb-4">
+      <section className="p-3">
+        <div className="stagger-item mb-4" style={{ '--stagger-delay': '0ms' }}>
           <h2 className="text-[14px] font-semibold mb-2">Frontend</h2>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="px-2 py-1 border border-zinc-200">Html</span>
@@ -79,7 +80,7 @@ const TechStack = () => {
           </div>
         </div>
 
-        <div className="mb-4">
+        <div className="stagger-item mb-4" style={{ '--stagger-delay': '100ms' }}>
           <h2 className="text-[14px] font-semibold mb-2">Backend</h2>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="px-2 py-1 border border-zinc-200">Node.js</span>
@@ -89,7 +90,7 @@ const TechStack = () => {
           </div>
         </div>
 
-        <div className='mb-4'>
+        <div className='stagger-item mb-4' style={{ '--stagger-delay': '200ms' }}>
           <h2 className="text-[14px] font-semibold mb-2">Object-Oriented Programming</h2>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="px-2 py-1 border border-zinc-200">Java</span>
@@ -101,7 +102,7 @@ const TechStack = () => {
           </div>
         </div>
 
-        <div className='mb-4'>
+        <div className='stagger-item mb-4' style={{ '--stagger-delay': '300ms' }}>
           <h2 className="text-[14px] font-semibold mb-2">Mobile Dev</h2>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="px-2 py-1 border border-zinc-200">Dart</span>
@@ -111,14 +112,14 @@ const TechStack = () => {
           </div>
         </div>
 
-        <div className='mb-4'>
+        <div className='stagger-item mb-4' style={{ '--stagger-delay': '400ms' }}>
           <h2 className="text-[14px] font-semibold mb-2">DevOps</h2>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="px-2 py-1 border border-zinc-200">Github Actions</span>
           </div>
         </div>
 
-        <div className='mb-4'>
+        <div className='stagger-item mb-4' style={{ '--stagger-delay': '500ms' }}>
           <h2 className="text-[14px] font-semibold mb-2">Developer Tools</h2>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="px-2 py-1 border border-zinc-200">Code::Blocks</span>
@@ -134,7 +135,7 @@ const TechStack = () => {
           </div>
         </div>
 
-        <div>
+        <div className="stagger-item" style={{ '--stagger-delay': '600ms' }}>
           <h2 className="text-[14px] font-semibold mb-2">Software and Cloud-based Designing Tools</h2>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="px-2 py-1 border border-zinc-200">Adobe Photoshop</span>

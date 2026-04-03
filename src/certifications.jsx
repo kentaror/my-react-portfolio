@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import './App.css'
+import { applyDocumentTheme } from './theme.js'
 
 const certifications = [
   {
@@ -97,7 +98,7 @@ const Certifications = () => {
   }, [])
 
   useEffect(() => {
-    document.body.classList.toggle('dark-theme', isDark)
+    applyDocumentTheme(isDark)
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 

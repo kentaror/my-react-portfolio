@@ -126,44 +126,44 @@ const Markup = () => (
                  hover:-translate-y-0.5 ">
             <h2 className="text-lg font-bold mb-2">Experience</h2>
             <div id="experienceTimeline" className="relative ml-2 pl-3 space-y-2.5">
-              <span className="experience-line absolute left-[-1px] top-[10px] bottom-[10px] w-px bg-zinc-200" aria-hidden="true"></span>
+              <span className="experience-line absolute left-[-1px] top-[11px] bottom-[-8px] w-px" aria-hidden="true"></span>
               <div className="relative group cursor-pointer" tabIndex={0}><span
-                className="experience-marker is-current absolute -left-[17px] top-1.5 w-2 h-2 bg-black border border-black"></span>
+                className="experience-marker is-current absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
                 <p className="text-sm font-bold">Full Subli Graphic Artist</p>
                 <p className="text-[13px]">Ryzn Clothing <span className="float-right text-[10px]">2026</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
+                className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
                 <p className="text-sm font-bold">On-the-Job Training</p>
                 <p className="text-[13px]">Graphic Designer <span className="float-right text-[10px]">2026</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
+                className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
                 <p className="text-sm font-bold">Leading Programmer</p>
                 <p className="text-[13px]">Capstone 101-102 <span className="float-right text-[10px]">2025</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
+                className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
                 <p className="text-sm font-bold">Mid-Level Graphic Artist </p>
                 <p className="text-[13px] ">Ryzn Clothing <span className="float-right text-[10px]">2025</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
+                className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
                 <p className="text-sm font-bold">Junior Graphic Artist</p>
                 <p className="text-[13px]">Ryzn Clothing<span className="float-right text-[10px]">2024</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
+                className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
                 <p className="text-sm font-bold">Ps & Ai</p>
                 <p className="text-[13px]">Made my first pen tool <span className="float-right text-[10px]">2023</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
+                className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
                 <p className="text-sm font-bold">BS Information Technology</p>
                 <p className="text-[13px]">Pangasinan State University  <span className="float-right text-[10px]">2022</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
-                className="experience-marker absolute -left-[17px] top-1.5 w-2 h-2 bg-white border border-zinc-200 transition-colors duration-200 group-hover:bg-black group-hover:border-black group-active:bg-black group-active:border-black"></span>
+                className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
                 <p className="text-sm font-bold">Hello World! <span className="text-xs">👋🏻</span></p>
                 <p className="text-[13px]">Wrote my first line of code <span className="float-right text-[10px]">2021</span></p>
               </div>
@@ -389,7 +389,7 @@ const Markup = () => (
       <section className="fadeup-item fadeup-6 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-2">A member of</h3>
-          <p className="text-[11.5px] leading-5">Domain of Information Technologist (Multimedia Club)</p>
+          <p className="text-[11.5px] leading-5">Domain of Information Technologist Multimedia Club (DOITMC)</p>
         </div>
         <div className="p-2.5">
           <h3 className="text-sm font-bold mb-1">Social Links</h3>

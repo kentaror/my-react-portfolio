@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import './App.css'
+import { applyDocumentTheme } from './theme.js'
 
 const blogPosts = [
   {
@@ -45,7 +46,7 @@ const BlogPost = () => {
   }, [])
 
   useEffect(() => {
-    document.body.classList.toggle('dark-theme', isDark)
+    applyDocumentTheme(isDark)
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
@@ -88,12 +89,13 @@ const BlogPost = () => {
         </p>
       </section>
 
-      <section className="fadeup-item fadeup-2 p-3">
+      <section className="p-3">
         <div className="grid grid-cols-1 gap-2">
-          {blogPosts.map((post) => (
+          {blogPosts.map((post, index) => (
             <article
               key={post.title}
-              className="blog-card-separator group border-b border-zinc-300 px-3 pt-3 pb-5"
+              className="stagger-item blog-card-separator group border-b border-zinc-300 px-3 pt-3 pb-5"
+              style={{ '--stagger-delay': `${index * 100}ms` }}
             >
               <div className="mb-2 flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
                 <h2

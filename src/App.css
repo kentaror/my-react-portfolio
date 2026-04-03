@@ -7,10 +7,19 @@ body,
 
 html {
   scrollbar-gutter: stable;
+  background: #ffffff;
+  color-scheme: light;
+}
+
+html.dark-theme {
+  background: #000000;
+  color: #f4f4f5;
+  color-scheme: dark;
 }
 
 body {
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  background: transparent;
   overflow-x: hidden;
 }
 
@@ -118,7 +127,9 @@ body {
   color: #f4f4f5;
 }
 
+html.dark-theme body,
 body.dark-theme,
+html.dark-theme #root,
 body.dark-theme #root {
   background: #000;
 }
@@ -222,39 +233,46 @@ body.chat-open #chatPanel {
       color: #0a0a0a !important;
     }
 
-    .dark-theme .experience-marker,
-    .dark-theme .ojt-marker {
-      background: transparent !important;
-      border-color: #303036 !important;
-    }
-
-    .dark-theme .experience-line {
-      background: #303036 !important;
-    }
-
-    .dark-theme .group:hover .experience-marker,
-    .dark-theme .group:active .experience-marker {
-      background: #f4f4f5 !important;
-      border-color: #f4f4f5 !important;
-    }
-
     #experienceTimeline .group:focus {
       outline: none;
     }
 
+    #experienceTimeline .experience-line {
+      background: #d4d4d8 !important;
+    }
+
+    #experienceTimeline .experience-marker,
+    #experienceTimeline .ojt-marker {
+      background: #ffffff !important;
+      border-color: #d4d4d8 !important;
+      transition: background-color 220ms ease, border-color 220ms ease, transform 220ms ease;
+    }
+
+    #experienceTimeline .group:hover .experience-marker,
+    #experienceTimeline .group:active .experience-marker,
     body:not(.dark-theme) #experienceTimeline .group:focus .experience-marker,
-    body:not(.dark-theme) #experienceTimeline .group:focus-visible .experience-marker {
+    body:not(.dark-theme) #experienceTimeline .group:focus-visible .experience-marker,
+    #experienceTimeline .experience-marker.is-current {
       background: #0a0a0a !important;
       border-color: #0a0a0a !important;
+      transform: scale(1) !important;
     }
 
+    .dark-theme #experienceTimeline .experience-line {
+      background: #303036 !important;
+    }
+
+    .dark-theme #experienceTimeline .experience-marker,
+    .dark-theme #experienceTimeline .ojt-marker {
+      background: #121212 !important;
+      border-color: #3f3f46 !important;
+    }
+
+    .dark-theme #experienceTimeline .group:hover .experience-marker,
+    .dark-theme #experienceTimeline .group:active .experience-marker,
     .dark-theme #experienceTimeline .group:focus .experience-marker,
-    .dark-theme #experienceTimeline .group:focus-visible .experience-marker {
-      background: #f4f4f5 !important;
-      border-color: #f4f4f5 !important;
-    }
-
-    .dark-theme .experience-marker.is-current {
+    .dark-theme #experienceTimeline .group:focus-visible .experience-marker,
+    .dark-theme #experienceTimeline .experience-marker.is-current {
       background: #f4f4f5 !important;
       border-color: #f4f4f5 !important;
     }
@@ -743,6 +761,7 @@ body.chat-open #chatPanel {
   color: #f4f4f5 !important;
 }
 
+
 @media (max-width: 414px) {
   #heroCard .hero-actions > * {
     font-size: 7px !important;
@@ -1172,7 +1191,8 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
 }
 
 .certifications-intro,
-.certification-card {
+.certification-card,
+.stagger-item {
   opacity: 0;
   transform: translateY(20px);
   animation: page-stagger-in 600ms ease-out forwards;
@@ -1187,6 +1207,10 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
   animation-delay: var(--stagger-delay, 0ms);
 }
 
+.stagger-item {
+  animation-delay: var(--stagger-delay, 0ms);
+}
+
 .certification-panel {
   background: transparent;
 }
@@ -1198,7 +1222,8 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
 
 @media (prefers-reduced-motion: reduce) {
   .certifications-intro,
-  .certification-card {
+  .certification-card,
+  .stagger-item {
     animation: none;
     opacity: 1;
     transform: none;

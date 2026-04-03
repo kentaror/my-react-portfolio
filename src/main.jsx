@@ -8,9 +8,9 @@ import RecentProj from './recent-proj.jsx'
 import Certifications from './certifications.jsx'
 import BlogPost from './blog-post.jsx'
 import BlogCleanFastPortfolioUi from './blog-clean-fast-portfolio-ui.jsx'
+import { applyDocumentTheme, getSavedTheme } from './theme.js'
 
-const savedTheme = localStorage.getItem('portfolio-theme')
-document.body.classList.toggle('dark-theme', savedTheme === 'dark')
+applyDocumentTheme(getSavedTheme())
 
 const path = window.location.pathname
 const page =

@@ -9,6 +9,17 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <title>Agbayani, Kristian Ken Lucero</title>
     <script>
+      ;(() => {
+        try {
+          const isDark = localStorage.getItem('portfolio-theme') === 'dark'
+          const root = document.documentElement
+          root.classList.toggle('dark-theme', isDark)
+          root.style.backgroundColor = isDark ? '#000000' : '#ffffff'
+          root.style.colorScheme = isDark ? 'dark' : 'light'
+        } catch {}
+      })()
+    </script>
+    <script>
       tailwind.config = {
         theme: {
           extend: { 

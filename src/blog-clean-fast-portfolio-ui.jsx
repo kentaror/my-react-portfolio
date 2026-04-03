@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { applyDocumentTheme } from './theme.js'
 
 const BlogCleanFastPortfolioUi = () => {
   const [isDark, setIsDark] = useState(false)
@@ -9,7 +10,7 @@ const BlogCleanFastPortfolioUi = () => {
   }, [])
 
   useEffect(() => {
-    document.body.classList.toggle('dark-theme', isDark)
+    applyDocumentTheme(isDark)
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 

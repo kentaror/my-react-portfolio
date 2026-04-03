@@ -1,6 +1,7 @@
 ﻿import { useEffect } from 'react'
 import './App.css'
 import Markup from './Markup'
+import { applyDocumentTheme } from './theme.js'
 
 
 function App() {
@@ -9,10 +10,9 @@ function App() {
     const switchWrap = toggle?.closest('.switch')
     const profileLight = document.getElementById('profileLight')
     const profileDark = document.getElementById('profileDark')
-    const body = document.body
 
     function applyTheme(isDark) {
-      body.classList.toggle('dark-theme', isDark)
+      applyDocumentTheme(isDark)
       if (toggle) {
         toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode')
         toggle.checked = isDark

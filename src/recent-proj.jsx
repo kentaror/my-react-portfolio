@@ -1,5 +1,6 @@
 ﻿import { useEffect, useState } from 'react'
 import './App.css'
+import { applyDocumentTheme } from './theme.js'
 
 const projects = [
   {
@@ -32,7 +33,7 @@ const RecentProj = () => {
   }, [])
 
   useEffect(() => {
-    document.body.classList.toggle('dark-theme', isDark)
+    applyDocumentTheme(isDark)
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
@@ -89,10 +90,14 @@ const RecentProj = () => {
         </p>
       </section>
 
-      <section className="fadeup-item fadeup-2 p-3">
+      <section className="p-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          {projects.map((project) => (
-            <article key={project.title} className="border-b border-zinc-200 bg-zinc-100 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
+          {projects.map((project, index) => (
+            <article
+              key={project.title}
+              className="stagger-item border-b border-zinc-200 bg-zinc-100 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5"
+              style={{ '--stagger-delay': `${index * 100}ms` }}
+            >
               <h4 className="text-sm font-semibold mb-1">{project.title}</h4>
               <p className="text-xs mb-1.5">{project.description}</p>
               <code className="text-xs bg-zinc-200 px-1.5 py-0.5">{project.site}</code>
@@ -109,8 +114,6 @@ const RecentProj = () => {
 }
 
 export default RecentProj
-
-
 
 
 
