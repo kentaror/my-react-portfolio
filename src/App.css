@@ -1277,3 +1277,55 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
 .dark-theme .hover\:bg-zinc-200:hover {
   background: #262626 !important;
 }
+
+.page-divider-b {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #e5e7eb;
+}
+
+.dark-theme .page-divider-b {
+  border-bottom-color: #2f2f2f;
+}
+
+.dark-theme .page-fadeup .page-divider-b {
+  border-bottom-width: 0;
+  border-bottom-color: transparent;
+}
+
+.main-page-divider-hover {
+  transform: translateY(0);
+  box-shadow: 0 0 0 0 rgba(113, 113, 122, 0);
+  will-change: transform, box-shadow, border-bottom-color;
+  transition-property: transform, box-shadow, border-bottom-color;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+body:not(.dark-theme) .main-page-divider-hover:hover,
+body:not(.dark-theme) .main-page-divider-hover:focus-within {
+  border-bottom-color: transparent;
+  box-shadow: 0 8px 14px -10px rgba(113, 113, 122, 0.36);
+}
+
+.dark-theme .main-page-divider-hover:hover,
+.dark-theme .main-page-divider-hover:focus-within {
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+body:not(.dark-theme) .main-page-divider-lift:hover,
+body:not(.dark-theme) .main-page-divider-lift:focus-within,
+.dark-theme .main-page-divider-lift:hover,
+.dark-theme .main-page-divider-lift:focus-within {
+  transform: translateY(-0.125rem);
+}
+
+.light-only-border-b {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark-theme .light-only-border-b {
+  border-bottom-width: 0 !important;
+  border-bottom-color: transparent !important;
+}

@@ -33,7 +33,7 @@ const Markup = () => (
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
-                fill="none" 
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
                 focusable="false"
@@ -66,7 +66,7 @@ const Markup = () => (
               </div>
             </p>
 
-            
+
           </div>
 
           <div className="grid grid-cols-1 gap-1.5 mt-1 sm:mt-2">
@@ -107,23 +107,28 @@ const Markup = () => (
 
       <section className="fadeup-item fadeup-2 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
         <div className="flex flex-col gap-2 h-full">
-          <article className="bg-white p-3 h-full flex flex-col justify-between">
+          <article className="bg-white p-3 pb-3 h-full flex flex-col justify-between page-divider-b main-page-divider-hover">
             <div>
               <h2 className="text-lg font-bold mb-2">About</h2>
-              <p className="text-sm leading-6 mb-3">I am a Bachelor of Science in Information Technology student from
-                Pangasinan State University and a dedicated working student with over three years of experience as a
-                Senior Full Graphic Sublimation Artist. My background in graphic design has strengthened my creativity,
-                attention to detail, and visual problem-solving skills.</p>
-              <p className="text-sm leading-6 mb-3.5">I am now focused on web development, where I combine technical skills and design thinking to build clean, user-centered interfaces. I enjoy turning ideas into responsive, accessible, and performance-driven websites that feel modern across desktop and mobile devices.</p>
-              <p className="text-sm leading-6">My goal is to grow as a full-stack developer while continuing to build products that solve real problems and create meaningful value for users. I value clear structure, reliable performance, and thoughtful user experience, and I approach each project with ownership, consistency, and long-term maintainability in mind, while continuously learning, improving my technical and problem-solving skills, and delivering impactful solutions.</p>
+              <p className="text-sm leading-6 mb-3">
+                I am an IT student at Pangasinan State University and Full Graphic Subli Artist with over two years of experience. My design background has sharpened my creativity, attention to detail, and visual problem-solving skills.
+              </p>
+              <p className="text-sm leading-6 mb-3.5">
+                I am now specializing in web development, where I combine technical expertise with design thinking. I enjoy building clean, responsive, and high-performance websites that deliver a modern experience across all devices.
+              </p>
+              <p className="text-sm leading-6 mb-3.5">
+                My goal is to grow as a full-stack developer who builds products that solve real-world problems. I value clean structure and reliable performance, approaching every project with a focus on quality, maintainability, and continuous learning.
+              </p>
+               <p className="text-sm leading-6">
+                Lately, I have developed a deep fascination with Artificial Intelligence and its integration into modern applications. Beyond exploring generative AI, agentic systems, and AI-powered workflows, I have also begun attending and speaking on AI topics. These experiences continue to fuel my interest, as I see the transformative power of this technology firsthand.
+              </p>
             </div>
           </article>
         </div>
 
 
         <div className="flex flex-col gap-2 h-full">
-          <aside className="bg-white p-3 transition-all duration-300 ease-out 
-                 hover:-translate-y-0.5 ">
+          <aside className="bg-white p-3 pb-3 page-divider-b main-page-divider-hover main-page-divider-lift">
             <h2 className="text-lg font-bold mb-2">Experience</h2>
             <div id="experienceTimeline" className="relative ml-2 pl-3 space-y-2.5">
               <span className="experience-line absolute left-[-1px] top-[11px] bottom-[-8px] w-px" aria-hidden="true"></span>
@@ -173,7 +178,7 @@ const Markup = () => (
       </section>
 
       <section className="fadeup-item fadeup-3 grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
-        <article className="bg-white p-3 ">
+        <article className="bg-white p-3 pb-3 page-divider-b main-page-divider-hover">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Tech Stack</h2><a href="/techstack" className="text-xs">View All <i
               className="fa-solid fa-angle-right"></i></a>
@@ -213,7 +218,7 @@ const Markup = () => (
           </div>
         </article>
 
-        <article className="bg-white p-3">
+        <article className="bg-white p-3 pb-3 page-divider-b main-page-divider-hover">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Recent Projects</h2><a href="/recent-projects" className="text-xs">View All <i
               className="fa-solid fa-angle-right"></i></a>
@@ -247,9 +252,9 @@ const Markup = () => (
         </article>
       </section>
 
-      <section className="fadeup-item fadeup-4 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch">
+      <section className="fadeup-item fadeup-4 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch ">
         <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
-          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 ">
+          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-lg font-bold">UI Designs</h2>
               <a href="/ui-design" className="text-xs">View All <i
@@ -277,7 +282,7 @@ const Markup = () => (
               </div>
             </div>
           </article>
-          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 ">
+          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-lg font-bold">Graphic Designs</h2>
               <a href="/graphic-design" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
@@ -311,8 +316,7 @@ const Markup = () => (
           </article>
         </div>
         <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
-          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 ">
+          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
             <h2 className="text-lg font-bold mb-2">Education</h2>
             <div className="relative ml-2 pl-3 space-y-2.5">
               <div className="relative group">
@@ -322,8 +326,7 @@ const Markup = () => (
             </div>
           </article>
 
-          <article className="bg-white p-3 h-full min-h-[120px] md:min-h-0 transition-all duration-300 ease-out 
-               hover:-translate-y-0.5">
+          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
             <h2 className="text-lg font-bold mb-2">On-the-Job Training</h2>
             <div className="relative ml-2 pl-3 space-y-2.5">
               <div className="relative group">
@@ -336,7 +339,7 @@ const Markup = () => (
       </section>
 
       <section className="fadeup-item fadeup-5 grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
-        <article className=" bg-white p-2 md:p-2.5">
+        <article className=" bg-white p-2 md:p-2.5 pb-3 page-divider-b main-page-divider-hover">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-lg font-bold">Certifications</h2>
             <a href="/certifications" className="text-xs">
@@ -365,7 +368,7 @@ const Markup = () => (
           </div>
         </article>
 
-        <article className=" bg-white p-2 md:p-2.5">
+        <article className=" bg-white p-2 md:p-2.5 pb-3 page-divider-b main-page-divider-hover">
           <h2 className="text-lg font-bold mb-2">Recommendations</h2>
 
           <p
@@ -387,35 +390,50 @@ const Markup = () => (
       </section>
 
       <section className="fadeup-item fadeup-6 bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-3 mb-2">
-        <div className="p-2.5">
+        <div className="group p-2.5 light-only-border-b">
           <h3 className="text-sm font-bold mb-2">A member of</h3>
-          <p className="text-[11.5px] leading-5">Domain of Information Technologist Multimedia Club (DOITMC)</p>
+          <div className="flex items-start justify-between gap-2 pb-2 light-only-border-b">
+            <p className="flex-1 text-[11.5px] leading-5">Domain of Information Technologist Multimedia Club (DOITMC)</p>
+            <svg
+              className="mt-1 h-2.5 w-2.5 flex-shrink-0 text-foreground/50 transition-transform group-hover:translate-x-0.5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              ></path>
+            </svg>
+          </div>
         </div>
-        <div className="p-2.5">
+        <div className="p-2.5 light-only-border-b">
           <h3 className="text-sm font-bold mb-1">Social Links</h3>
-          <a className="social-link contact-outline text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
+          <a className="social-link contact-outline light-only-border-b text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
-          <a className="social-link contact-outline text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
+          <a className="social-link contact-outline light-only-border-b text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-github mr-1"></i> GitHub</a>
-          <a className="social-link contact-outline text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
+          <a className="social-link contact-outline light-only-border-b text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
                hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
               className="fa-brands fa-instagram mr-1"></i> Instagram</a>
         </div>
-        <div className="p-2.5">
+        <div className="p-2.5 light-only-border-b">
           <h3 className="text-sm font-bold mb-1">Work With Me</h3>
-          <div className="contact-outline border px-1 py-1 w-full transition-all duration-300 ease-out hover:border-transparent">
+          <div className="contact-outline light-only-border-b border px-1 py-1 w-full transition-all duration-300 ease-out hover:border-transparent">
             <p className="text-[11.5px] leading-5">Available for freelance web development, custom UI/UX design, and digital branding solutions.</p>
             <a className="text-[11.5px] mt-3 hover:underline inline-flex items-center gap-1" href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch">Get in touch <i className="fa-solid fa-angle-right"></i></a>
           </div>
 
         </div>
-        <div className="contact-actions p-2">
+        <div className="contact-actions p-2.5 light-only-border-b">
           <h3 className="text-sm font-bold mb-1">Insights & Inquiries </h3>
           <div className="contact-action-group group">
             <a
-              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
+              className="contact-link contact-outline light-only-border-b inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
               href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
               target="_blank"
               rel="noopener noreferrer"
@@ -430,7 +448,7 @@ const Markup = () => (
           </div>
           <div className="contact-action-group group">
             <a
-              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
+              className="contact-link contact-outline light-only-border-b inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
               href="https://calendly.com/agbayanikristianken/30min"
               target="_blank"
               rel="noopener noreferrer"
@@ -445,7 +463,7 @@ const Markup = () => (
           </div>
           <div className="contact-action-group group">
             <a
-              className="contact-link contact-outline inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
+              className="contact-link contact-outline light-only-border-b inline-flex flex-col items-start transition-all duration-300 ease-out border px-2 py-1.5 w-full shadow-[0_0_0_0_rgba(82,82,91,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(82,82,91,0.76)] hover:-translate-y-0.5"
               href="/blog-post"
               target="_blank"
               rel="noopener noreferrer"
@@ -542,7 +560,7 @@ const Markup = () => (
 
     <div id="resumeModal" className="fixed inset-0 z-[70] hidden items-center justify-center bg-black/55 px-2 sm:px-4 py-3" aria-hidden="true">
       <div className="bg-white border border-zinc-200 w-full max-w-[420px] sm:max-w-[520px] md:max-w-[620px] h-[94vh] overflow-hidden flex flex-col">
-        <div className="flex items-center justify-between border-b border-zinc-200 px-3 sm:px-4 py-3">
+        <div className="flex items-center justify-between page-divider-b px-3 sm:px-4 py-3">
           <h2 className="text-base sm:text-lg font-bold">My Resume</h2>
           <div className="flex items-center gap-2">
             <a href="/2025-template_bullet.pdf" target="_blank" rel="noopener noreferrer" className="text-sm border border-zinc-200 px-3 py-1">Open Full</a>

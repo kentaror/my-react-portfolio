@@ -30,7 +30,7 @@ const UiDesign = () => {
 
   return (
     <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
-      <section className="fadeup-item fadeup-1 p-3 border-b border-zinc-200 mb-3">
+      <section className="fadeup-item fadeup-1 p-3 page-divider-b mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] mb-2 items-center min-h-[32px]">
           <a
             href="/"
@@ -82,7 +82,7 @@ const UiDesign = () => {
           {uiImages.map((image, index) => (
             <article
               key={image.src}
-              className="stagger-item transition-all duration-300 ease-out hover:-translate-y-0.5 border-b border-zinc-200 p-2"
+              className="stagger-item transition-all duration-300 ease-out hover:-translate-y-0.5 page-divider-b p-2"
               style={{ '--stagger-delay': `${index * 100}ms` }}
             >
               <img

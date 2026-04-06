@@ -65,7 +65,7 @@ const BlogPost = () => {
 
   return (
     <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
-      <section className="fadeup-item fadeup-1 blog-header-separator p-3 border-b border-zinc-200 mb-3">
+      <section className="fadeup-item fadeup-1 blog-header-separator page-divider-b p-3 mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <h1 className="justify-self-start text-2xl font-bold">Ken's Blogs</h1>
           <div></div>
@@ -94,7 +94,7 @@ const BlogPost = () => {
           {blogPosts.map((post, index) => (
             <article
               key={post.title}
-              className="stagger-item blog-card-separator group border-b border-zinc-300 px-3 pt-3 pb-5"
+              className="stagger-item blog-card-separator group page-divider-b px-3 pt-3 pb-5"
               style={{ '--stagger-delay': `${index * 100}ms` }}
             >
               <div className="mb-2 flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">

@@ -51,7 +51,14 @@ const certifications = [
     link: 'https://www.testdome.com/certificates/eeef7d8f044f42cea5a3b7c856e69ac1',
   },
 
-   {
+  {
+    title: 'CSS Styling',
+    source: 'EPCPS',
+    link: 'https://drive.google.com/file/d/1TYeka23yVyM2HA-ncYO2juJs-8B376zT/view?usp=drive_link',
+  },
+
+
+ {
     title: 'Javascript',
     source: 'Testdome',
     link: 'https://www.testdome.com/certificates/a56d78cb99e64dc2a9f277d78f4f34d6',
@@ -63,10 +70,16 @@ const certifications = [
     link: 'https://drive.google.com/file/d/1nvhoMLcumCwvrUqKJ67ouQziko9lSAwf/view?usp=drive_link',
   },
 
-  {
-    title: 'CSS Styling',
-    source: 'EPCPS',
-    link: 'https://drive.google.com/file/d/1TYeka23yVyM2HA-ncYO2juJs-8B376zT/view?usp=drive_link',
+   {
+    title: 'PHP',
+    source: 'Testdome',
+    link: 'https://www.testdome.com/certificates/92c33b2402c04ef788e9c2668bcfd418',
+  },
+
+   {
+    title: 'SQL (Advanced)',
+    source: 'HackerRank',
+    link: 'https://www.hackerrank.com/certificates/69c17afd0c51',
   },
 
   {
@@ -108,7 +121,7 @@ const Certifications = () => {
 
   return (
     <div className="certifications-page max-w-4xl mx-auto px-4 py-8">
-      <section className="certifications-intro p-3 border-b border-zinc-200 mb-3">
+      <section className="certifications-intro p-3 page-divider-b mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a
             href="/"
@@ -166,7 +179,7 @@ const Certifications = () => {
                 rel="noopener noreferrer"
                 style={{ '--stagger-delay': `${index * 100}ms` }}
               >
-                <article className="certification-panel border-b border-zinc-200 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
+                <article className="certification-panel page-divider-b p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
                   <b className="text-sm">{item.title}</b>
                   <p className="text-xs mt-1">{item.source}</p>
                 </article>
@@ -174,7 +187,7 @@ const Certifications = () => {
             ) : (
               <article
                 key={item.title}
-                className="certification-card certification-panel border-b border-zinc-200 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5"
+                className="certification-card certification-panel page-divider-b p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5"
                 style={{ '--stagger-delay': `${index * 100}ms` }}
               >
                 <b className="text-sm">{item.title}</b>

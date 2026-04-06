@@ -43,7 +43,7 @@ const RecentProj = () => {
 
   return (
     <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
-      <section className="fadeup-item fadeup-1 p-3 border-b border-zinc-200 mb-3">
+      <section className="fadeup-item fadeup-1 p-3 page-divider-b mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a
             href="/"
@@ -95,7 +95,7 @@ const RecentProj = () => {
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className="stagger-item border-b border-zinc-200 bg-zinc-100 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5"
+              className="stagger-item page-divider-b bg-zinc-100 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5"
               style={{ '--stagger-delay': `${index * 100}ms` }}
             >
               <h4 className="text-sm font-semibold mb-1">{project.title}</h4>
@@ -114,7 +114,6 @@ const RecentProj = () => {
 }
 
 export default RecentProj
-
 
 
 
