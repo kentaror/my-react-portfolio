@@ -87,14 +87,14 @@ const Markup = () => (
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn hero-action-hover-bg order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-envelope"></i> Send Email</a>
               <button id="openResumeModalBtn"
-                className="hero-action-btn hero-action-hover-bg order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-file-lines"></i> View Resume</button>
               <a
                 href="/blog-post" target='_blank'
-                className="hero-action-btn hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
                 <span className="inline-flex items-center gap-0.5 sm:gap-2">
                   <i className="fa-regular fa-pen-to-square"></i> Read my blog
                 </span>
@@ -486,41 +486,46 @@ const Markup = () => (
             className="grid absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-9 sm:w-9 sm:h-10 border border-zinc-200 bg-zinc-50 place-items-center text-sm text-zinc-500 z-[50] pointer-events-auto cursor-pointer"><i
               className="fa-solid fa-angle-left"></i></button>
           <div id="galleryViewport" className="overflow-hidden relative z-[1]">
-            <div id="galleryTrack" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+            <div id="galleryTrack" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1">
+              <div className="js-gallery-frame overflow-hidden bg-zinc-50 relative group">
                 <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
                   src="/gal1.jpeg"
                   alt="Gallery 1"
                   loading="lazy"
                   decoding="async" />
+                <div className="absolute inset-x-0 bottom-0 h-1 translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
               </div>
-              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+              <div className="js-gallery-frame overflow-hidden bg-zinc-50 relative group">
                 <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
                   src="/gal2.JPG"
                   alt="Gallery 2"
                   loading="lazy"
                   decoding="async" />
+                <div className="absolute inset-x-0 bottom-0 h-1 translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
               </div>
-              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+              <div className="js-gallery-frame overflow-hidden bg-zinc-50 relative group">
                 <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
                   src="/gal3.png"
                   alt="Gallery 3"
                   loading="lazy"
                   decoding="async" />
+                <div className="absolute inset-x-0 bottom-0 h-1 translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
               </div>
-              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+              <div className="js-gallery-frame overflow-hidden bg-zinc-50 relative group">
                 <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
                   src="/gal4.png"
                   alt="Gallery 4"
                   loading="lazy"
                   decoding="async" />
+                <div className="absolute inset-x-0 bottom-0 h-1 translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
               </div>
-              <div className="js-gallery-frame overflow-hidden border border-zinc-200 bg-zinc-50">
+              <div className="js-gallery-frame overflow-hidden bg-zinc-50 relative group">
                 <img className="js-gallery-image w-full h-full object-cover cursor-pointer transition duration-200 ease-out hover:scale-105"
                   src="/gal5.jpg"
                   alt="Gallery 5"
                   loading="lazy"
                   decoding="async" />
+                <div className="absolute inset-x-0 bottom-0 h-1 translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
               </div>
             </div>
           </div>

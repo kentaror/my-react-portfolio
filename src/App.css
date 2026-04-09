@@ -1,4 +1,4 @@
-﻿html,
+html,
 body,
 #root {
   margin: 0;
@@ -1328,4 +1328,16 @@ body:not(.dark-theme) .main-page-divider-lift:focus-within,
 .dark-theme .light-only-border-b {
   border-bottom-width: 0 !important;
   border-bottom-color: transparent !important;
+}
+
+
+
+
+#portfolioGallery .js-gallery-frame > div {
+  z-index: 10;
+  pointer-events: none;
+}
+
+#portfolioGallery .js-gallery-frame > div * {
+  pointer-events: auto;
 }
