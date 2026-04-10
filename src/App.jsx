@@ -1,6 +1,8 @@
 ﻿import { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Markup from './Markup'
+import CaseStudyPage from './CaseStudyPage'
 import { applyDocumentTheme } from './theme.js'
 
 
@@ -618,7 +620,12 @@ function App() {
   }, [])
 
   return (
-    <Markup />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Markup />} />
+        <Route path="/case-study" element={<CaseStudyPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
