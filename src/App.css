@@ -18,7 +18,7 @@ html.dark-theme {
 }
 
 body {
-  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Open Runde', sans-serif;
   background: transparent;
   overflow-x: hidden;
 }
@@ -1342,55 +1342,4 @@ body:not(.dark-theme) .main-page-divider-lift:focus-within,
   pointer-events: auto;
 }
 
-/* Reader Mode Enhancements */
-@layer utilities {
-  .font-geist {
-    font-family: 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  }
-}
 
-/* Prose customizations for Reader Mode */
-.prose {
-  max-width: 65ch;
-}
-
-.prose h1 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.prose h2 {
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
-
-.prose p {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
-  line-height: 1.75;
-}
-
-.prose ul {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
-}
-
-.prose li {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-/* Glassmorphic backdrop blur support */
-@supports (backdrop-filter: blur(12px)) {
-  .backdrop-blur-md {
-    backdrop-filter: blur(12px);
-  }
-}
-
-/* Keyboard shortcut styling */
-kbd {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.875em;
-}

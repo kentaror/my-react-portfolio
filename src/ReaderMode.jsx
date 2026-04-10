@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+gimport { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
 const ReaderMode = ({ children }) => {
@@ -52,6 +52,22 @@ const ReaderMode = ({ children }) => {
     window.addEventListener('keydown', handleKeyPress)
     return () => window.removeEventListener('keydown', handleKeyPress)
   }, [isReaderMode])
+
+  // Apply font class to body when reader mode is active
+  useEffect(() => {
+    if (isReaderMode) {
+      const fontClass = getFontClass()
+      document.documentElement.classList.add('reader-mode-active')
+      document.documentElement.setAttribute('data-reader-font', currentFont)
+    } else {
+      document.documentElement.classList.remove('reader-mode-active')
+      document.documentElement.removeAttribute('data-reader-font')
+    }
+    return () => {
+      document.documentElement.classList.remove('reader-mode-active')
+      document.documentElement.removeAttribute('data-reader-font')
+    }
+  }, [isReaderMode, currentFont])
 
   return (
     <>
@@ -141,30 +157,8 @@ const ReaderMode = ({ children }) => {
         </div>
       )}
 
-      {/* Main Content */}
-      <div
-        className={`transition-all duration-500 ease-in-out ${
-          isReaderMode ? 'bg-zinc-50 dark:bg-zinc-900 min-h-screen' : ''
-        }`}
-      >
-        <div
-          className={`transition-all duration-500 ease-in-out ${
-            isReaderMode
-              ? 'max-w-2xl mx-auto px-6 py-12'
-              : 'w-full'
-          }`}
-        >
-          <article
-            className={`transition-all duration-500 ease-in-out ${
-              isReaderMode
-                ? `prose prose-zinc dark:prose-invert prose-lg ${getFontClass()} max-w-none`
-                : ''
-            }`}
-          >
-            {children}
-          </article>
-        </div>
-      </div>
+      {/* Main Content - No layout changes, only font changes */}
+      {children}
 
       {/* Click outside to close menu */}
       {isMenuOpen && (

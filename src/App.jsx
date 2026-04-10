@@ -1,8 +1,6 @@
 ﻿import { useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Markup from './Markup'
-import ReaderMode from './ReaderMode'
 import { applyDocumentTheme } from './theme.js'
 
 
@@ -620,13 +618,7 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
-      <ReaderMode>
-        <Routes>
-          <Route path="/" element={<Markup />} />
-        </Routes>
-      </ReaderMode>
-    </BrowserRouter>
+    <Markup />
   )
 }
 
