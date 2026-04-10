@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-const ReaderMode = ({ children, showNav = true, showFooter = true }) => {
+const ReaderMode = ({ children }) => {
   const [searchParams, setSearchParams] = useSearchParams()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   
@@ -55,115 +55,98 @@ const ReaderMode = ({ children, showNav = true, showFooter = true }) => {
 
   return (
     <>
-      {/* AA Control Center */}
-      <div className="fixed top-6 right-6 z-50">
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="w-12 h-12 backdrop-blur-md bg-white/70 dark:bg-black/70 border border-zinc-200/50 dark:border-zinc-700/50 flex items-center justify-center text-sm font-semibold transition-all duration-300 hover:bg-white/90 dark:hover:bg-black/90 shadow-lg"
-          aria-label="Reader mode controls"
+      {/* Reader Mode Icon - Safari Style */}
+      <button
+        onClick={toggleReaderMode}
+        className={`fixed top-4 right-20 z-50 w-10 h-10 flex items-center justify-center transition-all duration-300 ${
+          isReaderMode 
+            ? 'bg-black dark:bg-white text-white dark:text-black' 
+            : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700'
+        }`}
+        aria-label="Toggle reader mode"
+        title="Reader View"
+      >
+        <svg 
+          width="20" 
+          height="20" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          strokeWidth="2"
+          strokeLinecap="round" 
+          strokeLinejoin="round"
         >
-          AA
-        </button>
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          <line x1="10" y1="8" x2="16" y2="8" />
+          <line x1="10" y1="12" x2="16" y2="12" />
+          <line x1="10" y1="16" x2="16" y2="16" />
+        </svg>
+      </button>
 
-        {/* Control Menu */}
-        <div
-          className={`absolute top-14 right-0 w-64 backdrop-blur-md bg-white/70 dark:bg-black/70 border border-zinc-200/50 dark:border-zinc-700/50 shadow-xl transition-all duration-300 ease-in-out origin-top-right ${
-            isMenuOpen
-              ? 'opacity-100 scale-100 pointer-events-auto'
-              : 'opacity-0 scale-95 pointer-events-none'
-          }`}
-        >
-          <div className="p-4 space-y-4">
-            {/* Reader Mode Toggle */}
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium">Reader Mode</span>
+      {/* Font Selector - Only visible in Reader Mode */}
+      {isReaderMode && (
+        <div className="fixed top-4 right-32 z-50">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="w-10 h-10 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700 flex items-center justify-center text-xs font-semibold transition-all duration-300"
+            aria-label="Font options"
+            title="Font Options"
+          >
+            AA
+          </button>
+
+          {/* Font Menu */}
+          <div
+            className={`absolute top-12 right-0 w-48 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-xl transition-all duration-200 ease-in-out origin-top-right ${
+              isMenuOpen
+                ? 'opacity-100 scale-100 pointer-events-auto'
+                : 'opacity-0 scale-95 pointer-events-none'
+            }`}
+          >
+            <div className="p-3 space-y-2">
+              <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-2">Font Family</p>
               <button
-                onClick={toggleReaderMode}
-                className={`relative w-11 h-6 transition-colors duration-300 ${
-                  isReaderMode ? 'bg-black dark:bg-white' : 'bg-zinc-300 dark:bg-zinc-600'
+                onClick={() => { setFont('serif'); setIsMenuOpen(false); }}
+                className={`w-full px-3 py-2 text-sm text-left transition-all duration-200 ${
+                  currentFont === 'serif'
+                    ? 'bg-black dark:bg-white text-white dark:text-black font-serif'
+                    : 'bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-700 font-serif'
                 }`}
-                aria-label="Toggle reader mode"
               >
-                <span
-                  className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white dark:bg-black transition-transform duration-300 ${
-                    isReaderMode ? 'translate-x-5' : 'translate-x-0'
-                  }`}
-                />
+                Serif
               </button>
-            </div>
-
-            {/* Font Switcher */}
-            <div>
-              <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-2 block">
-                Font Family
-              </label>
-              <div className="grid grid-cols-3 gap-1">
-                <button
-                  onClick={() => setFont('serif')}
-                  className={`px-3 py-2 text-xs font-medium transition-all duration-200 ${
-                    currentFont === 'serif'
-                      ? 'bg-black dark:bg-white text-white dark:text-black'
-                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700'
-                  }`}
-                >
-                  Serif
-                </button>
-                <button
-                  onClick={() => setFont('sans')}
-                  className={`px-3 py-2 text-xs font-medium transition-all duration-200 ${
-                    currentFont === 'sans'
-                      ? 'bg-black dark:bg-white text-white dark:text-black'
-                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700'
-                  }`}
-                >
-                  Sans
-                </button>
-                <button
-                  onClick={() => setFont('geist')}
-                  className={`px-3 py-2 text-xs font-medium transition-all duration-200 ${
-                    currentFont === 'geist'
-                      ? 'bg-black dark:bg-white text-white dark:text-black'
-                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700'
-                  }`}
-                >
-                  Geist
-                </button>
-              </div>
-            </div>
-
-            {/* Keyboard Shortcut Hint */}
-            <div className="pt-3 border-t border-zinc-200/50 dark:border-zinc-700/50">
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                <kbd className="px-1.5 py-0.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600">
-                  ⌘R
-                </kbd>{' '}
-                to toggle
-              </p>
+              <button
+                onClick={() => { setFont('sans'); setIsMenuOpen(false); }}
+                className={`w-full px-3 py-2 text-sm text-left transition-all duration-200 ${
+                  currentFont === 'sans'
+                    ? 'bg-black dark:bg-white text-white dark:text-black font-sans'
+                    : 'bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-700 font-sans'
+                }`}
+              >
+                Sans
+              </button>
+              <button
+                onClick={() => { setFont('geist'); setIsMenuOpen(false); }}
+                className={`w-full px-3 py-2 text-sm text-left transition-all duration-200 ${
+                  currentFont === 'geist'
+                    ? 'bg-black dark:bg-white text-white dark:text-black font-geist'
+                    : 'bg-zinc-50 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-700 font-geist'
+                }`}
+              >
+                Geist
+              </button>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
-      {/* Main Content Wrapper */}
+      {/* Main Content */}
       <div
         className={`transition-all duration-500 ease-in-out ${
-          isReaderMode ? 'bg-zinc-50 dark:bg-zinc-900' : ''
+          isReaderMode ? 'bg-zinc-50 dark:bg-zinc-900 min-h-screen' : ''
         }`}
       >
-        {/* Navigation - Hidden in Reader Mode */}
-        {showNav && (
-          <div
-            className={`transition-all duration-500 ease-in-out ${
-              isReaderMode
-                ? 'opacity-0 h-0 overflow-hidden pointer-events-none'
-                : 'opacity-100 h-auto'
-            }`}
-          >
-            {/* Your navigation component goes here */}
-          </div>
-        )}
-
-        {/* Content Area */}
         <div
           className={`transition-all duration-500 ease-in-out ${
             isReaderMode
@@ -181,19 +164,6 @@ const ReaderMode = ({ children, showNav = true, showFooter = true }) => {
             {children}
           </article>
         </div>
-
-        {/* Footer - Hidden in Reader Mode */}
-        {showFooter && (
-          <div
-            className={`transition-all duration-500 ease-in-out ${
-              isReaderMode
-                ? 'opacity-0 h-0 overflow-hidden pointer-events-none'
-                : 'opacity-100 h-auto'
-            }`}
-          >
-            {/* Your footer component goes here */}
-          </div>
-        )}
       </div>
 
       {/* Click outside to close menu */}

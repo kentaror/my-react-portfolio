@@ -2,7 +2,7 @@ import ReaderMode from './ReaderMode'
 
 const CaseStudyPage = () => {
   return (
-    <ReaderMode showNav={true} showFooter={true}>
+    <ReaderMode>
       {/* Case Study Content */}
       <div className="space-y-8">
         <header className="space-y-4">
