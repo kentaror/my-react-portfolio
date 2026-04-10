@@ -180,7 +180,7 @@ const Certifications = () => {
                 style={{ '--stagger-delay': `${index * 100}ms` }}
               >
                 <article className="certification-panel page-divider-b p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5">
-                  <b className="text-sm">{item.title}</b>
+                  <b className="text-sm font-medium">{item.title}</b>
                   <p className="text-xs mt-1">{item.source}</p>
                 </article>
               </a>

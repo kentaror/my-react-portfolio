@@ -98,7 +98,7 @@ const RecentProj = () => {
               className="stagger-item page-divider-b bg-zinc-100 p-2.5 transition-all duration-300 ease-out hover:-translate-y-0.5"
               style={{ '--stagger-delay': `${index * 100}ms` }}
             >
-              <h4 className="text-sm font-semibold mb-1">{project.title}</h4>
+              <h4 className="text-sm font-medium mb-1">{project.title}</h4>
               <p className="text-xs mb-1.5">{project.description}</p>
               <code className="text-xs bg-zinc-200 px-1.5 py-0.5">{project.site}</code>
             </article>

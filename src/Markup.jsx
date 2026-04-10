@@ -75,7 +75,7 @@ const Markup = () => (
                 href="https://calendly.com/agbayanikristianken/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn order-1 sm:order-1 h-[23px] sm:h-[34px] px-1 sm:px-3 border border-black bg-black text-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
+                className="hero-action-btn order-1 sm:order-1 h-[23px] sm:h-[34px] px-1 sm:px-3 border border-black bg-black text-white text-[6px] sm:text-[12px] font-normal inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
                   className="fa-regular fa-calendar"></i> Schedule a Call <i className="fa-solid fa-angle-right"></i></a>
               <a
 
@@ -87,14 +87,14 @@ const Markup = () => (
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn light-only-border-b hero-action-hover-bg order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-envelope"></i> Send Email</a>
               <button id="openResumeModalBtn"
-                className="hero-action-btn light-only-border-b hero-action-hover-bg order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-file-lines"></i> View Resume</button>
               <a
                 href="/blog-post" target='_blank'
-                className="hero-action-btn light-only-border-b hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[13px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
                 <span className="inline-flex items-center gap-0.5 sm:gap-2">
                   <i className="fa-regular fa-pen-to-square"></i> Read my blog
                 </span>
@@ -134,43 +134,43 @@ const Markup = () => (
               <span className="experience-line absolute left-[-1px] top-[11px] bottom-[-8px] w-px" aria-hidden="true"></span>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker is-current absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
-                <p className="text-sm font-bold">Full Subli Graphic Artist</p>
-                <p className="text-[13px]">Ryzn Clothing <span className="float-right text-[10px]">2026</span></p>
+                <p className="text-sm font-semibold">Full Subli Graphic Artist</p>
+                <p className="text-[12px]">Ryzn Clothing <span className="float-right text-[10px]">2026</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
-                <p className="text-sm font-bold">On-the-Job Training</p>
-                <p className="text-[13px]">Graphic Designer <span className="float-right text-[10px]">2026</span></p>
+                <p className="text-sm font-semibold">On-the-Job Training</p>
+                <p className="text-[12px]">Graphic Designer <span className="float-right text-[10px]">2026</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
-                <p className="text-sm font-bold">Leading Programmer</p>
-                <p className="text-[13px]">Capstone 101-102 <span className="float-right text-[10px]">2025</span></p>
+                <p className="text-sm font-semibold">Leading Programmer</p>
+                <p className="text-[12px]">Capstone 101-102 <span className="float-right text-[10px]">2025</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
-                <p className="text-sm font-bold">Mid-Level Graphic Artist </p>
-                <p className="text-[13px] ">Ryzn Clothing <span className="float-right text-[10px]">2025</span></p>
+                <p className="text-sm font-semibold">Mid-Level Graphic Artist </p>
+                <p className="text-[12px] ">Ryzn Clothing <span className="float-right text-[10px]">2025</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
-                <p className="text-sm font-bold">Junior Graphic Artist</p>
-                <p className="text-[13px]">Ryzn Clothing<span className="float-right text-[10px]">2024</span></p>
+                <p className="text-sm font-semibold">Junior Graphic Artist</p>
+                <p className="text-[12px]">Ryzn Clothing<span className="float-right text-[10px]">2024</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
-                <p className="text-sm font-bold">Ps & Ai</p>
-                <p className="text-[13px]">Made my first pen tool <span className="float-right text-[10px]">2023</span></p>
+                <p className="text-sm font-semibold">Ps & Ai</p>
+                <p className="text-[12px]">Made my first pen tool <span className="float-right text-[10px]">2023</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
-                <p className="text-sm font-bold">BS Information Technology</p>
-                <p className="text-[13px]">Pangasinan State University  <span className="float-right text-[10px]">2022</span></p>
+                <p className="text-sm font-semibold">BS Information Technology</p>
+                <p className="text-[12px]">Pangasinan State University  <span className="float-right text-[10px]">2022</span></p>
               </div>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
-                <p className="text-sm font-bold">Hello World! <span className="text-xs">👋🏻</span></p>
-                <p className="text-[13px]">Wrote my first line of code <span className="float-right text-[10px]">2021</span></p>
+                <p className="text-sm font-semibold">Hello World! <span className="text-xs">👋🏻</span></p>
+                <p className="text-[12px]">Wrote my first line of code <span className="float-right text-[10px]">2021</span></p>
               </div>
             </div>
           </aside>
@@ -224,27 +224,27 @@ const Markup = () => (
               className="fa-solid fa-angle-right"></i></a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <div className=" bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+            <div className="p-2.5 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
-              <h4 className="text-sm font-semibold mb-1">Cabanas</h4>
+              <h4 className="text-sm font-medium mb-1">Cabanas</h4>
               <p className="text-xs mb-1.5">Hotel and boat booking for cabanas</p><code
                 className="text-xs bg-zinc-200 px-1.5 py-0.5">cabanas.fun</code>
             </div>
-            <div className=" bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+            <div className="p-2.5 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
-              <h4 className="text-sm font-semibold mb-1">sm404</h4>
+              <h4 className="text-sm font-medium mb-1">sm404</h4>
               <p className="text-xs mb-1.5">Online coding bootcamp</p><code
                 className="text-xs bg-zinc-200 px-1.5 py-0.5">sm-404.com</code>
             </div>
-            <div className=" bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+            <div className="p-2.5 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
-              <h4 className="text-sm font-bold mb-1">DIIN.PH</h4>
+              <h4 className="text-sm font-medium mb-1">DIIN.PH</h4>
               <p className="text-xs mb-1.5">AI-powered wardrobe assistant</p><code
                 className="text-xs bg-zinc-200 px-1.5 py-0.5">diin.ph</code>
             </div>
-            <div className=" bg-zinc-50 p-2.5 transition-all duration-300 ease-out 
+            <div className="p-2.5 transition-all duration-300 ease-out 
                hover:-translate-y-0.5">
-              <h4 className="text-sm font-bold mb-1">DYNAMIS Workout Tracker</h4>
+              <h4 className="text-sm font-medium mb-1">DYNAMIS Workout Tracker</h4>
               <p className="text-xs mb-1.5">AI-powered workout tracker</p><code
                 className="text-xs bg-zinc-200 px-1.5 py-0.5">dynamis-app.online</code>
             </div>
@@ -320,7 +320,7 @@ const Markup = () => (
             <h2 className="text-lg font-bold mb-2">Education</h2>
             <div className="relative ml-2 pl-3 space-y-2.5">
               <div className="relative group">
-                <p className="text-sm font-bold">Pangasinan State University</p>
+                <p className="text-sm font-semibold">Pangasinan State University</p>
                 <p className="text-[13px]">Alaminos City Campus</p>
               </div>
             </div>
@@ -330,7 +330,7 @@ const Markup = () => (
             <h2 className="text-lg font-bold mb-2">On-the-Job Training</h2>
             <div className="relative ml-2 pl-3 space-y-2.5">
               <div className="relative group">
-                <p className="text-sm font-bold">Virtual Wonders Web Solutions</p>
+                <p className="text-sm font-semibold">Virtual Wonders Web Solutions</p>
                 <p className="text-[13px]">Palamis, Alaminos City</p>
               </div>
             </div>
@@ -348,22 +348,22 @@ const Markup = () => (
           </div>
 
           <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
-            <b className="text-[13px] ml-1">Lecturer</b>
+            <b className="text-[12px] ml-1">Lecturer</b>
             <p className="text-[12px] ml-1">Techtalk</p>
           </div>
 
           <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
-            <b className="text-[13px] ml-1">CBT Web Design 1st Place</b>
+            <b className="text-[12px] ml-1">CBT Web Design 1st Place</b>
             <p className="text-[12px] ml-1">CBT Fest</p>
           </div>
 
           <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
-            <b className="text-[13px] ml-1">Legacy Responsive Web Design</b>
+            <b className="text-[12px] ml-1">Legacy Responsive Web Design</b>
             <p className="text-[12px] ml-1">FreeCodeCamp</p>
           </div>
 
           <div className="bg-zinc-100 p-1 mb-1.5 hover:bg-gray-200">
-            <b className="text-[13px] ml-1">CodeCred</b>
+            <b className="text-[12px] ml-1">CodeCred</b>
             <p className="text-[12px] ml-1">HTML Fundamentals</p>
           </div>
         </article>
