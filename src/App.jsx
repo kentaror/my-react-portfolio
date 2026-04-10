@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Markup from './Markup'
-import CaseStudyPage from './CaseStudyPage'
+import ReaderMode from './ReaderMode'
 import { applyDocumentTheme } from './theme.js'
 
 
@@ -621,10 +621,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Markup />} />
-        <Route path="/case-study" element={<CaseStudyPage />} />
-      </Routes>
+      <ReaderMode>
+        <Routes>
+          <Route path="/" element={<Markup />} />
+        </Routes>
+      </ReaderMode>
     </BrowserRouter>
   )
 }
