@@ -8,6 +8,7 @@ import RecentProj from './recent-proj.jsx'
 import Certifications from './certifications.jsx'
 import BlogPost from './blog-post.jsx'
 import BlogCleanFastPortfolioUi from './blog-clean-fast-portfolio-ui.jsx'
+import BlogWelcomeToKensBlog from './blog-welcome-to-kens-blog.jsx'
 import { applyDocumentTheme, getSavedTheme } from './theme.js'
 
 applyDocumentTheme(getSavedTheme())
@@ -21,6 +22,7 @@ const page =
   path === '/certifications' ? <Certifications /> :
   path === '/blog-post' ? <BlogPost /> :
   path === '/blog/building-clean-fast-portfolio-ui' ? <BlogCleanFastPortfolioUi /> :
+  path === '/blog/welcome-to-kens-blog' ? <BlogWelcomeToKensBlog /> :
   <App />
 
 createRoot(document.getElementById('root')).render(page)

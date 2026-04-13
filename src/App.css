@@ -32,6 +32,7 @@ body {
 :root {
   --theme-transition-duration: 420ms;
   --theme-transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --page-divider-color: #e5e7eb;
 }
 
 .switch {
@@ -125,6 +126,7 @@ body {
 .dark-theme {
   background: #000;
   color: #f4f4f5;
+  --page-divider-color: #2f2f2f;
 }
 
 html.dark-theme body,
@@ -219,7 +221,7 @@ body.chat-open #chatPanel {
     }
 
     .dark-theme .blog-card-separator {
-      border-color: #4b5563 !important;
+      border-color: var(--page-divider-color) !important;
     }
 
     .dark-theme .text-zinc-500 {
@@ -1281,16 +1283,11 @@ body:not(.dark-theme) #experienceList .experience-item:hover {
 .page-divider-b {
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: #e5e7eb;
+  border-bottom-color: var(--page-divider-color);
 }
 
 .dark-theme .page-divider-b {
-  border-bottom-color: #2f2f2f;
-}
-
-.dark-theme .page-fadeup .page-divider-b {
-  border-bottom-width: 0;
-  border-bottom-color: transparent;
+  border-bottom-color: var(--page-divider-color);
 }
 
 .main-page-divider-hover {
@@ -1322,7 +1319,7 @@ body:not(.dark-theme) .main-page-divider-lift:focus-within,
 }
 
 .light-only-border-b {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--page-divider-color);
 }
 
 .dark-theme .light-only-border-b {

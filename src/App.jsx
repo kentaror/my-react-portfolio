@@ -54,26 +54,38 @@ function App() {
       {
         quote:
           "Ken was the most talented software engineer I've mentored in a long time. He's a fast learner, delivers quality output, and stays curious about new technologies.",
-        name: 'Cris Lawrence Adrian Militante',
-        role: 'ICT Director at GCM',
+        name: 'Jumar Bagorio Caacbay',
+        role: 'Senior Graphic Artist and Owner of Ryzn Clothing',
       },
       {
         quote:
           'Working with Ken was smooth and dependable. He consistently delivered clean UI work and understood feedback quickly.',
-        name: 'Mikaela Santos',
-        role: 'Product Designer at Virtual Wonders Web Solutions',
+        name: 'Ruissan A. Ramos',
+        role: 'Department Chairperson at Pangasinan State University',
       },
       {
         quote:
           'Ken has strong initiative and ownership. He can translate ideas into practical features while keeping both design and performance in mind.',
-        name: 'Jared Villanueva',
-        role: 'Engineering Lead at Ryzn Clothing',
+        name: 'Marbelyn Caboteja',
+        role: 'Former Vice Governor of DOIT',
       },
       {
         quote:
           "I was impressed by Ken's consistency and professionalism. He communicates clearly, meets deadlines, and supports the team when it matters most.",
-        name: 'Angela Reyes',
-        role: 'Operations Manager at CBT Fest',
+        name: 'Daryl Rudy C. Villar',
+        role: 'President of Multimedia Club',
+      },
+       {
+        quote:
+          "I was impressed by Ken's consistency and professionalism. He communicates clearly, meets deadlines, and supports the team when it matters most.",
+        name: 'Daryl Rudy C. Villar',
+        role: 'President of Multimedia Club',
+      },
+       {
+        quote:
+          "I was impressed by Ken's consistency and professionalism. He communicates clearly, meets deadlines, and supports the team when it matters most.",
+        name: 'Daryl Rudy C. Villar',
+        role: 'President of Multimedia Club',
       },
     ]
 

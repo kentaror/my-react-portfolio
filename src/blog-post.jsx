@@ -36,6 +36,15 @@ const blogPosts = [
     excerpt:
       'A simple guide to making mobile carousels look cleaner and feel more consistent.',
   },
+  {
+    title: 'Welcome to Ken’s Blog',
+    date: 'December 18, 2025',
+    readTime: '4 min ',
+    category: 'UI/UX',
+    href: '/blog/welcome-to-kens-blog',
+    excerpt:
+      'Welcome to the blog. Here is a quick look at what you’ll find.',
+  },
 ]
 
 const BlogPost = () => {
@@ -85,7 +94,7 @@ const BlogPost = () => {
           </button>
         </div>
         <p className="text-sm text-zinc-500 leading-6">
-          Notes, lessons, and practical write-ups about frontend development, UI design, and my progress as Ken.
+         Sharing my process through helpful Tutorials, Guides, and Workflows.
         </p>
       </section>
 
