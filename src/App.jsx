@@ -346,8 +346,10 @@ function App() {
       ),
     )
     const resumeModal = document.getElementById('resumeModal')
-    const openResumeModalBtn = document.getElementById('openResumeModalBtn')
-    const closeResumeModalBtn = document.getElementById('closeResumeModalBtn')
+    const resumeDialog = document.getElementById('resumeDialog')
+    const openResumeModalBtns = Array.from(document.querySelectorAll('[data-resume-open]'))
+    const closeResumeModalBtns = Array.from(document.querySelectorAll('[data-resume-close]'))
+    let lastResumeTrigger = null
 
     function setResumeModalOpen(isOpen) {
       if (!resumeModal) {
@@ -356,10 +358,23 @@ function App() {
       resumeModal.classList.toggle('hidden', !isOpen)
       resumeModal.classList.toggle('flex', isOpen)
       resumeModal.setAttribute('aria-hidden', isOpen ? 'false' : 'true')
+      resumeModal.setAttribute('data-state', isOpen ? 'open' : 'closed')
+      resumeDialog?.setAttribute('data-state', isOpen ? 'open' : 'closed')
       document.body.style.overflow = isOpen ? 'hidden' : ''
+      if (isOpen) {
+        window.requestAnimationFrame(() => {
+          closeResumeModalBtns[0]?.focus()
+        })
+      } else {
+        lastResumeTrigger?.focus?.()
+      }
     }
 
-    const onOpenResumeModal = () => setResumeModalOpen(true)
+    const onOpenResumeModal = (event) => {
+      event.preventDefault()
+      lastResumeTrigger = event.currentTarget
+      setResumeModalOpen(true)
+    }
     const onCloseResumeModal = () => setResumeModalOpen(false)
     const onResumeModalBackdropClick = (event) => {
       if (event.target === resumeModal) {
@@ -563,9 +578,13 @@ function App() {
       document.addEventListener('keydown', onEscapeCloseChat)
     }
 
-    if (resumeModal && openResumeModalBtn && closeResumeModalBtn) {
-      openResumeModalBtn.addEventListener('click', onOpenResumeModal)
-      closeResumeModalBtn.addEventListener('click', onCloseResumeModal)
+    if (resumeModal && openResumeModalBtns.length > 0 && closeResumeModalBtns.length > 0) {
+      openResumeModalBtns.forEach((button) => {
+        button.addEventListener('click', onOpenResumeModal)
+      })
+      closeResumeModalBtns.forEach((button) => {
+        button.addEventListener('click', onCloseResumeModal)
+      })
       resumeModal.addEventListener('click', onResumeModalBackdropClick)
       document.addEventListener('keydown', onResumeModalEscape)
     }
@@ -615,12 +634,12 @@ function App() {
         chatLauncher.removeEventListener('click', openChat)
       }
       document.removeEventListener('keydown', onEscapeCloseChat)
-      if (openResumeModalBtn) {
-        openResumeModalBtn.removeEventListener('click', onOpenResumeModal)
-      }
-      if (closeResumeModalBtn) {
-        closeResumeModalBtn.removeEventListener('click', onCloseResumeModal)
-      }
+      openResumeModalBtns.forEach((button) => {
+        button.removeEventListener('click', onOpenResumeModal)
+      })
+      closeResumeModalBtns.forEach((button) => {
+        button.removeEventListener('click', onCloseResumeModal)
+      })
       if (resumeModal) {
         resumeModal.removeEventListener('click', onResumeModalBackdropClick)
       }

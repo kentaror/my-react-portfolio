@@ -87,11 +87,14 @@ const Markup = () => (
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn light-only-border-b hero-action-hover-bg order-3 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-2 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-envelope"></i> Send Email</a>
-              <button id="openResumeModalBtn"
-                className="hero-action-btn light-only-border-b hero-action-hover-bg order-2 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
-                  className="fa-regular fa-file-lines"></i> View Resume</button>
+              <a
+                id="openResumeModalBtn"
+                href="/2025-template_bullet.pdf"
+                data-resume-open
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-3 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                  className="fa-regular fa-file-lines"></i> View Resume</a>
               <a
                 href="/blog-post" target='_blank'
                 className="hero-action-btn light-only-border-b hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
@@ -119,7 +122,7 @@ const Markup = () => (
               <p className="text-sm leading-6 mb-3.5">
                 My goal is to grow as a full-stack developer who builds products that solve real-world problems. I value clean structure and reliable performance, approaching every project with a focus on quality, maintainability, and continuous learning.
               </p>
-               <p className="text-sm leading-6">
+              <p className="text-sm leading-6">
                 Lately, I have developed a deep fascination with Artificial Intelligence and its integration into modern applications. Beyond exploring generative AI, agentic systems, and AI-powered workflows, I have also begun attending and speaking on AI topics. These experiences continue to fuel my interest, as I see the transformative power of this technology firsthand.
               </p>
             </div>
@@ -558,27 +561,97 @@ const Markup = () => (
           keys to navigate • ESC to close</div>
       </div>
 
+      <div
+        id="resumeModal"
+        className="fixed inset-0 z-[70] hidden items-center justify-center bg-black/55 p-3 sm:p-4"
+        aria-hidden="true"
+        data-state="closed"
+      >
+        <div
+          id="resumeDialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="resumeDialogTitle"
+          data-state="closed"
+          className="resume-dialog-panel relative m-0 flex max-h-[85vh] w-[88vw] max-w-[560px] flex-col overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-[0_24px_80px_-32px_rgba(15,23,42,0.45)] duration-200 sm:w-[76vw] md:w-[60vw] lg:w-[520px]"
+          tabIndex={-1}
+        >
+          <button
+            type="button"
+            data-resume-close
+            className="resume-dialog-icon-btn absolute right-2.5 top-2.5 z-10 inline-flex h-7 w-7 items-center justify-center rounded-sm text-zinc-500 transition-colors duration-200 hover:bg-zinc-200/70 hover:text-zinc-700"
+            aria-label="Close resume preview"
+          >
+            <i className="fa-solid fa-xmark"></i>
+          </button>
+
+          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-1.5 border-b border-zinc-200 bg-slate-100 px-3 py-2.5 text-center sm:text-left">
+            <h2 id="resumeDialogTitle" className="truncate pr-8 text-base font-bold sm:text-lg">Resume</h2>
+          </div>
+
+          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-2 border-b border-zinc-200 bg-slate-100 px-3 py-2.5">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-zinc-200 bg-white text-zinc-600 shadow-sm">
+                <i className="fa-regular fa-file-lines text-[12px]"></i>
+              </span>
+              <span className="resume-dialog-muted text-[11px] sm:text-xs">PDF Preview</span>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2">
+              <a
+                href="/2025-template_bullet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="resume-dialog-secondary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-sm border border-zinc-200 bg-white px-2.5 text-[11px] font-medium text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
+              >
+                <i className="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                Open Full
+              </a>
+              <a
+                href="/2025-template_bullet.pdf"
+                download="Kristian_Ken_Lucero_Agbayani_Resume.pdf"
+                className="resume-dialog-primary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-md bg-black px-2.5 text-[11px] font-medium text-white transition-colors duration-200 hover:bg-zinc-800"
+              >
+                <i className="fa-solid fa-download text-[11px]"></i>
+                Download
+              </a>
+            </div>
+          </div>
+
+          <div className="resume-dialog-body flex-1 overflow-auto bg-zinc-100">
+            <div className="flex min-h-full justify-center p-2.5">
+              <div className="resume-dialog-paper relative aspect-[8.5/11] w-full max-w-[440px] overflow-hidden bg-white">
+                <iframe
+                  title="Resume preview"
+                  src="/2025-template_bullet.pdf#toolbar=0&navpanes=0&view=FitV"
+                  className="resume-dialog-frame absolute inset-0 block h-full w-full border-0 bg-white"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-2 border-t border-zinc-200 bg-slate-100 px-3 py-2.5">
+            <div className="flex w-full flex-col items-center gap-2">
+              <div className="resume-dialog-muted max-w-full truncate text-[11px]">2025-template_bullet.pdf</div>
+              <div className="flex gap-2">
+                <button
+                  id="closeResumeModalBtn"
+                  type="button"
+                  data-resume-close
+                  className="resume-dialog-secondary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-sm border border-zinc-200 bg-white px-3 text-[11px] font-medium text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">© 2026 Agbayani, Kristian Ken Lucero.
         All rights reserved.</footer>
     </div>
     <Chatbot />
-
-    <div id="resumeModal" className="fixed inset-0 z-[70] hidden items-center justify-center bg-black/55 px-2 sm:px-4 py-3" aria-hidden="true">
-      <div className="bg-white border border-zinc-200 w-full max-w-[420px] sm:max-w-[520px] md:max-w-[620px] h-[94vh] overflow-hidden flex flex-col">
-        <div className="flex items-center justify-between page-divider-b px-3 sm:px-4 py-3">
-          <h2 className="text-base sm:text-lg font-bold">My Resume</h2>
-          <div className="flex items-center gap-2">
-            <a href="/2025-template_bullet.pdf" target="_blank" rel="noopener noreferrer" className="text-sm border border-zinc-200 px-3 py-1">Open Full</a>
-            <button id="closeResumeModalBtn" type="button" className="text-sm border border-zinc-200 px-3 py-1">Close</button>
-          </div>
-        </div>
-        <div className="p-2 sm:p-3 bg-zinc-50 flex-1 min-h-0 flex justify-center overflow-auto">
-          <div className="w-full max-w-[560px] aspect-[8.5/11] bg-white border border-zinc-200">
-            <iframe title="Resume Preview" src="/2025-template_bullet.pdf#view=FitH" className="w-full h-full bg-white"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </>
 )

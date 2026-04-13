@@ -5,10 +5,17 @@
   --font-sans: "Open Runde", sans-serif;
 }
 
-html,
-body,
-#root {
+html {
   font-family: var(--font-sans);
+}
+
+body,
+#root,
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 * {
