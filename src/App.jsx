@@ -539,7 +539,10 @@ function App() {
       }
     }
 
-    const openChat = () => setChatOpen(true)
+    const openChat = (event) => {
+      event?.preventDefault?.()
+      setChatOpen(true)
+    }
     const closeChat = () => setChatOpen(false)
 
     const updateChatSendState = () => {
