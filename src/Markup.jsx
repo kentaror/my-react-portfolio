@@ -597,24 +597,45 @@ const Markup = () => (
               <span className="resume-dialog-muted text-[11px] sm:text-xs">PDF Preview</span>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2">
-              <a
-                href="/2025-template_bullet.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="resume-dialog-secondary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-sm border border-zinc-200 bg-white px-2.5 text-[11px] font-medium text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-                Open Full
-              </a>
-              <a
-                href="/2025-template_bullet.pdf"
-                download="Kristian_Ken_Lucero_Agbayani_Resume.pdf"
-                className="resume-dialog-primary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-md bg-black px-2.5 text-[11px] font-medium text-white transition-colors duration-200 hover:bg-zinc-800"
-              >
-                <i className="fa-solid fa-download text-[11px]"></i>
-                Download
-              </a>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  id="zoomOutBtn"
+                  className="resume-dialog-secondary-btn inline-flex h-7 w-7 items-center justify-center rounded-sm border border-zinc-200 bg-white text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
+                  aria-label="Zoom out"
+                >
+                  <i className="fa-solid fa-minus text-[11px]"></i>
+                </button>
+                <span id="zoomLevel" className="resume-dialog-muted text-[11px] min-w-[48px] text-center">100%</span>
+                <button
+                  type="button"
+                  id="zoomInBtn"
+                  className="resume-dialog-secondary-btn inline-flex h-7 w-7 items-center justify-center rounded-sm border border-zinc-200 bg-white text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
+                  aria-label="Zoom in"
+                >
+                  <i className="fa-solid fa-plus text-[11px]"></i>
+                </button>
+              </div>
+              <div className="flex flex-wrap items-center gap-2">
+                <a
+                  href="/2025-template_bullet.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="resume-dialog-secondary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-sm border border-zinc-200 bg-white px-2.5 text-[11px] font-medium text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
+                >
+                  <i className="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                  Open Full
+                </a>
+                <a
+                  href="/2025-template_bullet.pdf"
+                  download="Kristian_Ken_Lucero_Agbayani_Resume.pdf"
+                  className="resume-dialog-primary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-md bg-black px-2.5 text-[11px] font-medium text-white transition-colors duration-200 hover:bg-zinc-800"
+                >
+                  <i className="fa-solid fa-download text-[11px]"></i>
+                  Download
+                </a>
+              </div>
             </div>
           </div>
 
@@ -622,9 +643,11 @@ const Markup = () => (
             <div className="flex min-h-full justify-center p-2.5">
               <div className="resume-dialog-paper relative aspect-[8.5/11] w-full max-w-[440px] overflow-hidden bg-white">
                 <iframe
+                  id="resumeIframe"
                   title="Resume preview"
                   src="/2025-template_bullet.pdf#toolbar=0&navpanes=0&view=FitV"
                   className="resume-dialog-frame absolute inset-0 block h-full w-full border-0 bg-white"
+                  style={{ transform: 'scale(1)', transformOrigin: 'top center' }}
                 />
               </div>
             </div>
