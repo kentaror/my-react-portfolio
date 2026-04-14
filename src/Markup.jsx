@@ -585,11 +585,11 @@ const Markup = () => (
             <i className="fa-solid fa-xmark"></i>
           </button>
 
-          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-1.5 border-b border-zinc-200 bg-slate-100 px-3 py-2.5 text-center sm:text-left">
+          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-1.5 border-b border-zinc-200 px-3 py-2.5 text-center sm:text-left">
             <h2 id="resumeDialogTitle" className="truncate pr-8 text-base font-bold sm:text-lg">Resume</h2>
           </div>
 
-          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-2 border-b border-zinc-200 bg-slate-100 px-3 py-2.5">
+          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-2 border-b border-zinc-200 px-3 py-2.5">
             <div className="flex items-center gap-2">
               <span className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-zinc-200 bg-white text-zinc-600 shadow-sm">
                 <i className="fa-regular fa-file-lines text-[12px]"></i>
@@ -618,7 +618,7 @@ const Markup = () => (
             </div>
           </div>
 
-          <div className="resume-dialog-body flex-1 overflow-auto bg-zinc-100">
+          <div className="resume-dialog-body flex-1 overflow-auto">
             <div className="flex min-h-full justify-center p-2.5">
               <div className="resume-dialog-paper relative aspect-[8.5/11] w-full max-w-[440px] overflow-hidden bg-white">
                 <iframe
@@ -630,7 +630,7 @@ const Markup = () => (
             </div>
           </div>
 
-          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-2 border-t border-zinc-200 bg-slate-100 px-3 py-2.5">
+          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-2 border-t border-zinc-200 px-3 py-2.5">
             <div className="flex w-full flex-col items-center gap-2">
               <div className="resume-dialog-muted max-w-full truncate text-[11px]">2025-template_bullet.pdf</div>
               <div className="flex gap-2">
