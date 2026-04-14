@@ -592,6 +592,30 @@ function App() {
       document.addEventListener('keydown', onResumeModalEscape)
     }
 
+    const resumeIframe = document.getElementById('resumeIframe')
+    const zoomInBtn = document.getElementById('zoomInBtn')
+    const zoomOutBtn = document.getElementById('zoomOutBtn')
+    const zoomLevel = document.getElementById('zoomLevel')
+    let currentZoom = 1
+
+    const updateZoom = (newZoom) => {
+      currentZoom = Math.max(0.5, Math.min(2, newZoom))
+      if (resumeIframe) {
+        resumeIframe.style.transform = `scale(${currentZoom})`
+      }
+      if (zoomLevel) {
+        zoomLevel.textContent = `${Math.round(currentZoom * 100)}%`
+      }
+    }
+
+    const onZoomIn = () => updateZoom(currentZoom + 0.1)
+    const onZoomOut = () => updateZoom(currentZoom - 0.1)
+
+    if (zoomInBtn && zoomOutBtn) {
+      zoomInBtn.addEventListener('click', onZoomIn)
+      zoomOutBtn.addEventListener('click', onZoomOut)
+    }
+
     return () => {
       document.body.style.overflow = ''
       toggle?.removeEventListener('change', onThemeChange)
@@ -647,6 +671,12 @@ function App() {
         resumeModal.removeEventListener('click', onResumeModalBackdropClick)
       }
       document.removeEventListener('keydown', onResumeModalEscape)
+      if (zoomInBtn) {
+        zoomInBtn.removeEventListener('click', onZoomIn)
+      }
+      if (zoomOutBtn) {
+        zoomOutBtn.removeEventListener('click', onZoomOut)
+      }
       hideTypingIndicator()
     }
   }, [])
