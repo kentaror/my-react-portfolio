@@ -127,6 +127,7 @@ const Certifications = () => {
             href="/"
             className="justify-self-start inline-flex items-center gap-1 text-[12px] sm:text-[13px] text-zinc-900"
           >
+            
             <svg
               aria-hidden="true"
               width="20"
