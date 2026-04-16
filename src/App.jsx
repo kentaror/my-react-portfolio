@@ -2,6 +2,11 @@
 import './App.css'
 import Markup from './Markup'
 import { applyDocumentTheme } from './theme.js'
+import * as pdfjsLib from 'pdfjs-dist'
+import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.mjs?url'
+
+// Set up PDF.js worker
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker
 
 
 function App() {
@@ -350,6 +355,94 @@ function App() {
     const openResumeModalBtns = Array.from(document.querySelectorAll('[data-resume-open]'))
     const closeResumeModalBtns = Array.from(document.querySelectorAll('[data-resume-close]'))
     let lastResumeTrigger = null
+    let pdfDoc = null
+    let currentPage = 1
+    let currentScale = 1.0
+
+    async function loadPDF() {
+      const canvas = document.getElementById('pdfCanvas')
+      const ctx = canvas?.getContext('2d')
+      
+      if (!canvas || !ctx) {
+        console.error('Canvas not found')
+        return
+      }
+
+      try {
+        const loadingTask = pdfjsLib.getDocument('/AgbayaniKristianKenLFinalCV.pdf')
+        pdfDoc = await loadingTask.promise
+        console.log('PDF loaded, pages:', pdfDoc.numPages)
+        const pageInfo = document.getElementById('pageInfo')
+        if (pageInfo) {
+          pageInfo.textContent = `${currentPage} / ${pdfDoc.numPages}`
+        }
+        await renderPage(currentPage, canvas, ctx)
+      } catch (error) {
+        console.error('Error loading PDF:', error)
+      }
+    }
+
+    async function renderPage(pageNum, canvas, ctx) {
+      if (!pdfDoc) {
+        console.error('PDF not loaded')
+        return
+      }
+      
+      if (!canvas) canvas = document.getElementById('pdfCanvas')
+      if (!ctx) ctx = canvas?.getContext('2d')
+      
+      if (!canvas || !ctx) {
+        console.error('Canvas not available for rendering')
+        return
+      }
+      
+      try {
+        const page = await pdfDoc.getPage(pageNum)
+        const container = document.getElementById('pdfContainer')
+        const containerWidth = container?.clientWidth || canvas.parentElement?.clientWidth || 520
+        
+        // Calculate scale to fit width with high DPI rendering
+        const viewport = page.getViewport({ scale: 1 })
+        const baseScale = containerWidth / viewport.width
+        const dpiScale = window.devicePixelRatio || 1
+        const scale = baseScale * currentScale * dpiScale
+        const scaledViewport = page.getViewport({ scale: scale })
+        
+        // Set canvas size at high resolution
+        canvas.height = scaledViewport.height
+        canvas.width = scaledViewport.width
+        
+        // Scale down display size for proper rendering
+        canvas.style.width = (scaledViewport.width / dpiScale) + 'px'
+        canvas.style.height = (scaledViewport.height / dpiScale) + 'px'
+        
+        const renderContext = {
+          canvasContext: ctx,
+          viewport: scaledViewport
+        }
+        
+        await page.render(renderContext).promise
+        console.log('Page rendered:', pageNum, 'at scale:', currentScale)
+        
+        const pageInfo = document.getElementById('pageInfo')
+        if (pageInfo) {
+          pageInfo.textContent = `${pageNum} / ${pdfDoc.numPages}`
+        }
+        
+        const prevBtn = document.getElementById('prevPageBtn')
+        const nextBtn = document.getElementById('nextPageBtn')
+        if (prevBtn) {
+          prevBtn.disabled = pageNum <= 1
+          prevBtn.style.opacity = pageNum <= 1 ? '0.5' : '1'
+        }
+        if (nextBtn) {
+          nextBtn.disabled = pageNum >= pdfDoc.numPages
+          nextBtn.style.opacity = pageNum >= pdfDoc.numPages ? '0.5' : '1'
+        }
+      } catch (error) {
+        console.error('Error rendering page:', error)
+      }
+    }
 
     function setResumeModalOpen(isOpen) {
       if (!resumeModal) {
@@ -362,6 +455,11 @@ function App() {
       resumeDialog?.setAttribute('data-state', isOpen ? 'open' : 'closed')
       document.body.style.overflow = isOpen ? 'hidden' : ''
       if (isOpen) {
+        setTimeout(() => {
+          if (!pdfDoc) {
+            loadPDF()
+          }
+        }, 100)
         window.requestAnimationFrame(() => {
           closeResumeModalBtns[0]?.focus()
         })
@@ -370,11 +468,13 @@ function App() {
       }
     }
 
+
     const onOpenResumeModal = (event) => {
       event.preventDefault()
       lastResumeTrigger = event.currentTarget
       setResumeModalOpen(true)
     }
+
     const onCloseResumeModal = () => setResumeModalOpen(false)
     const onResumeModalBackdropClick = (event) => {
       if (event.target === resumeModal) {
@@ -592,24 +692,51 @@ function App() {
       document.addEventListener('keydown', onResumeModalEscape)
     }
 
-    const resumeIframe = document.getElementById('resumeIframe')
     const zoomInBtn = document.getElementById('zoomInBtn')
     const zoomOutBtn = document.getElementById('zoomOutBtn')
     const zoomLevel = document.getElementById('zoomLevel')
-    let currentZoom = 1
 
-    const updateZoom = (newZoom) => {
-      currentZoom = Math.max(0.5, Math.min(2, newZoom))
-      if (resumeIframe) {
-        resumeIframe.style.transform = `scale(${currentZoom})`
-      }
+    const updateZoom = (newScale) => {
+      currentScale = Math.max(1.0, Math.min(2.0, newScale))
       if (zoomLevel) {
-        zoomLevel.textContent = `${Math.round(currentZoom * 100)}%`
+        zoomLevel.textContent = `${Math.round(currentScale * 100)}%`
+      }
+      
+      // Update modal body overflow based on zoom level and screen size
+      const modalBody = document.querySelector('.resume-modal-body')
+      const pdfContainer = document.getElementById('pdfContainer')
+      const isMobile = window.innerWidth < 768
+      
+      if (modalBody && pdfContainer) {
+        if (isMobile) {
+          // Always enable horizontal scroll on mobile
+          modalBody.style.overflowX = 'auto'
+          pdfContainer.style.justifyContent = 'flex-start'
+          pdfContainer.style.alignItems = 'flex-start'
+        } else {
+          // On desktop, enable scroll only at 120% zoom or higher
+          if (currentScale >= 1.2) {
+            modalBody.style.overflowX = 'auto'
+            pdfContainer.style.justifyContent = 'flex-start'
+            pdfContainer.style.alignItems = 'flex-start'
+          } else {
+            modalBody.style.overflowX = 'hidden'
+            modalBody.scrollLeft = 0
+            pdfContainer.style.justifyContent = ''
+            pdfContainer.style.alignItems = 'center'
+          }
+        }
+      }
+      
+      if (pdfDoc) {
+        const canvas = document.getElementById('pdfCanvas')
+        const ctx = canvas?.getContext('2d')
+        renderPage(currentPage, canvas, ctx)
       }
     }
 
-    const onZoomIn = () => updateZoom(currentZoom + 0.1)
-    const onZoomOut = () => updateZoom(currentZoom - 0.1)
+    const onZoomIn = () => updateZoom(currentScale + 0.1)
+    const onZoomOut = () => updateZoom(currentScale - 0.1)
 
     if (zoomInBtn && zoomOutBtn) {
       zoomInBtn.addEventListener('click', onZoomIn)
