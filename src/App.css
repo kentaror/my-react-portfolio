@@ -200,6 +200,13 @@ body.chat-open #chatPanel {
       background: #121212 !important;
     }
 
+    .dark-theme #resumeModal .bg-white,
+    .dark-theme #resumeDialog .bg-white,
+    .dark-theme .resume-dialog-body,
+    .dark-theme .resume-dialog-frame {
+      background: #ffffff !important;
+    }
+
     .dark-theme .bg-zinc-50 {
       background: #171717 !important;
     }
@@ -1350,14 +1357,42 @@ body:not(.dark-theme) .main-page-divider-lift:focus-within,
   background: #ffffff;
 }
 
+.resume-dialog-body {
+  background: #ffffff !important;
+}
+
+.resume-dialog-body,
+.resume-dialog-body > *,
+.resume-dialog-body iframe {
+  background: #ffffff !important;
+}
+
 .resume-dialog-paper {
   aspect-ratio: 8.5 / 11;
   box-shadow: 0 18px 40px -28px rgba(15, 23, 42, 0.32);
 }
 
+.resume-dialog-body {
+  background: #ffffff;
+}
+
+.resume-dialog-body,
+.resume-dialog-body > *,
+.resume-dialog-body iframe {
+  background: #ffffff !important;
+}
+
 .resume-dialog-frame {
   max-height: 66vh;
   min-height: 0;
+  background: #ffffff !important;
+}
+
+#resumeIframe {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+  background: #ffffff !important;
 }
 
 .resume-dialog-muted {
@@ -1384,11 +1419,23 @@ body:not(.dark-theme) .main-page-divider-lift:focus-within,
 }
 
 .dark-theme .resume-dialog-body {
-  background: #121212;
+  background: #ffffff !important;
+}
+
+.dark-theme .resume-dialog-body > div {
+  background: #ffffff !important;
+}
+
+.dark-theme .resume-dialog-body iframe {
+  background: #ffffff !important;
+}
+
+.dark-theme #resumeIframe {
+  background: #ffffff !important;
 }
 
 .dark-theme .resume-dialog-paper {
-  background: #121212;
+  background: #ffffff !important;
   box-shadow: 0 18px 40px -28px rgba(2, 6, 23, 0.7);
 }
 
@@ -1437,3 +1484,240 @@ body:not(.dark-theme) .main-page-divider-lift:focus-within,
 }
 
 
+
+.resume-modal-dialog[data-state="open"] {
+  animation: resume-modal-in 220ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes resume-modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Resume Modal Dark Mode Styles */
+.resume-modal-dialog {
+  background: #ffffff;
+  border-color: #e4e4e7;
+}
+
+.dark-theme .resume-modal-dialog {
+  background: #121212;
+  border-color: #3f3f46;
+}
+
+.resume-modal-header,
+.resume-modal-toolbar,
+.resume-modal-footer {
+  background: #ffffff;
+  border-color: #e4e4e7;
+}
+
+.dark-theme .resume-modal-header,
+.dark-theme .resume-modal-toolbar,
+.dark-theme .resume-modal-footer {
+  background: #121212;
+  border-color: #3f3f46;
+}
+
+.resume-modal-close {
+  color: #71717a;
+}
+
+.dark-theme .resume-modal-close {
+  color: #a1a1aa;
+}
+
+.resume-modal-close:hover {
+  background: #f4f4f5;
+  color: #3f3f46;
+}
+
+.dark-theme .resume-modal-close:hover {
+  background: #27272a;
+  color: #e4e4e7;
+}
+
+.resume-modal-icon {
+  background: #ffffff;
+  border-color: #e4e4e7;
+  color: #52525b;
+}
+
+.dark-theme .resume-modal-icon {
+  background: #18181b;
+  border-color: #3f3f46;
+  color: #a1a1aa;
+}
+
+.resume-modal-text {
+  color: #71717a;
+}
+
+.dark-theme .resume-modal-text {
+  color: #a1a1aa;
+}
+
+.resume-modal-btn {
+  background: #ffffff;
+  border-color: #e4e4e7;
+  color: #3f3f46;
+}
+
+.dark-theme .resume-modal-btn {
+  background: #18181b;
+  border-color: #3f3f46;
+  color: #e4e4e7;
+}
+
+.resume-modal-btn:hover {
+  background: #f9fafb;
+}
+
+.dark-theme .resume-modal-btn:hover {
+  background: #27272a;
+}
+
+.resume-modal-download {
+  background: #000000;
+}
+
+.dark-theme .resume-modal-download {
+  background: #ffffff;
+  color: #0a0a0a !important;
+}
+
+.resume-modal-download:hover {
+  background: #18181b;
+}
+
+.dark-theme .resume-modal-download:hover {
+  background: #f4f4f5;
+}
+
+.resume-modal-body,
+.resume-modal-canvas-container {
+  background: #ffffff !important;
+}
+
+.dark-theme .resume-modal-body {
+  background: #000000 !important;
+}
+
+.dark-theme .resume-modal-canvas-container {
+  background: #ffffff !important;
+}
+
+.resume-modal-close-btn {
+  background: #000000;
+  color: #ffffff;
+}
+
+.dark-theme .resume-modal-close-btn {
+  background: #ffffff;
+  color: #0a0a0a !important;
+}
+
+.resume-modal-close-btn:hover {
+  background: #18181b;
+}
+
+.dark-theme .resume-modal-close-btn:hover {
+  background: #f4f4f5;
+}
+
+/* Close button in footer - custom styling for dark mode */
+#closeResumeModalBtn {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e4e4e7;
+}
+
+.dark-theme #closeResumeModalBtn {
+  background: #121212;
+  border-color: #3f3f46;
+  color: #e4e4e7;
+}
+
+#closeResumeModalBtn:hover {
+  background: #f9fafb;
+}
+
+.dark-theme #closeResumeModalBtn:hover {
+  background: #27272a;
+}
+
+.dark-theme #closeResumeModalBtn {
+  background: #121212 !important;
+  border-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}
+
+.dark-theme #closeResumeModalBtn:hover {
+  background: #27272a !important;
+}
+
+.dark-theme #closeResumeModalBtn {
+  background: #000000 !important;
+  border-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}
+
+.dark-theme #closeResumeModalBtn:hover {
+  background: #18181b !important;
+}
+
+#closeResumeModalBtn {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #e4e4e7 !important;
+}
+
+.dark-theme #closeResumeModalBtn {
+  background: #000000 !important;
+  border-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}
+
+#closeResumeModalBtn {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #e4e4e7 !important;
+}
+
+.dark-theme #closeResumeModalBtn {
+  background: #121212 !important;
+  border-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}
+
+#openFullBtn {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #e4e4e7 !important;
+}
+
+.dark-theme #openFullBtn {
+  background: #121212 !important;
+  border-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}
+
+#openFullBtn:hover {
+  background: #f9fafb !important;
+}
+
+.dark-theme #openFullBtn:hover {
+  background: #121212 !important;
+}
+
+.dark-theme #openFullBtn {
+  background: #121212 !important;
+  border-color: #3f3f46 !important;
+  color: #e4e4e7 !important;
+}

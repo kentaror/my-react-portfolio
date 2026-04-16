@@ -91,7 +91,7 @@ const Markup = () => (
                   className="fa-regular fa-envelope"></i> Send Email</a>
               <a
                 id="openResumeModalBtn"
-                href="/2025-template_bullet.pdf"
+                href="/AgbayaniKristianKenLFinalCV.pdf"
                 data-resume-open
                 className="hero-action-btn light-only-border-b hero-action-hover-bg order-3 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-px sm:gap-px transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-file-lines"></i> View Resume</a>
@@ -376,7 +376,7 @@ const Markup = () => (
 
           <p
             id="recommendationQuote"
-            className="text-[13px] leading-6 mb-1 min-h-[96px] sm:min-h-[110px]"
+            className="text-[13px] leading-6 mb-1 min-h-[96px] sm:min-h-[110px] font-serif"
           ></p>
 
           <div className="border-t border-zinc-200 pt-1 min-h-[48px] sm:min-h-[56px]">
@@ -563,7 +563,7 @@ const Markup = () => (
 
       <div
         id="resumeModal"
-        className="fixed inset-0 z-[70] hidden items-center justify-center bg-black/55 p-3 sm:p-4"
+        className="fixed inset-0 z-[70] hidden items-center justify-center p-3 sm:p-4 bg-black/50"
         aria-hidden="true"
         data-state="closed"
       >
@@ -573,100 +573,81 @@ const Markup = () => (
           aria-modal="true"
           aria-labelledby="resumeDialogTitle"
           data-state="closed"
-          className="resume-dialog-panel relative m-0 flex max-h-[85vh] w-[88vw] max-w-[560px] flex-col overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-[0_24px_80px_-32px_rgba(15,23,42,0.45)] duration-200 sm:w-[76vw] md:w-[60vw] lg:w-[520px]"
+          className="resume-modal-dialog relative m-0 flex h-[70vh] sm:h-[68vh] lg:h-[88vh] w-[88vw] max-w-[560px] flex-col overflow-hidden rounded-lg border shadow-[0_24px_80px_-32px_rgba(15,23,42,0.45)] duration-200 sm:w-[76vw] md:w-[60vw] lg:w-[520px] opacity-0 translate-y-2 scale-[0.98]"
           tabIndex={-1}
         >
           <button
             type="button"
             data-resume-close
-            className="resume-dialog-icon-btn absolute right-2.5 top-2.5 z-10 inline-flex h-7 w-7 items-center justify-center rounded-sm text-zinc-500 transition-colors duration-200 hover:bg-zinc-200/70 hover:text-zinc-700"
+            className="resume-modal-close absolute right-2.5 top-2.5 z-10 inline-flex h-7 w-7 items-center justify-center rounded-sm transition-colors duration-200"
             aria-label="Close resume preview"
           >
             <i className="fa-solid fa-xmark"></i>
           </button>
 
-          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-1.5 border-b border-zinc-200 px-3 py-2.5 text-center sm:text-left">
+          <div className="resume-modal-header flex shrink-0 flex-col gap-1.5 border-b px-3 py-2.5 text-center sm:text-left">
             <h2 id="resumeDialogTitle" className="truncate pr-8 text-base font-bold sm:text-lg">Resume</h2>
           </div>
 
-          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-2 border-b border-zinc-200 px-3 py-2.5">
-            <div className="flex items-center gap-2">
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-zinc-200 bg-white text-zinc-600 shadow-sm">
-                <i className="fa-regular fa-file-lines text-[12px]"></i>
-              </span>
-              <span className="resume-dialog-muted text-[11px] sm:text-xs">PDF Preview</span>
-            </div>
-
+          <div className="resume-modal-toolbar flex shrink-0 flex-col gap-2 border-b px-3 py-2.5">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center">
                 <button
                   type="button"
                   id="zoomOutBtn"
-                  className="resume-dialog-secondary-btn inline-flex h-7 w-7 items-center justify-center rounded-sm border border-zinc-200 bg-white text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
+                  className="resume-modal-btn inline-flex h-7 w-7 items-center justify-center rounded-sm border shadow-sm transition-colors duration-200"
                   aria-label="Zoom out"
                 >
                   <i className="fa-solid fa-minus text-[11px]"></i>
                 </button>
-                <span id="zoomLevel" className="resume-dialog-muted text-[11px] min-w-[48px] text-center">100%</span>
+                <span id="zoomLevel" className="resume-modal-text text-[11px] min-w-[48px] text-center">100%</span>
                 <button
                   type="button"
                   id="zoomInBtn"
-                  className="resume-dialog-secondary-btn inline-flex h-7 w-7 items-center justify-center rounded-sm border border-zinc-200 bg-white text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
+                  className="resume-modal-btn inline-flex h-7 w-7 items-center justify-center rounded-sm border shadow-sm transition-colors duration-200"
                   aria-label="Zoom in"
                 >
                   <i className="fa-solid fa-plus text-[11px]"></i>
                 </button>
               </div>
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex flex-row items-center gap-2">
                 <a
-                  href="/2025-template_bullet.pdf"
+                  href="/AgbayaniKristianKenLFinalCV.pdf"
+                  download="Agbayani_Kristian_Ken_L_Resume.pdf"
+                  className="resume-modal-download inline-flex h-7 w-7 items-center justify-center rounded-md text-white transition-colors duration-200"
+                  aria-label="Download"
+                >
+                  <i className="fa-solid fa-arrow-down text-[11px]"></i>
+                </a>
+                <a
+                  href="/AgbayaniKristianKenLFinalCV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="resume-dialog-secondary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-sm border border-zinc-200 bg-white px-2.5 text-[11px] font-medium text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
+                  id="openFullBtn"
+                  className="inline-flex h-7 w-7 items-center justify-center rounded-md text-black border border-zinc-200 transition-colors duration-200"
+                  aria-label="Open full"
                 >
                   <i className="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-                  Open Full
-                </a>
-                <a
-                  href="/2025-template_bullet.pdf"
-                  download="Kristian_Ken_Lucero_Agbayani_Resume.pdf"
-                  className="resume-dialog-primary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-md bg-black px-2.5 text-[11px] font-medium text-white transition-colors duration-200 hover:bg-zinc-800"
-                >
-                  <i className="fa-solid fa-download text-[11px]"></i>
-                  Download
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="resume-dialog-body flex-1 overflow-auto">
-            <div className="flex min-h-full justify-center p-2.5">
-              <div className="resume-dialog-paper relative aspect-[8.5/11] w-full max-w-[440px] overflow-hidden bg-white">
-                <iframe
-                  id="resumeIframe"
-                  title="Resume preview"
-                  src="/2025-template_bullet.pdf#toolbar=0&navpanes=0&view=FitV"
-                  className="resume-dialog-frame absolute inset-0 block h-full w-full border-0 bg-white"
-                  style={{ transform: 'scale(1)', transformOrigin: 'top center' }}
-                />
-              </div>
+          <div className="resume-modal-body flex-1 overflow-y-auto p-0">
+            <div id="pdfContainer" className="resume-modal-canvas-container flex flex-col items-center min-h-full">
+              <canvas id="pdfCanvas" style={{ width: '100%', height: 'auto', display: 'block' }}></canvas>
             </div>
           </div>
 
-          <div className="resume-dialog-chrome flex shrink-0 flex-col gap-2 border-t border-zinc-200 px-3 py-2.5">
-            <div className="flex w-full flex-col items-center gap-2">
-              <div className="resume-dialog-muted max-w-full truncate text-[11px]">2025-template_bullet.pdf</div>
-              <div className="flex gap-2">
-                <button
-                  id="closeResumeModalBtn"
-                  type="button"
-                  data-resume-close
-                  className="resume-dialog-secondary-btn inline-flex h-7 items-center justify-center gap-1.5 rounded-sm border border-zinc-200 bg-white px-3 text-[11px] font-medium text-zinc-700 shadow-sm transition-colors duration-200 hover:bg-zinc-50"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
+          <div className="resume-modal-footer flex shrink-0 flex-row items-center justify-between gap-2 border-t px-4 py-4">
+            <div className="resume-modal-text max-w-full truncate text-[11px]">AgbayaniKristianKenLFinalCV.pdf</div>
+            <span
+              id="closeResumeModalBtn"
+              data-resume-close
+              className="inline-flex h-8 items-center justify-center gap-1.5 rounded-md px-3 text-[11px] sm:text-xs font-normal text-black border border-zinc-200 transition-colors duration-200 cursor-pointer"
+            >
+              Close
+            </span>
           </div>
         </div>
       </div>
