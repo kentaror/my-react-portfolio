@@ -75,7 +75,7 @@ const Markup = () => (
                 href="https://calendly.com/agbayanikristianken/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn order-1 sm:order-1 h-[23px] sm:h-[34px] px-1 sm:px-3 border border-black bg-black text-white text-[6px] sm:text-[12px] font-normal inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5"><i
+                className="hero-action-btn order-1 sm:order-1 h-[23px] sm:h-[34px] px-1 sm:px-3 border border-black bg-black text-white text-[6px] sm:text-[12px] font-normal inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-px sm:gap-px transition-all duration-300 ease-out hover:-translate-y-0.5"><i
                   className="fa-regular fa-calendar"></i> Schedule a Call <i className="fa-solid fa-angle-right"></i></a>
               <a
 
@@ -87,17 +87,17 @@ const Markup = () => (
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=agbayanikristianken@gmail.com&su=Get%20in%20touch"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-action-btn light-only-border-b hero-action-hover-bg order-2 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-2 sm:order-2 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-px sm:gap-px transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-envelope"></i> Send Email</a>
               <a
                 id="openResumeModalBtn"
                 href="/2025-template_bullet.pdf"
                 data-resume-open
-                className="hero-action-btn light-only-border-b hero-action-hover-bg order-3 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-3 sm:order-3 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-start w-full sm:w-auto sm:shrink-0 gap-px sm:gap-px transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]"><i
                   className="fa-regular fa-file-lines"></i> View Resume</a>
               <a
                 href="/blog-post" target='_blank'
-                className="hero-action-btn light-only-border-b hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-0.5 sm:gap-2 transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
+                className="hero-action-btn light-only-border-b hero-action-hover-bg order-4 sm:order-4 h-[23px] sm:h-[34px] px-1 sm:px-3 bg-white text-[6px] sm:text-[12px] inline-flex items-center justify-center sm:justify-between w-full sm:flex-1 sm:min-w-[240px] sm:ml-auto gap-px sm:gap-px transition-all duration-300 ease-out hover:-translate-y-0.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]">
                 <span className="inline-flex items-center gap-0.5 sm:gap-2">
                   <i className="fa-regular fa-pen-to-square"></i> Read my blog
                 </span>

@@ -1373,22 +1373,22 @@ body:not(.dark-theme) .main-page-divider-lift:focus-within,
 
 .dark-theme .resume-dialog-panel {
   border-color: rgba(148, 163, 184, 0.18);
-  background: #000000;
+  background: #121212;
   color: #e2e8f0;
   box-shadow: 0 28px 90px -38px rgba(2, 6, 23, 0.9);
 }
 
 .dark-theme .resume-dialog-chrome {
-  background: #000000;
+  background: #121212;
   border-color: rgba(148, 163, 184, 0.18);
 }
 
 .dark-theme .resume-dialog-body {
-  background: #000000;
+  background: #121212;
 }
 
 .dark-theme .resume-dialog-paper {
-  background: #000000;
+  background: #121212;
   box-shadow: 0 18px 40px -28px rgba(2, 6, 23, 0.7);
 }
 
