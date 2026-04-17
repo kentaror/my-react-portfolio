@@ -4,19 +4,19 @@ const Markup = () => (
   <>
     <div className="page-fadeup max-w-4xl mx-auto px-4 py-8 mt-2 sm:mt-3">
 
-      <section id="heroCard" className="fadeup-item fadeup-1 grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[165px_minmax(0,1fr)] gap-3 sm:gap-4 mb-8 items-start">
+      <section id="heroCard" className="fadeup-item fadeup-1 grid grid-cols-[160px_minmax(0,1fr)] sm:grid-cols-[180px_minmax(0,1fr)] md:grid-cols-[136px_minmax(0,1fr)] gap-3 sm:gap-4 md:gap-8 mb-8 items-start">
         <div id="profileMedia" className="relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[136px] md:h-[136px] overflow-hidden">
           <img id="profileLight"
-            className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-200" src="pfp2.png"
+            className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-200" src="newpfp.jpeg"
             alt="Profile light" />
           <img id="profileDark"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200" src="pfp.png"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200" src="newpfp.jpeg"
             alt="Profile dark" />
           <img id="profileHover"
             className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200 pointer-events-none" src="lec.jpeg"
             alt="Profile hover" />
         </div>
-        <div className="min-h-[160px] sm:min-h-[180px] md:min-h-0 min-w-0 pr-1 sm:pr-0 pl-3 sm:pl-0 flex flex-col justify-between">
+        <div className="min-h-[160px] sm:min-h-[180px] md:min-h-0 min-w-0 pr-1 sm:pr-0 pl-3 sm:pl-0 md:pl-0 flex flex-col justify-between">
           <div className="min-w-0">
             <div className="flex items-start justify-between gap-2 mb-1 sm:mb-2">
               <h1 className="text-[15px] sm:text-[17px] md:text-[23px] lg:text-[26px] font-bold leading-tight flex items-center gap-1 sm:gap-2 min-w-0"><span className="sm:hidden">Ken Agbayani</span><span className="hidden sm:inline">Agbayani, Kristian Ken Lucero</span>
@@ -131,9 +131,9 @@ const Markup = () => (
 
 
         <div className="flex flex-col gap-2 h-full">
-          <aside className="bg-white p-3 pb-3 page-divider-b main-page-divider-hover main-page-divider-lift">
+          <aside className="bg-white p-3 pb-3.5 page-divider-b main-page-divider-hover main-page-divider-lift">
             <h2 className="text-lg font-bold mb-2">Experience</h2>
-            <div id="experienceTimeline" className="relative ml-2 pl-3 space-y-2.5">
+            <div id="experienceTimeline" className="relative ml-2 pl-3 space-y-2.5 pb-0.5">
               <span className="experience-line absolute left-[-1px] top-[11px] bottom-[-8px] w-px" aria-hidden="true"></span>
               <div className="relative group cursor-pointer" tabIndex={0}><span
                 className="experience-marker is-current absolute -left-[18px] top-1.5 w-[10px] h-[10px] border-2"></span>
@@ -177,6 +177,64 @@ const Markup = () => (
               </div>
             </div>
           </aside>
+        </div>
+      </section>
+
+       <section className="fadeup-item fadeup-4 grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-2 mb-2 md:items-stretch ">
+        <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1">
+          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-lg font-bold">Graphic Designs</h2>
+              <a href="/graphic-design" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div className="relative space-y-2.5">
+              <div className="relative">
+                <div className="grid grid-cols-5 gap-1 max-w-[400px] mx-auto">
+                  <div className="overflow-hidden aspect-[4/3] relative group">
+                    <img className="js-gallery-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/gal1.jpeg" alt="Graphic design Gold" loading="lazy" decoding="async" />
+                    <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
+                  </div>
+                  <div className="overflow-hidden aspect-[4/3] relative group">
+                    <img className="js-gallery-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/gal2.JPG" alt="Graphic design Black" loading="lazy" decoding="async" />
+                    <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
+                  </div>
+                  <div className="overflow-hidden aspect-[4/3] relative group">
+                    <img className="js-gallery-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/gal3.png" alt="Graphic design Red" loading="lazy" decoding="async" />
+                    <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
+                  </div>
+                  <div className="overflow-hidden aspect-[4/3] relative group">
+                    <img className="js-gallery-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/gal4.png" alt="Graphic design Maroon" loading="lazy" decoding="async" />
+                    <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
+                  </div>
+                  <div className="overflow-hidden aspect-[4/3] relative group">
+                    <img className="js-gallery-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/gal5.jpg" alt="Graphic design White Black" loading="lazy" decoding="async" />
+                    <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 items-stretch md:flex-1">
+          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
+            <h2 className="text-lg font-bold mb-2">Education</h2>
+            <div className="relative ml-2 pl-3 space-y-2.5">
+              <div className="relative group">
+                <p className="text-sm font-semibold" style={{ fontFamily: '"PT Serif", serif' }}>Pangasinan State University</p>
+                <p className="text-[13px]" style={{ fontFamily: '"PT Serif", serif' }}>Alaminos City Campus</p>
+              </div>
+            </div>
+          </article>
+
+          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
+            <h2 className="text-lg font-bold mb-2">On-the-Job Training</h2>
+            <div className="relative ml-2 pl-3 space-y-2.5">
+              <div className="relative group">
+                <p className="text-sm font-semibold" style={{ fontFamily: '"PT Serif", serif' }}>Virtual Wonders Web Solutions</p>
+                <p className="text-[13px]" style={{ fontFamily: '"PT Serif", serif' }}>Palamis, Alaminos City</p>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -255,91 +313,7 @@ const Markup = () => (
         </article>
       </section>
 
-      <section className="fadeup-item fadeup-4 grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2 mb-2 md:items-stretch ">
-        <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
-          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-lg font-bold">UI Designs</h2>
-              <a href="/ui-design" className="text-xs">View All <i
-                className="fa-solid fa-angle-right"></i></a>
-            </div>
-            <div className="relative space-y-2.5">
-              <div className="relative group">
-                <div className="grid grid-cols-5 gap-1.5">
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="UI design 1" loading="lazy" decoding="async" />
-                  </div>
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal2.JPG" alt="UI design 2" loading="lazy" decoding="async" />
-                  </div>
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal3.png" alt="UI design 3" loading="lazy" decoding="async" />
-                  </div>
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal4.png" alt="UI design 4" loading="lazy" decoding="async" />
-                  </div>
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal5.jpg" alt="UI design 5" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-lg font-bold">Graphic Designs</h2>
-              <a href="/graphic-design" className="text-xs">View All <i className="fa-solid fa-angle-right"></i></a>
-            </div>
-            <div className="relative space-y-2.5">
-              <div className="relative group">
-                <div className="grid grid-cols-5 gap-1.5">
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal1.jpeg" alt="Graphic design Gold" loading="lazy" decoding="async" />
-
-                  </div>
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal2.JPG" alt="Graphic design Black" loading="lazy" decoding="async" />
-
-                  </div>
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal3.png" alt="Graphic design Red" loading="lazy" decoding="async" />
-
-                  </div>
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal4.png" alt="Graphic design Maroon" loading="lazy" decoding="async" />
-
-                  </div>
-                  <div className="overflow-hidden">
-                    <img className="js-gallery-image w-full h-16 object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-in-out hover:scale-105" src="/gal5.jpg" alt="Graphic design White Black" loading="lazy" decoding="async" />
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <div className="grid grid-cols-1 gap-2 items-stretch md:flex-1 md:grid-rows-2">
-          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
-            <h2 className="text-lg font-bold mb-2">Education</h2>
-            <div className="relative ml-2 pl-3 space-y-2.5">
-              <div className="relative group">
-                <p className="text-sm font-semibold">Pangasinan State University</p>
-                <p className="text-[13px]">Alaminos City Campus</p>
-              </div>
-            </div>
-          </article>
-
-          <article className="bg-white p-3 pb-3 h-full min-h-[120px] md:min-h-0 page-divider-b main-page-divider-hover">
-            <h2 className="text-lg font-bold mb-2">On-the-Job Training</h2>
-            <div className="relative ml-2 pl-3 space-y-2.5">
-              <div className="relative group">
-                <p className="text-sm font-semibold">Virtual Wonders Web Solutions</p>
-                <p className="text-[13px]">Palamis, Alaminos City</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
+    
 
       <section className="fadeup-item fadeup-5 grid grid-cols-1 md:grid-cols-2 gap-2 mb-2 md:items-stretch">
         <article className=" bg-white p-2 md:p-2.5 pb-3 page-divider-b main-page-divider-hover">
@@ -376,12 +350,13 @@ const Markup = () => (
 
           <p
             id="recommendationQuote"
-            className="text-[13px] leading-6 mb-1 min-h-[96px] sm:min-h-[110px] font-serif"
+            className="text-[13px] leading-6 mb-1 min-h-[80px] sm:min-h-[90px]"
+            style={{ fontFamily: '"PT Serif", serif' }}
           ></p>
 
-          <div className="border-t border-zinc-200 pt-1 min-h-[48px] sm:min-h-[56px]">
-            <b id="recommendationName" className="text-[13px] font-semibold"></b>
-            <div id="recommendationRole" className="text-[12px]"></div>
+          <div className="border-t border-zinc-200 pt-1 min-h-[40px] sm:min-h-[48px]">
+            <b id="recommendationName" className="text-[13px] font-semibold" style={{ fontFamily: '"PT Serif", serif' }}></b>
+            <div id="recommendationRole" className="text-[12px]" style={{ fontFamily: '"PT Serif", serif' }}></div>
           </div>
 
           <div
@@ -482,7 +457,7 @@ const Markup = () => (
         </div>
       </section>
 
-      <section id="portfolioGallery" className="fadeup-item fadeup-7 bg-white p-3 overflow-hidden">
+      <section id="portfolioGallery" className="fadeup-item fadeup-7 bg-white p-3 mb-2 overflow-hidden">
         <h2 className="text-lg font-bold mb-2">Gallery</h2>
         <div className="relative z-[40]">
           <button id="galleryPrevBtn" type="button"
@@ -589,7 +564,7 @@ const Markup = () => (
             <h2 id="resumeDialogTitle" className="truncate pr-8 text-base font-bold sm:text-lg">Resume</h2>
           </div>
 
-          <div className="resume-modal-toolbar flex shrink-0 flex-col gap-2 border-b px-3 py-2.5">
+          <div className="resume-modal-toolbar flex shrink-0 flex-col gap-2 border-b px-3 py-4 shadow-[0_8px_16px_-4px_rgba(0,0,0,0.4)]">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center">
                 <button
