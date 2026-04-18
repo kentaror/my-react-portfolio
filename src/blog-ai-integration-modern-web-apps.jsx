@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { applyDocumentTheme } from './theme.js'
 
-const BlogCleanFastPortfolioUi = () => {
+const BlogAiIntegrationModernWebApps = () => {
   const [isDark, setIsDark] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -58,39 +58,46 @@ const BlogCleanFastPortfolioUi = () => {
           </button>
         </div>
 
-        <h1 className="text-2xl font-bold mb-3">Building Clean, Fast Portfolio UI</h1>
+        <h1 className="text-2xl font-bold mb-3">AI Integration in Modern Web Apps</h1>
         <p className="text-base leading-7 text-zinc-600 mb-4">
-          Why simple structure and tighter spacing make a portfolio feel more polished.
+          Exploring how AI is transforming web development and practical ways to integrate it into your projects.
         </p>
         <p className="text-xs text-zinc-500">
-          Kristian Ken Agbayani &bull; February 10, 2026 &bull; 2 min read
+          Kristian Ken Agbayani &bull; April 15, 2026 &bull; 8 min read
         </p>
       </section>
 
       <article className="p-3 text-sm leading-8">
         <section className="blog-card-separator page-divider-b pb-8">
           <p className="text-[15px] sm:text-base font-medium mb-5" style={{ fontFamily: '"PT Serif", serif' }}>
-            A clean portfolio feels stronger when the layout is short, clear, and easy to scan. The essentials are:
+            AI is changing how we build web apps. It's not just a trend—it's becoming a practical tool for creating smarter, more responsive applications.
           </p>
 
+          <h2 className="text-lg font-bold mb-3 mt-6">Why Use AI in Web Apps?</h2>
+          <p className="mb-5">
+            AI helps apps adapt to users, predict their needs, and automate tasks. Instead of static experiences, you can build interfaces that learn and improve over time.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">Simple Ways to Add AI</h2>
           <ul className="list-disc pl-6 space-y-3 mb-6" style={{ fontFamily: '"PT Serif", serif' }}>
-            <li>
-              <strong>Clear sections</strong> - Hero, work, skills, and contact should each have one job.
-            </li>
-            <li>
-              <strong>Consistent spacing</strong> - Repeating the same gaps and padding makes the page feel calmer.
-            </li>
-            <li>
-              <strong>Reusable patterns</strong> - Cards, buttons, and content blocks should be easy to repeat.
-            </li>
+            <li><strong>Chatbots</strong> — Handle support and answer questions automatically</li>
+            <li><strong>Smart Search</strong> — Understand natural language and fix typos</li>
+            <li><strong>Recommendations</strong> — Suggest content based on user behavior</li>
+            <li><strong>Content Generation</strong> — Create text, images, or code snippets</li>
           </ul>
 
+          <h2 className="text-lg font-bold mb-3 mt-6">Getting Started</h2>
           <p className="mb-5">
-            You do not need a complex layout to make a portfolio feel polished. A few strong sections, balanced spacing, and readable content already do most of the work.
+            You don't need to build AI from scratch. Use APIs like OpenAI, Google Vision, or AWS services. Start with one feature, test it, and expand from there.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">Things to Watch</h2>
+          <p className="mb-5">
+            AI can be slow or expensive if not optimized. Cache responses, batch requests, and monitor usage. Also, be transparent about how you handle user data.
           </p>
 
           <p>
-            The best portfolio UI is usually the one that stays simple, loads fast, and lets the work speak first.
+            AI is becoming more accessible every day. Learning how to integrate it now will give you an edge as it continues to evolve.
           </p>
         </section>
       </article>
@@ -102,4 +109,4 @@ const BlogCleanFastPortfolioUi = () => {
   )
 }
 
-export default BlogCleanFastPortfolioUi
+export default BlogAiIntegrationModernWebApps

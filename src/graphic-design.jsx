@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+﻿import { useEffect, useState, useRef, useCallback } from 'react'
 import './App.css'
 import { applyDocumentTheme } from './theme.js'
 
@@ -7,11 +7,18 @@ const graphicImages = [
   { src: '/g2.png', alt: 'Graphic design 2' },
   { src: '/g3.png', alt: 'Graphic design 3' },
   { src: '/g4.png', alt: 'Graphic design 4' },
-  { src: '/g5.jpg', alt: 'Graphic design 5' },
+  { src: '/g5.png', alt: 'Graphic design 5' },
+  { src: '/g6.png', alt: 'Graphic design 6' },
+  { src: '/g7.png', alt: 'Graphic design 7' },
 ]
 
 const GraphicDesign = () => {
   const [isDark, setIsDark] = useState(false)
+  const [visibleImages, setVisibleImages] = useState(3)
+  const [loadedImages, setLoadedImages] = useState(new Set())
+  const [isVisible, setIsVisible] = useState(false)
+  const observerRef = useRef(null)
+  const sentinelRef = useRef(null)
 
   useEffect(() => {
     setIsDark(localStorage.getItem('portfolio-theme') === 'dark')
@@ -22,13 +29,48 @@ const GraphicDesign = () => {
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      setIsVisible(true)
+    })
+  }, [])
+
+  const loadMoreImages = useCallback(() => {
+    setVisibleImages(prev => Math.min(prev + 3, graphicImages.length))
+  }, [])
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && visibleImages < graphicImages.length) {
+          loadMoreImages()
+        }
+      },
+      { threshold: 0.1, rootMargin: '100px' }
+    )
+
+    if (sentinelRef.current) {
+      observerRef.current.observe(sentinelRef.current)
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect()
+      }
+    }
+  }, [visibleImages, loadMoreImages])
+
+  const handleImageLoad = useCallback((index) => {
+    setLoadedImages(prev => new Set([...prev, index]))
+  }, [])
+
   const onThemeButtonClick = () => {
     setIsDark((prev) => !prev)
   }
 
   return (
-    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
-      <section className="fadeup-item fadeup-1 p-3 page-divider-b mb-3">
+    <div className={`max-w-4xl mx-auto px-4 py-8 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <section className="p-3 page-divider-b mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a
             href="/"
@@ -77,22 +119,37 @@ const GraphicDesign = () => {
 
       <section className="p-3">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-          {graphicImages.map((image, index) => (
+          {graphicImages.slice(0, visibleImages).map((image, index) => (
             <article
               key={image.src}
-              className="stagger-item transition-all duration-300 ease-out hover:-translate-y-0.5 page-divider-b p-2"
-              style={{ '--stagger-delay': `${index * 100}ms` }}
+              className="transition-all duration-300 ease-out hover:-translate-y-0.5 page-divider-b p-2"
             >
-              <img
-                className="w-full h-44 sm:h-52 md:h-56 object-cover border border-zinc-200"
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-                decoding="async"
-              />
+              <div className="relative w-full h-44 sm:h-52 md:h-56 bg-zinc-100 dark:bg-zinc-800">
+                {!loadedImages.has(index) && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-8 h-8 border-2 border-zinc-300 border-t-zinc-600 rounded-full animate-spin"></div>
+                  </div>
+                )}
+                <img
+                  className={`w-full h-full object-cover border border-zinc-200 transition-opacity duration-300 ${
+                    loadedImages.has(index) ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                  decoding="async"
+                  onLoad={() => handleImageLoad(index)}
+                />
+              </div>
             </article>
           ))}
         </div>
+        
+        {visibleImages < graphicImages.length && (
+          <div ref={sentinelRef} className="h-20 flex items-center justify-center mt-4">
+            <div className="text-sm text-zinc-500">Loading more...</div>
+          </div>
+        )}
       </section>
 
       <footer className="mt-3.5 pt-3 border-t border-zinc-200 text-center text-sm mb-2">

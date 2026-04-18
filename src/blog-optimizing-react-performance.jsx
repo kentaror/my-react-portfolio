@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { applyDocumentTheme } from './theme.js'
 
-const BlogCleanFastPortfolioUi = () => {
+const BlogOptimizingReactPerformance = () => {
   const [isDark, setIsDark] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -58,39 +58,51 @@ const BlogCleanFastPortfolioUi = () => {
           </button>
         </div>
 
-        <h1 className="text-2xl font-bold mb-3">Building Clean, Fast Portfolio UI</h1>
+        <h1 className="text-2xl font-bold mb-3">Optimizing React Performance</h1>
         <p className="text-base leading-7 text-zinc-600 mb-4">
-          Why simple structure and tighter spacing make a portfolio feel more polished.
+          Practical techniques for improving React app performance and avoiding common bottlenecks.
         </p>
         <p className="text-xs text-zinc-500">
-          Kristian Ken Agbayani &bull; February 10, 2026 &bull; 2 min read
+          Kristian Ken Agbayani &bull; March 20, 2026 &bull; 6 min read
         </p>
       </section>
 
       <article className="p-3 text-sm leading-8">
         <section className="blog-card-separator page-divider-b pb-8">
           <p className="text-[15px] sm:text-base font-medium mb-5" style={{ fontFamily: '"PT Serif", serif' }}>
-            A clean portfolio feels stronger when the layout is short, clear, and easy to scan. The essentials are:
+            React is fast, but as apps grow, performance issues can appear. Here's how to keep your React app running smoothly.
           </p>
 
+          <h2 className="text-lg font-bold mb-3 mt-6">Common Problems</h2>
+          <p className="mb-5">
+            The biggest issue is unnecessary re-renders. When components re-render too often, the app feels slow. Large JavaScript bundles also cause slow load times.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">Stop Unnecessary Re-renders</h2>
           <ul className="list-disc pl-6 space-y-3 mb-6" style={{ fontFamily: '"PT Serif", serif' }}>
-            <li>
-              <strong>Clear sections</strong> - Hero, work, skills, and contact should each have one job.
-            </li>
-            <li>
-              <strong>Consistent spacing</strong> - Repeating the same gaps and padding makes the page feel calmer.
-            </li>
-            <li>
-              <strong>Reusable patterns</strong> - Cards, buttons, and content blocks should be easy to repeat.
-            </li>
+            <li><strong>React.memo</strong> — Prevents re-renders when props don't change</li>
+            <li><strong>useMemo</strong> — Caches expensive calculations</li>
+            <li><strong>useCallback</strong> — Prevents functions from being recreated</li>
+            <li><strong>Avoid inline functions</strong> — Define functions outside JSX</li>
           </ul>
 
+          <h2 className="text-lg font-bold mb-3 mt-6">Load Code Faster</h2>
           <p className="mb-5">
-            You do not need a complex layout to make a portfolio feel polished. A few strong sections, balanced spacing, and readable content already do most of the work.
+            Use React.lazy and Suspense to split your code into smaller chunks. Load heavy components only when needed. This reduces initial load time.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">Manage State Better</h2>
+          <p className="mb-5">
+            Keep state local when possible. If only one component needs it, store it there. For global state, use lightweight libraries like Zustand or split context into smaller pieces.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">Measure First</h2>
+          <p className="mb-5">
+            Use React DevTools Profiler to see which components are slow. Use Lighthouse to check overall performance. Measure before optimizing.
           </p>
 
           <p>
-            The best portfolio UI is usually the one that stays simple, loads fast, and lets the work speak first.
+            Focus on the biggest bottlenecks first. Don't over-optimize early. Small improvements in the right places make a big difference.
           </p>
         </section>
       </article>
@@ -102,4 +114,4 @@ const BlogCleanFastPortfolioUi = () => {
   )
 }
 
-export default BlogCleanFastPortfolioUi
+export default BlogOptimizingReactPerformance

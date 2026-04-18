@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { applyDocumentTheme } from './theme.js'
 
-const BlogCleanFastPortfolioUi = () => {
+const BlogBetterMobileCarousels = () => {
   const [isDark, setIsDark] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -58,39 +58,45 @@ const BlogCleanFastPortfolioUi = () => {
           </button>
         </div>
 
-        <h1 className="text-2xl font-bold mb-3">Building Clean, Fast Portfolio UI</h1>
+        <h1 className="text-2xl font-bold mb-3">Better Mobile Carousels</h1>
         <p className="text-base leading-7 text-zinc-600 mb-4">
-          Why simple structure and tighter spacing make a portfolio feel more polished.
+          A simple guide to making mobile carousels look cleaner and feel more consistent.
         </p>
         <p className="text-xs text-zinc-500">
-          Kristian Ken Agbayani &bull; February 10, 2026 &bull; 2 min read
+          Kristian Ken Agbayani &bull; December 18, 2025 &bull; 4 min read
         </p>
       </section>
 
       <article className="p-3 text-sm leading-8">
         <section className="blog-card-separator page-divider-b pb-8">
           <p className="text-[15px] sm:text-base font-medium mb-5" style={{ fontFamily: '"PT Serif", serif' }}>
-            A clean portfolio feels stronger when the layout is short, clear, and easy to scan. The essentials are:
+            Most mobile carousels feel clunky. Here's how to make them smooth and easy to use.
           </p>
 
+          <h2 className="text-lg font-bold mb-3 mt-6">Common Problems</h2>
+          <p className="mb-5">
+            Carousels often scroll too fast, have awkward spacing, or don't show where you are in the sequence. These small issues make them frustrating to use.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">My Approach</h2>
           <ul className="list-disc pl-6 space-y-3 mb-6" style={{ fontFamily: '"PT Serif", serif' }}>
-            <li>
-              <strong>Clear sections</strong> - Hero, work, skills, and contact should each have one job.
-            </li>
-            <li>
-              <strong>Consistent spacing</strong> - Repeating the same gaps and padding makes the page feel calmer.
-            </li>
-            <li>
-              <strong>Reusable patterns</strong> - Cards, buttons, and content blocks should be easy to repeat.
-            </li>
+            <li><strong>Smooth scrolling</strong> — Use CSS scroll-snap-type for natural swiping</li>
+            <li><strong>Clear navigation</strong> — Add arrows and dots so users know where they are</li>
+            <li><strong>Consistent spacing</strong> — Use Tailwind gap utilities to keep items balanced</li>
           </ul>
 
+          <h2 className="text-lg font-bold mb-3 mt-6">Handle Edge Cases</h2>
           <p className="mb-5">
-            You do not need a complex layout to make a portfolio feel polished. A few strong sections, balanced spacing, and readable content already do most of the work.
+            Disable arrows at the start and end to avoid confusion. Test on different screen sizes to make sure spacing works everywhere.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">Keep It Fast</h2>
+          <p className="mb-5">
+            Use lazy loading for images. Only load them when they're about to appear. This keeps the carousel fast and responsive.
           </p>
 
           <p>
-            The best portfolio UI is usually the one that stays simple, loads fast, and lets the work speak first.
+            A good carousel should feel effortless. Users shouldn't have to think about how to use it—they should just swipe and browse.
           </p>
         </section>
       </article>
@@ -102,4 +108,4 @@ const BlogCleanFastPortfolioUi = () => {
   )
 }
 
-export default BlogCleanFastPortfolioUi
+export default BlogBetterMobileCarousels

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { applyDocumentTheme } from './theme.js'
 
-const BlogCleanFastPortfolioUi = () => {
+const BlogGraphicDesignToFrontend = () => {
   const [isDark, setIsDark] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -58,39 +58,38 @@ const BlogCleanFastPortfolioUi = () => {
           </button>
         </div>
 
-        <h1 className="text-2xl font-bold mb-3">Building Clean, Fast Portfolio UI</h1>
+        <h1 className="text-2xl font-bold mb-3">Graphic Design to Frontend</h1>
         <p className="text-base leading-7 text-zinc-600 mb-4">
-          Why simple structure and tighter spacing make a portfolio feel more polished.
+          How graphic design shaped the way I build clearer and more polished interfaces.
         </p>
         <p className="text-xs text-zinc-500">
-          Kristian Ken Agbayani &bull; February 10, 2026 &bull; 2 min read
+          Kristian Ken Agbayani &bull; January 25, 2026 &bull; 5 min read
         </p>
       </section>
 
       <article className="p-3 text-sm leading-8">
         <section className="blog-card-separator page-divider-b pb-8">
           <p className="text-[15px] sm:text-base font-medium mb-5" style={{ fontFamily: '"PT Serif", serif' }}>
-            A clean portfolio feels stronger when the layout is short, clear, and easy to scan. The essentials are:
+            Before coding, I worked as a graphic designer for over two years. That experience shaped how I build interfaces today.
           </p>
 
-          <ul className="list-disc pl-6 space-y-3 mb-6" style={{ fontFamily: '"PT Serif", serif' }}>
-            <li>
-              <strong>Clear sections</strong> - Hero, work, skills, and contact should each have one job.
-            </li>
-            <li>
-              <strong>Consistent spacing</strong> - Repeating the same gaps and padding makes the page feel calmer.
-            </li>
-            <li>
-              <strong>Reusable patterns</strong> - Cards, buttons, and content blocks should be easy to repeat.
-            </li>
-          </ul>
-
+          <h2 className="text-lg font-bold mb-3 mt-6">Design Thinking in Code</h2>
           <p className="mb-5">
-            You do not need a complex layout to make a portfolio feel polished. A few strong sections, balanced spacing, and readable content already do most of the work.
+            Principles like alignment, spacing, and hierarchy work the same in design and code. I think about how elements should be grouped and how users' eyes should move across the page.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">From Photoshop to React</h2>
+          <p className="mb-5">
+            In design, I worked with layers and reusable assets. In React, I work with components and props. The mindset is similar—break complex visuals into smaller, manageable pieces.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">Attention to Detail</h2>
+          <p className="mb-5">
+            Design taught me to care about small things—pixel-perfect alignment, consistent spacing, smooth transitions. I bring that same attention to my frontend work.
           </p>
 
           <p>
-            The best portfolio UI is usually the one that stays simple, loads fast, and lets the work speak first.
+            My journey from design to development wasn't a shift—it was an evolution. Design and development are two sides of the same process for me.
           </p>
         </section>
       </article>
@@ -102,4 +101,4 @@ const BlogCleanFastPortfolioUi = () => {
   )
 }
 
-export default BlogCleanFastPortfolioUi
+export default BlogGraphicDesignToFrontend
