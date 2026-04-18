@@ -14,6 +14,7 @@ import BlogReusableReactSections from './blog-reusable-react-sections.jsx'
 import BlogBetterMobileCarousels from './blog-better-mobile-carousels.jsx'
 import BlogAiIntegrationModernWebApps from './blog-ai-integration-modern-web-apps.jsx'
 import BlogOptimizingReactPerformance from './blog-optimizing-react-performance.jsx'
+import BlogStuckInVim from './blog-stuck-in-vim.jsx'
 import { applyDocumentTheme, getSavedTheme } from './theme.js'
 
 applyDocumentTheme(getSavedTheme())
@@ -33,6 +34,7 @@ const page =
   path === '/blog/better-mobile-carousels' ? <BlogBetterMobileCarousels /> :
   path === '/blog/ai-integration-modern-web-apps' ? <BlogAiIntegrationModernWebApps /> :
   path === '/blog/optimizing-react-performance' ? <BlogOptimizingReactPerformance /> :
+  path === '/blog/stuck-in-vim' ? <BlogStuckInVim /> :
   <App />
 
 createRoot(document.getElementById('root')).render(page)

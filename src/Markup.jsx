@@ -191,23 +191,23 @@ const Markup = () => (
               <div className="relative">
                 <div className="grid grid-cols-5 gap-1 max-w-[400px] mx-auto">
                   <div className="overflow-hidden aspect-[4/3] relative group">
-                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g1.png" alt="Graphic design 1" loading="lazy" decoding="async" />
+                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g1.png" alt="Graphic design 1" loading="lazy" decoding="async" width="80" height="60" />
                     <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
                   </div>
                   <div className="overflow-hidden aspect-[4/3] relative group">
-                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g2.png" alt="Graphic design 2" loading="lazy" decoding="async" />
+                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g2.png" alt="Graphic design 2" loading="lazy" decoding="async" width="80" height="60" />
                     <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
                   </div>
                   <div className="overflow-hidden aspect-[4/3] relative group">
-                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g3.png" alt="Graphic design 3" loading="lazy" decoding="async" />
+                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g3.png" alt="Graphic design 3" loading="lazy" decoding="async" width="80" height="60" />
                     <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
                   </div>
                   <div className="overflow-hidden aspect-[4/3] relative group">
-                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g4.png" alt="Graphic design 4" loading="lazy" decoding="async" />
+                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g4.png" alt="Graphic design 4" loading="lazy" decoding="async" width="80" height="60" />
                     <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
                   </div>
                   <div className="overflow-hidden aspect-[4/3] relative group">
-                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g5.png" alt="Graphic design 5" loading="lazy" decoding="async" />
+                    <img className="js-graphic-design-image w-full h-full object-cover border border-zinc-200 cursor-pointer transition duration-200 ease-out hover:scale-105" src="/g5.png" alt="Graphic design 5" loading="lazy" decoding="async" width="80" height="60" />
                     <div className="absolute inset-x-0 bottom-0 h-[2px] translate-y-full group-hover:translate-y-0 transition-all duration-200 ease-in-out bg-white"></div>
                   </div>
                 </div>
