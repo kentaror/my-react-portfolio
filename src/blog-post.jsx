@@ -4,6 +4,15 @@ import { applyDocumentTheme } from './theme.js'
 
 const blogPosts = [
   {
+    title: 'Stuck in Vim? Here\'s How to Exit',
+    date: 'May 5, 2026',
+    readTime: '5 min',
+    category: 'Tutorial',
+    href: '/blog/stuck-in-vim',
+    excerpt:
+      'A complete guide to exiting Vim in every situation with all the methods you need.',
+  },
+  {
     title: 'AI Integration in Modern Web Apps',
     date: 'April 15, 2026',
     readTime: '8 min',
