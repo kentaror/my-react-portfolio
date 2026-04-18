@@ -390,13 +390,13 @@ const Markup = () => (
         <div className="p-2.5 light-only-border-b">
           <h3 className="text-sm font-bold mb-1">Social Links</h3>
           <a className="social-link contact-outline light-only-border-b text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
+               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="https://www.linkedin.com/in/kristian-ken-agbayani-90406b3b6/" target="_blank" rel="noopener noreferrer"><i
               className="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
           <a className="social-link contact-outline light-only-border-b text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
+               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="https://github.com/kentaror" target="_blank" rel="noopener noreferrer"><i
               className="fa-brands fa-github mr-1"></i> GitHub</a>
           <a className="social-link contact-outline light-only-border-b text-[11.5px] inline-flex items-center w-full transition-all duration-300 ease-out 
-               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="#"><i
+               hover:-translate-y-0.5 border px-2 py-2.5 shadow-[0_0_0_0_rgba(113,113,122,0)] hover:border-transparent hover:shadow-[0_8px_14px_-10px_rgba(113,113,122,0.62)]" href="https://www.instagram.com/keanueu" target="_blank" rel="noopener noreferrer"><i
               className="fa-brands fa-instagram mr-1"></i> Instagram</a>
         </div>
         <div className="p-2.5 light-only-border-b">
