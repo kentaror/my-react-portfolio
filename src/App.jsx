@@ -58,7 +58,7 @@ function App() {
     const recommendations = [
       {
         quote:
-          "Ken was the most talented software engineer I've mentored in a long time. He's a fast learner, delivers quality output, and stays curious about new technologies.",
+          "Ken was the most talented graphic artist I've mentored in a long time. He's a fast learner, delivers quality output, and stays curious about new technologies.",
         name: 'Jumar Bagorio Caacbay',
         role: 'Senior Graphic Artist and Owner of Ryzn Clothing',
       },
@@ -75,18 +75,6 @@ function App() {
         role: 'Former Vice Governor of DOIT',
       },
       {
-        quote:
-          "I was impressed by Ken's consistency and professionalism. He communicates clearly, meets deadlines, and supports the team when it matters most.",
-        name: 'Daryl Rudy C. Villar',
-        role: 'President of Multimedia Club',
-      },
-       {
-        quote:
-          "I was impressed by Ken's consistency and professionalism. He communicates clearly, meets deadlines, and supports the team when it matters most.",
-        name: 'Daryl Rudy C. Villar',
-        role: 'President of Multimedia Club',
-      },
-       {
         quote:
           "I was impressed by Ken's consistency and professionalism. He communicates clearly, meets deadlines, and supports the team when it matters most.",
         name: 'Daryl Rudy C. Villar',
