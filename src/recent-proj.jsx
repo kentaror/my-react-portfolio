@@ -27,6 +27,7 @@ const projects = [
 
 const RecentProj = () => {
   const [isDark, setIsDark] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     setIsDark(localStorage.getItem('portfolio-theme') === 'dark')
@@ -37,13 +38,19 @@ const RecentProj = () => {
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      setIsVisible(true)
+    })
+  }, [])
+
   const onThemeButtonClick = () => {
     setIsDark((prev) => !prev)
   }
 
   return (
-    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
-      <section className="fadeup-item fadeup-1 p-3 page-divider-b mb-3">
+    <div className={`max-w-4xl mx-auto px-4 py-8 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <section className="p-3 page-divider-b mb-3">
         <div className="grid grid-cols-[auto_1fr_auto] items-center mb-2 min-h-[32px]">
           <a
             href="/"

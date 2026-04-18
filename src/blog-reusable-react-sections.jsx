@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { applyDocumentTheme } from './theme.js'
 
-const BlogCleanFastPortfolioUi = () => {
+const BlogReusableReactSections = () => {
   const [isDark, setIsDark] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -58,39 +58,46 @@ const BlogCleanFastPortfolioUi = () => {
           </button>
         </div>
 
-        <h1 className="text-2xl font-bold mb-3">Building Clean, Fast Portfolio UI</h1>
+        <h1 className="text-2xl font-bold mb-3">Reusable React Sections Workflow</h1>
         <p className="text-base leading-7 text-zinc-600 mb-4">
-          Why simple structure and tighter spacing make a portfolio feel more polished.
+          How I build reusable React sections without making the markup messy or repetitive.
         </p>
         <p className="text-xs text-zinc-500">
-          Kristian Ken Agbayani &bull; February 10, 2026 &bull; 2 min read
+          Kristian Ken Agbayani &bull; January 8, 2026 &bull; 7 min read
         </p>
       </section>
 
       <article className="p-3 text-sm leading-8">
         <section className="blog-card-separator page-divider-b pb-8">
           <p className="text-[15px] sm:text-base font-medium mb-5" style={{ fontFamily: '"PT Serif", serif' }}>
-            A clean portfolio feels stronger when the layout is short, clear, and easy to scan. The essentials are:
+            Keeping React code clean and reusable is tricky. Here's my simple approach to building components that don't get messy.
           </p>
 
+          <h2 className="text-lg font-bold mb-3 mt-6">The Problem</h2>
+          <p className="mb-5">
+            Copying and pasting code across pages is easy at first, but it becomes hard to maintain. Changing one thing means updating it everywhere.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">My Workflow</h2>
           <ul className="list-disc pl-6 space-y-3 mb-6" style={{ fontFamily: '"PT Serif", serif' }}>
-            <li>
-              <strong>Clear sections</strong> - Hero, work, skills, and contact should each have one job.
-            </li>
-            <li>
-              <strong>Consistent spacing</strong> - Repeating the same gaps and padding makes the page feel calmer.
-            </li>
-            <li>
-              <strong>Reusable patterns</strong> - Cards, buttons, and content blocks should be easy to repeat.
-            </li>
+            <li><strong>Build first</strong> — Write the full markup before thinking about reusability</li>
+            <li><strong>Find patterns</strong> — Look for parts that repeat more than twice</li>
+            <li><strong>Extract with purpose</strong> — Create components with a single, clear job</li>
+            <li><strong>Keep it readable</strong> — If extraction makes code confusing, leave it as is</li>
           </ul>
 
+          <h2 className="text-lg font-bold mb-3 mt-6">Example: Cards</h2>
           <p className="mb-5">
-            You do not need a complex layout to make a portfolio feel polished. A few strong sections, balanced spacing, and readable content already do most of the work.
+            Instead of one generic Card component with many props, I create specific ones like ProjectCard, BlogCard, and CertificationCard. Each handles its own layout and styling.
+          </p>
+
+          <h2 className="text-lg font-bold mb-3 mt-6">When Not to Extract</h2>
+          <p className="mb-5">
+            If a section only appears once, keep it inline. If extracting requires too many props, it's doing too much. Clarity is more important than reusability.
           </p>
 
           <p>
-            The best portfolio UI is usually the one that stays simple, loads fast, and lets the work speak first.
+            Start simple, refactor when needed, and always prioritize readability over abstraction.
           </p>
         </section>
       </article>
@@ -102,4 +109,4 @@ const BlogCleanFastPortfolioUi = () => {
   )
 }
 
-export default BlogCleanFastPortfolioUi
+export default BlogReusableReactSections

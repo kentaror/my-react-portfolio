@@ -150,7 +150,8 @@ function App() {
 
     initRecommendations()
 
-    const galleryImages = Array.from(document.querySelectorAll('.js-gallery-image'))
+    const galleryImages = Array.from(document.querySelectorAll('#portfolioGallery .js-gallery-image'))
+    const graphicDesignImages = Array.from(document.querySelectorAll('.js-graphic-design-image'))
     const gallerySection = document.getElementById('portfolioGallery')
     const galleryDisplayFrames = gallerySection ? Array.from(gallerySection.querySelectorAll('.js-gallery-frame')) : []
     const galleryTrack = document.getElementById('galleryTrack')
@@ -163,20 +164,22 @@ function App() {
     const lightboxNext = document.getElementById('lightboxNext')
     const lightboxCounter = document.getElementById('lightboxCounter')
     let activeGalleryIndex = 0
+    let currentLightboxImages = []
 
     function showLightboxImage(index) {
-      const image = galleryImages[index]
+      const image = currentLightboxImages[index]
       if (!image) {
         return
       }
       lightboxImage.src = image.src
       lightboxImage.alt = image.alt || 'Gallery preview'
-      lightboxCounter.textContent = `${index + 1} / ${galleryImages.length}`
+      lightboxCounter.textContent = `${index + 1} / ${currentLightboxImages.length}`
     }
 
     function openLightbox(index) {
       activeGalleryIndex = index
       showLightboxImage(activeGalleryIndex)
+      updateLightboxButtons()
       lightbox.classList.remove('hidden')
       lightbox.classList.add('flex')
       lightbox.setAttribute('aria-hidden', 'false')
@@ -191,8 +194,40 @@ function App() {
     }
 
     function moveLightbox(direction) {
-      activeGalleryIndex = (activeGalleryIndex + direction + galleryImages.length) % galleryImages.length
+      const nextIndex = activeGalleryIndex + direction
+      // Prevent moving beyond boundaries
+      if (nextIndex < 0 || nextIndex >= currentLightboxImages.length) {
+        return
+      }
+      activeGalleryIndex = nextIndex
       showLightboxImage(activeGalleryIndex)
+      updateLightboxButtons()
+    }
+
+    function updateLightboxButtons() {
+      if (!lightboxPrev || !lightboxNext) return
+      
+      // Disable/enable prev button
+      if (activeGalleryIndex <= 0) {
+        lightboxPrev.disabled = true
+        lightboxPrev.style.opacity = '0.4'
+        lightboxPrev.style.cursor = 'not-allowed'
+      } else {
+        lightboxPrev.disabled = false
+        lightboxPrev.style.opacity = '1'
+        lightboxPrev.style.cursor = 'pointer'
+      }
+      
+      // Disable/enable next button
+      if (activeGalleryIndex >= currentLightboxImages.length - 1) {
+        lightboxNext.disabled = true
+        lightboxNext.style.opacity = '0.4'
+        lightboxNext.style.cursor = 'not-allowed'
+      } else {
+        lightboxNext.disabled = false
+        lightboxNext.style.opacity = '1'
+        lightboxNext.style.cursor = 'pointer'
+      }
     }
 
     const galleryCleanup = []
@@ -209,10 +244,10 @@ function App() {
       if (event.key === 'Escape') {
         closeLightbox()
       }
-      if (event.key === 'ArrowLeft') {
+      if (event.key === 'ArrowLeft' && activeGalleryIndex > 0) {
         moveLightbox(-1)
       }
-      if (event.key === 'ArrowRight') {
+      if (event.key === 'ArrowRight' && activeGalleryIndex < currentLightboxImages.length - 1) {
         moveLightbox(1)
       }
     }
@@ -318,9 +353,25 @@ function App() {
       galleryNextBtn.addEventListener('click', onGalleryNextClick)
     }
 
+    // Graphic design images - separate lightbox
+    if (graphicDesignImages.length && lightbox && lightboxImage && lightboxClose && lightboxPrev && lightboxNext && lightboxCounter) {
+      graphicDesignImages.forEach((image, index) => {
+        const onClick = () => {
+          currentLightboxImages = graphicDesignImages
+          openLightbox(index)
+        }
+        image.addEventListener('click', onClick)
+        galleryCleanup.push(() => image.removeEventListener('click', onClick))
+      })
+    }
+
+    // Gallery images - separate lightbox
     if (galleryImages.length && lightbox && lightboxImage && lightboxClose && lightboxPrev && lightboxNext && lightboxCounter) {
       galleryImages.forEach((image, index) => {
-        const onClick = () => openLightbox(index)
+        const onClick = () => {
+          currentLightboxImages = galleryImages
+          openLightbox(index)
+        }
         image.addEventListener('click', onClick)
         galleryCleanup.push(() => image.removeEventListener('click', onClick))
       })

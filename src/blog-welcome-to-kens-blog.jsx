@@ -4,6 +4,7 @@ import { applyDocumentTheme } from './theme.js'
 
 const BlogWelcomeToKensBlog = () => {
   const [isDark, setIsDark] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     setIsDark(localStorage.getItem('portfolio-theme') === 'dark')
@@ -14,13 +15,19 @@ const BlogWelcomeToKensBlog = () => {
     localStorage.setItem('portfolio-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      setIsVisible(true)
+    })
+  }, [])
+
   const onThemeButtonClick = () => {
     setIsDark((prev) => !prev)
   }
 
   return (
-    <div className="page-fadeup max-w-4xl mx-auto px-4 py-8">
-      <section className="fadeup-item fadeup-1 blog-header-separator page-divider-b p-3 mb-3">
+    <div className={`max-w-4xl mx-auto px-4 py-8 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <section className="blog-header-separator page-divider-b p-3 mb-3">
         <div className="mb-4 flex items-start justify-between gap-3 min-h-[28px]">
           <a
             href="/blog-post"
@@ -60,9 +67,9 @@ const BlogWelcomeToKensBlog = () => {
         </p>
       </section>
 
-      <article className="fadeup-item fadeup-2 p-3 text-sm leading-8">
+      <article className="p-3 text-sm leading-8">
         <section className="blog-card-separator page-divider-b pb-8">
-          <p className="text-[15px] sm:text-base font-medium mb-5">
+          <p className="text-[15px] sm:text-base font-medium mb-5" style={{ fontFamily: '"PT Serif", serif' }}>
             Welcome to my blog. This is where I share the ideas, lessons, and practical workflows behind the work I build.
           </p>
 
@@ -76,7 +83,7 @@ const BlogWelcomeToKensBlog = () => {
             about what is working, what I am refining, and what I am discovering along the way.
           </p>
 
-          <ul className="list-disc pl-6 space-y-3 mb-6">
+          <ul className="list-disc pl-6 space-y-3 mb-6" style={{ fontFamily: '"PT Serif", serif' }}>
             <li>
               <strong>Tutorials</strong> about UI structure, styling, and practical frontend techniques.
             </li>
